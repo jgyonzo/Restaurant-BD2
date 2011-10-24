@@ -1,0 +1,7 @@
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\bin\Debug\DAL.dll
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\bin\Debug\DAL.pdb
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\bin\Debug\MySql.Data.dll
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\bin\Debug\MySql.Data.xml
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\obj\Debug\DAL.dll
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,8 @@
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\Restaurant.Properties.Resources.resources
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\Restaurant.exe
+C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\Restaurant.pdb
