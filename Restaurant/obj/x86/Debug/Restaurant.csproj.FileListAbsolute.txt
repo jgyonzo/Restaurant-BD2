@@ -6,3 +6,12 @@ C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug
 C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\Restaurant.exe
 C:\Users\jgyonzo.ML\My Dropbox\UNSL\BDII\tpe\Restaurant\Restaurant\obj\x86\Debug\Restaurant.pdb
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.exe
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.pdb
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\bin\Debug\Restaurant.exe
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\bin\Debug\Restaurant.pdb
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.Form1.resources
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.Properties.Resources.resources
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.write.1.tlog
