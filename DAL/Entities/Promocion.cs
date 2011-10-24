@@ -5,12 +5,10 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Plato
+    class Promocion
     {
         public UInt32 Id { get; set; }
         public string Desc { get; set; }
-        public string Rubro { get; set; }
-        public float Precio_Costo { get; set; }
-        public float Precio_Venta { get; set; }
+        public float Precio { get; set; }
     }
 }

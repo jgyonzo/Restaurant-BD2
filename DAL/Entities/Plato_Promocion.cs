@@ -5,9 +5,9 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Mesa
+    class Platos_Promocion
     {
-        public UInt32 Id { get; set; }
-        public UInt32 Sector { get; set; }
+        public UInt32 Plato_Id { get; set; }
+        public UInt32 Promocion_Id { get; set; }
     }
 }

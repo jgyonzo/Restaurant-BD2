@@ -5,7 +5,12 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Mozo
+    public class Mozo
     {
+        public UInt32 Id { get; set; }
+        public string Nombre { get; set; }
+        public string Dir { get; set; }
+        public UInt64 Dni { get; set; }
+        public UInt32 Sector { get; set; }
     }
 }

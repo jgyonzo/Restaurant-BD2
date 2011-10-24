@@ -49,7 +49,10 @@
     <Compile Include="Entities\Mozo.cs" />
     <Compile Include="Entities\Pedido.cs" />
     <Compile Include="Entities\Plato.cs" />
+    <Compile Include="Entities\Plato_Promocion.cs" />
+    <Compile Include="Entities\Promocion.cs" />
     <Compile Include="Entities\Venta.cs" />
+    <Compile Include="Entities\Venta_Promocion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlMapper.cs" />
   </ItemGroup>

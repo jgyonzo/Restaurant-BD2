@@ -5,9 +5,9 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Pedido
+    class Venta_Promocion
     {
-        public UInt32 Plato_Id { get; set; }
+        public UInt32 Promocion_Id { get; set; }
         public UInt32 Venta_Id { get; set; }
         public UInt16 Cant { get; set; }
     }
