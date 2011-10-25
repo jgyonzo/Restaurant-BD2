@@ -68,7 +68,7 @@ namespace Restaurant
             textBox_mozo_alta_dir.Clear();
             textBox_mozo_alta_dni.Clear();
             textBox_mozo_alta_exito.Visible = false;
-            
+
         }
 
         private void textBox_mozo_alta_dir_TextChanged(object sender, EventArgs e)
