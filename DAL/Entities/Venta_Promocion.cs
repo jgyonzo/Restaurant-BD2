@@ -9,6 +9,6 @@ namespace DAL.Entities
     {
         public UInt32 Promocion_Id { get; set; }
         public UInt32 Venta_Id { get; set; }
-        public UInt16 Cant { get; set; }
+        public UInt16 Cantidad { get; set; }
     }
 }

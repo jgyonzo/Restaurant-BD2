@@ -1,6 +1,6 @@
 ﻿namespace Restaurant
 {
-    partial class Yonzo
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Yonzo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tabs = new System.Windows.Forms.TabControl();
             this.TabResumen = new System.Windows.Forms.TabPage();
@@ -78,6 +78,7 @@
             this.DataGridPlatos = new System.Windows.Forms.DataGridView();
             this.TabPromos = new System.Windows.Forms.TabPage();
             this.GroupDataPromo = new System.Windows.Forms.GroupBox();
+            this.CheckListPromos = new System.Windows.Forms.CheckedListBox();
             this.LinkClearPromo = new System.Windows.Forms.LinkLabel();
             this.ButtonDeletePromo = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -92,7 +93,7 @@
             this.DataGridPromos = new System.Windows.Forms.DataGridView();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.AcercaDeLink = new System.Windows.Forms.LinkLabel();
-            this.CheckListPromos = new System.Windows.Forms.CheckedListBox();
+            this.TextIdMozo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Tabs.SuspendLayout();
             this.TabResumen.SuspendLayout();
@@ -243,9 +244,11 @@
             this.TabMozos.TabIndex = 2;
             this.TabMozos.Text = "Mozos";
             this.TabMozos.UseVisualStyleBackColor = true;
+            this.TabMozos.Enter += new System.EventHandler(this.TabMozos_Enter);
             // 
             // GroupDatosMozos
             // 
+            this.GroupDatosMozos.Controls.Add(this.TextIdMozo);
             this.GroupDatosMozos.Controls.Add(this.LinkClearMozos);
             this.GroupDatosMozos.Controls.Add(this.ButtonDeleteMozo);
             this.GroupDatosMozos.Controls.Add(this.ButtonNewMozo);
@@ -258,9 +261,9 @@
             this.GroupDatosMozos.Controls.Add(this.label3);
             this.GroupDatosMozos.Controls.Add(this.label2);
             this.GroupDatosMozos.Controls.Add(this.label1);
-            this.GroupDatosMozos.Location = new System.Drawing.Point(203, 6);
+            this.GroupDatosMozos.Location = new System.Drawing.Point(6, 155);
             this.GroupDatosMozos.Name = "GroupDatosMozos";
-            this.GroupDatosMozos.Size = new System.Drawing.Size(370, 270);
+            this.GroupDatosMozos.Size = new System.Drawing.Size(567, 141);
             this.GroupDatosMozos.TabIndex = 4;
             this.GroupDatosMozos.TabStop = false;
             this.GroupDatosMozos.Text = "Datos del empleado";
@@ -268,17 +271,18 @@
             // LinkClearMozos
             // 
             this.LinkClearMozos.AutoSize = true;
-            this.LinkClearMozos.Location = new System.Drawing.Point(26, 166);
+            this.LinkClearMozos.Location = new System.Drawing.Point(249, 111);
             this.LinkClearMozos.Name = "LinkClearMozos";
             this.LinkClearMozos.Size = new System.Drawing.Size(104, 13);
             this.LinkClearMozos.TabIndex = 13;
             this.LinkClearMozos.TabStop = true;
             this.LinkClearMozos.Text = "Restablecer campos";
+            this.LinkClearMozos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkClearMozos_LinkClicked);
             // 
             // ButtonDeleteMozo
             // 
             this.ButtonDeleteMozo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeleteMozo.Location = new System.Drawing.Point(270, 211);
+            this.ButtonDeleteMozo.Location = new System.Drawing.Point(444, 102);
             this.ButtonDeleteMozo.Name = "ButtonDeleteMozo";
             this.ButtonDeleteMozo.Size = new System.Drawing.Size(83, 31);
             this.ButtonDeleteMozo.TabIndex = 12;
@@ -287,47 +291,48 @@
             // 
             // ButtonNewMozo
             // 
-            this.ButtonNewMozo.Location = new System.Drawing.Point(28, 211);
+            this.ButtonNewMozo.Location = new System.Drawing.Point(444, 25);
             this.ButtonNewMozo.Name = "ButtonNewMozo";
-            this.ButtonNewMozo.Size = new System.Drawing.Size(71, 31);
+            this.ButtonNewMozo.Size = new System.Drawing.Size(83, 31);
             this.ButtonNewMozo.TabIndex = 8;
             this.ButtonNewMozo.Text = "Alta";
             this.ButtonNewMozo.UseVisualStyleBackColor = true;
             // 
             // TextDniMozo
             // 
-            this.TextDniMozo.Location = new System.Drawing.Point(141, 99);
+            this.TextDniMozo.Location = new System.Drawing.Point(141, 76);
             this.TextDniMozo.Name = "TextDniMozo";
             this.TextDniMozo.Size = new System.Drawing.Size(212, 20);
             this.TextDniMozo.TabIndex = 7;
             // 
             // TextDirMozo
             // 
-            this.TextDirMozo.Location = new System.Drawing.Point(141, 73);
+            this.TextDirMozo.Location = new System.Drawing.Point(141, 50);
             this.TextDirMozo.Name = "TextDirMozo";
             this.TextDirMozo.Size = new System.Drawing.Size(212, 20);
             this.TextDirMozo.TabIndex = 6;
             // 
             // TextNombreMozo
             // 
-            this.TextNombreMozo.Location = new System.Drawing.Point(141, 47);
+            this.TextNombreMozo.Location = new System.Drawing.Point(141, 25);
             this.TextNombreMozo.Name = "TextNombreMozo";
             this.TextNombreMozo.Size = new System.Drawing.Size(212, 20);
             this.TextNombreMozo.TabIndex = 5;
             // 
             // ButtonSaveMozos
             // 
-            this.ButtonSaveMozos.Location = new System.Drawing.Point(110, 211);
+            this.ButtonSaveMozos.Location = new System.Drawing.Point(444, 62);
             this.ButtonSaveMozos.Name = "ButtonSaveMozos";
-            this.ButtonSaveMozos.Size = new System.Drawing.Size(68, 31);
+            this.ButtonSaveMozos.Size = new System.Drawing.Size(83, 31);
             this.ButtonSaveMozos.TabIndex = 1;
             this.ButtonSaveMozos.Text = "Actualizar";
             this.ButtonSaveMozos.UseVisualStyleBackColor = true;
+            this.ButtonSaveMozos.Click += new System.EventHandler(this.ButtonSaveMozos_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 125);
+            this.label4.Location = new System.Drawing.Point(29, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 4;
@@ -337,7 +342,7 @@
             // 
             this.ComboMozoSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboMozoSector.FormattingEnabled = true;
-            this.ComboMozoSector.Location = new System.Drawing.Point(141, 125);
+            this.ComboMozoSector.Location = new System.Drawing.Point(141, 102);
             this.ComboMozoSector.Name = "ComboMozoSector";
             this.ComboMozoSector.Size = new System.Drawing.Size(56, 21);
             this.ComboMozoSector.TabIndex = 3;
@@ -345,7 +350,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 99);
+            this.label3.Location = new System.Drawing.Point(26, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 2;
@@ -354,7 +359,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 73);
+            this.label2.Location = new System.Drawing.Point(26, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -363,7 +368,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 47);
+            this.label1.Location = new System.Drawing.Point(26, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 0;
@@ -381,11 +386,16 @@
             // 
             // DataGridMozos
             // 
+            this.DataGridMozos.AllowUserToAddRows = false;
+            this.DataGridMozos.AllowUserToDeleteRows = false;
             this.DataGridMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridMozos.Location = new System.Drawing.Point(12, 24);
+            this.DataGridMozos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.DataGridMozos.Location = new System.Drawing.Point(6, 24);
             this.DataGridMozos.Name = "DataGridMozos";
-            this.DataGridMozos.Size = new System.Drawing.Size(174, 252);
+            this.DataGridMozos.ReadOnly = true;
+            this.DataGridMozos.Size = new System.Drawing.Size(567, 125);
             this.DataGridMozos.TabIndex = 0;
+            this.DataGridMozos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMozos_CellClick);
             // 
             // TabVentas_Pedidos
             // 
@@ -617,6 +627,14 @@
             this.GroupDataPromo.TabStop = false;
             this.GroupDataPromo.Text = "Datos de la promo";
             // 
+            // CheckListPromos
+            // 
+            this.CheckListPromos.FormattingEnabled = true;
+            this.CheckListPromos.Location = new System.Drawing.Point(83, 121);
+            this.CheckListPromos.Name = "CheckListPromos";
+            this.CheckListPromos.Size = new System.Drawing.Size(153, 154);
+            this.CheckListPromos.TabIndex = 13;
+            // 
             // LinkClearPromo
             // 
             this.LinkClearPromo.AutoSize = true;
@@ -748,15 +766,16 @@
             this.AcercaDeLink.TabStop = true;
             this.AcercaDeLink.Text = "Acerca de...";
             // 
-            // CheckListPromos
+            // TextIdMozo
             // 
-            this.CheckListPromos.FormattingEnabled = true;
-            this.CheckListPromos.Location = new System.Drawing.Point(83, 121);
-            this.CheckListPromos.Name = "CheckListPromos";
-            this.CheckListPromos.Size = new System.Drawing.Size(153, 154);
-            this.CheckListPromos.TabIndex = 13;
+            this.TextIdMozo.Location = new System.Drawing.Point(378, 26);
+            this.TextIdMozo.Name = "TextIdMozo";
+            this.TextIdMozo.ReadOnly = true;
+            this.TextIdMozo.Size = new System.Drawing.Size(35, 20);
+            this.TextIdMozo.TabIndex = 14;
+            this.TextIdMozo.Visible = false;
             // 
-            // Yonzo
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -767,7 +786,7 @@
             this.Controls.Add(this.Tabs);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Yonzo";
+            this.Name = "MainWindow";
             this.Text = "Restaurant.NET";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Tabs.ResumeLayout(false);
@@ -859,5 +878,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView DataGridPromos;
         private System.Windows.Forms.CheckedListBox CheckListPromos;
+        private System.Windows.Forms.TextBox TextIdMozo;
     }
 }

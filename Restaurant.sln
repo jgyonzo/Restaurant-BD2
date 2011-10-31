@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant", "Restaurant\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{9ED38A72-A1C2-4C0C-8DC8-3AB84F6A5B9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSL", "BSL\BSL.csproj", "{1D29331D-E1E1-43E6-9042-0810070861D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{9ED38A72-A1C2-4C0C-8DC8-3AB84F6A5B9A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9ED38A72-A1C2-4C0C-8DC8-3AB84F6A5B9A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9ED38A72-A1C2-4C0C-8DC8-3AB84F6A5B9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1D29331D-E1E1-43E6-9042-0810070861D8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

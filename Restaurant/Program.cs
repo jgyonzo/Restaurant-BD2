@@ -15,7 +15,7 @@ namespace Restaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Yonzo());
+            Application.Run(new MainWindow());
         }
     }
 }

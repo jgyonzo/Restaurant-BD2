@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading;
 using System.Text.RegularExpressions;
 
-namespace MySqlMapper
+namespace DAL
 {
 	/// <summary>
 	/// Dapper, a light weight object mapper for ADO.NET

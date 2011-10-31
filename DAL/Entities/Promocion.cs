@@ -8,7 +8,7 @@ namespace DAL.Entities
     class Promocion
     {
         public UInt32 Id { get; set; }
-        public string Desc { get; set; }
+        public string Descripcion { get; set; }
         public float Precio { get; set; }
     }
 }

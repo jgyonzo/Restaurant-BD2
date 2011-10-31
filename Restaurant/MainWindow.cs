@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BSL;
+using DAL.Entities;
 
 namespace Restaurant
 {
-    public partial class Yonzo : Form
+    public partial class MainWindow : Form
     {
-        public Yonzo()
+        public MainWindow()
         {
             InitializeComponent();
         }
