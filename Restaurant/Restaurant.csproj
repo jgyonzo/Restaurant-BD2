@@ -50,7 +50,13 @@
     <Compile Include="MozosUI.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PlatoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="PromocionesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>

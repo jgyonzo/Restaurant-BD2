@@ -42,6 +42,7 @@
             this.groupPromociones = new System.Windows.Forms.GroupBox();
             this.TabMozos = new System.Windows.Forms.TabPage();
             this.GroupDatosMozos = new System.Windows.Forms.GroupBox();
+            this.TextIdMozo = new System.Windows.Forms.TextBox();
             this.LinkClearMozos = new System.Windows.Forms.LinkLabel();
             this.ButtonDeleteMozo = new System.Windows.Forms.Button();
             this.ButtonNewMozo = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.TabConsultas = new System.Windows.Forms.TabPage();
             this.TabPlatos = new System.Windows.Forms.TabPage();
             this.GroupDatosPlatos = new System.Windows.Forms.GroupBox();
+            this.TextIdPlatos = new System.Windows.Forms.TextBox();
             this.LinkClearPlatos = new System.Windows.Forms.LinkLabel();
             this.ButtonDeletePlato = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,8 +79,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.DataGridPlatos = new System.Windows.Forms.DataGridView();
             this.TabPromos = new System.Windows.Forms.TabPage();
-            this.GroupDataPromo = new System.Windows.Forms.GroupBox();
             this.CheckListPromos = new System.Windows.Forms.CheckedListBox();
+            this.GroupDataPromo = new System.Windows.Forms.GroupBox();
+            this.TextIdPromo = new System.Windows.Forms.TextBox();
             this.LinkClearPromo = new System.Windows.Forms.LinkLabel();
             this.ButtonDeletePromo = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -86,14 +89,13 @@
             this.TextPricePromo = new System.Windows.Forms.TextBox();
             this.TextDescPromo = new System.Windows.Forms.TextBox();
             this.ButtonSavePromo = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.LabelPrecioPromo = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.DataGridPromos = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.AcercaDeLink = new System.Windows.Forms.LinkLabel();
-            this.TextIdMozo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Tabs.SuspendLayout();
             this.TabResumen.SuspendLayout();
@@ -268,6 +270,15 @@
             this.GroupDatosMozos.TabStop = false;
             this.GroupDatosMozos.Text = "Datos del empleado";
             // 
+            // TextIdMozo
+            // 
+            this.TextIdMozo.Location = new System.Drawing.Point(378, 26);
+            this.TextIdMozo.Name = "TextIdMozo";
+            this.TextIdMozo.ReadOnly = true;
+            this.TextIdMozo.Size = new System.Drawing.Size(35, 20);
+            this.TextIdMozo.TabIndex = 14;
+            this.TextIdMozo.Visible = false;
+            // 
             // LinkClearMozos
             // 
             this.LinkClearMozos.AutoSize = true;
@@ -288,6 +299,7 @@
             this.ButtonDeleteMozo.TabIndex = 12;
             this.ButtonDeleteMozo.Text = "Eliminar";
             this.ButtonDeleteMozo.UseVisualStyleBackColor = true;
+            this.ButtonDeleteMozo.Click += new System.EventHandler(this.ButtonDeleteMozo_Click);
             // 
             // ButtonNewMozo
             // 
@@ -297,6 +309,7 @@
             this.ButtonNewMozo.TabIndex = 8;
             this.ButtonNewMozo.Text = "Alta";
             this.ButtonNewMozo.UseVisualStyleBackColor = true;
+            this.ButtonNewMozo.Click += new System.EventHandler(this.ButtonNewMozo_Click);
             // 
             // TextDniMozo
             // 
@@ -388,6 +401,9 @@
             // 
             this.DataGridMozos.AllowUserToAddRows = false;
             this.DataGridMozos.AllowUserToDeleteRows = false;
+            this.DataGridMozos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridMozos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridMozos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridMozos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.DataGridMozos.Location = new System.Drawing.Point(6, 24);
@@ -429,9 +445,11 @@
             this.TabPlatos.TabIndex = 6;
             this.TabPlatos.Text = "Platos";
             this.TabPlatos.UseVisualStyleBackColor = true;
+            this.TabPlatos.Enter += new System.EventHandler(this.TabPlatos_Enter);
             // 
             // GroupDatosPlatos
             // 
+            this.GroupDatosPlatos.Controls.Add(this.TextIdPlatos);
             this.GroupDatosPlatos.Controls.Add(this.LinkClearPlatos);
             this.GroupDatosPlatos.Controls.Add(this.ButtonDeletePlato);
             this.GroupDatosPlatos.Controls.Add(this.label11);
@@ -446,37 +464,48 @@
             this.GroupDatosPlatos.Controls.Add(this.label6);
             this.GroupDatosPlatos.Controls.Add(this.label7);
             this.GroupDatosPlatos.Controls.Add(this.label8);
-            this.GroupDatosPlatos.Location = new System.Drawing.Point(203, 9);
+            this.GroupDatosPlatos.Location = new System.Drawing.Point(12, 151);
             this.GroupDatosPlatos.Name = "GroupDatosPlatos";
-            this.GroupDatosPlatos.Size = new System.Drawing.Size(370, 270);
+            this.GroupDatosPlatos.Size = new System.Drawing.Size(565, 151);
             this.GroupDatosPlatos.TabIndex = 7;
             this.GroupDatosPlatos.TabStop = false;
             this.GroupDatosPlatos.Text = "Datos del plato";
             // 
+            // TextIdPlatos
+            // 
+            this.TextIdPlatos.Location = new System.Drawing.Point(404, 89);
+            this.TextIdPlatos.Name = "TextIdPlatos";
+            this.TextIdPlatos.ReadOnly = true;
+            this.TextIdPlatos.Size = new System.Drawing.Size(43, 20);
+            this.TextIdPlatos.TabIndex = 13;
+            this.TextIdPlatos.Visible = false;
+            // 
             // LinkClearPlatos
             // 
             this.LinkClearPlatos.AutoSize = true;
-            this.LinkClearPlatos.Location = new System.Drawing.Point(26, 193);
+            this.LinkClearPlatos.Location = new System.Drawing.Point(299, 122);
             this.LinkClearPlatos.Name = "LinkClearPlatos";
             this.LinkClearPlatos.Size = new System.Drawing.Size(104, 13);
             this.LinkClearPlatos.TabIndex = 12;
             this.LinkClearPlatos.TabStop = true;
             this.LinkClearPlatos.Text = "Restablecer campos";
+            this.LinkClearPlatos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkClearPlatos_LinkClicked);
             // 
             // ButtonDeletePlato
             // 
             this.ButtonDeletePlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeletePlato.Location = new System.Drawing.Point(270, 234);
+            this.ButtonDeletePlato.Location = new System.Drawing.Point(466, 99);
             this.ButtonDeletePlato.Name = "ButtonDeletePlato";
             this.ButtonDeletePlato.Size = new System.Drawing.Size(83, 30);
             this.ButtonDeletePlato.TabIndex = 11;
             this.ButtonDeletePlato.Text = "Eliminar";
             this.ButtonDeletePlato.UseVisualStyleBackColor = true;
+            this.ButtonDeletePlato.Click += new System.EventHandler(this.ButtonDeletePlato_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(138, 131);
+            this.label11.Location = new System.Drawing.Point(292, 89);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 10;
@@ -485,7 +514,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(138, 105);
+            this.label10.Location = new System.Drawing.Point(110, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 9;
@@ -493,40 +522,41 @@
             // 
             // ButtonNewPlato
             // 
-            this.ButtonNewPlato.Location = new System.Drawing.Point(28, 232);
+            this.ButtonNewPlato.Location = new System.Drawing.Point(466, 25);
             this.ButtonNewPlato.Name = "ButtonNewPlato";
             this.ButtonNewPlato.Size = new System.Drawing.Size(82, 31);
             this.ButtonNewPlato.TabIndex = 8;
             this.ButtonNewPlato.Text = "Alta";
             this.ButtonNewPlato.UseVisualStyleBackColor = true;
+            this.ButtonNewPlato.Click += new System.EventHandler(this.ButtonNewPlato_Click);
             // 
             // TextPricePlatoV
             // 
-            this.TextPricePlatoV.Location = new System.Drawing.Point(154, 131);
+            this.TextPricePlatoV.Location = new System.Drawing.Point(311, 89);
             this.TextPricePlatoV.Name = "TextPricePlatoV";
             this.TextPricePlatoV.Size = new System.Drawing.Size(52, 20);
             this.TextPricePlatoV.TabIndex = 7;
             // 
             // TextPricePlatoC
             // 
-            this.TextPricePlatoC.Location = new System.Drawing.Point(154, 105);
+            this.TextPricePlatoC.Location = new System.Drawing.Point(129, 89);
             this.TextPricePlatoC.Name = "TextPricePlatoC";
             this.TextPricePlatoC.Size = new System.Drawing.Size(52, 20);
             this.TextPricePlatoC.TabIndex = 6;
             // 
             // TextDescPlatos
             // 
-            this.TextDescPlatos.Location = new System.Drawing.Point(28, 47);
+            this.TextDescPlatos.Location = new System.Drawing.Point(28, 31);
             this.TextDescPlatos.Multiline = true;
             this.TextDescPlatos.Name = "TextDescPlatos";
-            this.TextDescPlatos.Size = new System.Drawing.Size(325, 52);
+            this.TextDescPlatos.Size = new System.Drawing.Size(401, 42);
             this.TextDescPlatos.TabIndex = 5;
             // 
             // ButtonSavePlato
             // 
-            this.ButtonSavePlato.Location = new System.Drawing.Point(116, 232);
+            this.ButtonSavePlato.Location = new System.Drawing.Point(466, 62);
             this.ButtonSavePlato.Name = "ButtonSavePlato";
-            this.ButtonSavePlato.Size = new System.Drawing.Size(78, 31);
+            this.ButtonSavePlato.Size = new System.Drawing.Size(82, 31);
             this.ButtonSavePlato.TabIndex = 1;
             this.ButtonSavePlato.Text = "Actualizar";
             this.ButtonSavePlato.UseVisualStyleBackColor = true;
@@ -534,7 +564,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 157);
+            this.label5.Location = new System.Drawing.Point(27, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 4;
@@ -544,7 +574,7 @@
             // 
             this.ComboBoxPlatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxPlatos.FormattingEnabled = true;
-            this.ComboBoxPlatos.Location = new System.Drawing.Point(141, 157);
+            this.ComboBoxPlatos.Location = new System.Drawing.Point(113, 118);
             this.ComboBoxPlatos.Name = "ComboBoxPlatos";
             this.ComboBoxPlatos.Size = new System.Drawing.Size(125, 21);
             this.ComboBoxPlatos.TabIndex = 3;
@@ -552,7 +582,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 131);
+            this.label6.Location = new System.Drawing.Point(197, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 2;
@@ -561,7 +591,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 105);
+            this.label7.Location = new System.Drawing.Point(27, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 1;
@@ -570,7 +600,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 31);
+            this.label8.Location = new System.Drawing.Point(25, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 0;
@@ -580,7 +610,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 9);
+            this.label9.Location = new System.Drawing.Point(9, 3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 15);
             this.label9.TabIndex = 6;
@@ -588,17 +618,27 @@
             // 
             // DataGridPlatos
             // 
+            this.DataGridPlatos.AllowUserToAddRows = false;
+            this.DataGridPlatos.AllowUserToDeleteRows = false;
+            this.DataGridPlatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridPlatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.DataGridPlatos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridPlatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridPlatos.Location = new System.Drawing.Point(12, 27);
+            this.DataGridPlatos.Location = new System.Drawing.Point(12, 21);
             this.DataGridPlatos.Name = "DataGridPlatos";
-            this.DataGridPlatos.Size = new System.Drawing.Size(174, 252);
+            this.DataGridPlatos.ReadOnly = true;
+            this.DataGridPlatos.Size = new System.Drawing.Size(565, 124);
             this.DataGridPlatos.TabIndex = 5;
+            this.DataGridPlatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPlatos_CellClick);
             // 
             // TabPromos
             // 
+            this.TabPromos.Controls.Add(this.CheckListPromos);
             this.TabPromos.Controls.Add(this.GroupDataPromo);
             this.TabPromos.Controls.Add(this.label18);
             this.TabPromos.Controls.Add(this.DataGridPromos);
+            this.TabPromos.Controls.Add(this.label14);
             this.TabPromos.Location = new System.Drawing.Point(4, 22);
             this.TabPromos.Name = "TabPromos";
             this.TabPromos.Padding = new System.Windows.Forms.Padding(3);
@@ -606,10 +646,20 @@
             this.TabPromos.TabIndex = 7;
             this.TabPromos.Text = "Promociones";
             this.TabPromos.UseVisualStyleBackColor = true;
+            this.TabPromos.Enter += new System.EventHandler(this.TabPromos_Enter);
+            // 
+            // CheckListPromos
+            // 
+            this.CheckListPromos.CheckOnClick = true;
+            this.CheckListPromos.FormattingEnabled = true;
+            this.CheckListPromos.Location = new System.Drawing.Point(374, 22);
+            this.CheckListPromos.Name = "CheckListPromos";
+            this.CheckListPromos.Size = new System.Drawing.Size(203, 274);
+            this.CheckListPromos.TabIndex = 13;
             // 
             // GroupDataPromo
             // 
-            this.GroupDataPromo.Controls.Add(this.CheckListPromos);
+            this.GroupDataPromo.Controls.Add(this.TextIdPromo);
             this.GroupDataPromo.Controls.Add(this.LinkClearPromo);
             this.GroupDataPromo.Controls.Add(this.ButtonDeletePromo);
             this.GroupDataPromo.Controls.Add(this.label13);
@@ -617,48 +667,50 @@
             this.GroupDataPromo.Controls.Add(this.TextPricePromo);
             this.GroupDataPromo.Controls.Add(this.TextDescPromo);
             this.GroupDataPromo.Controls.Add(this.ButtonSavePromo);
-            this.GroupDataPromo.Controls.Add(this.label14);
             this.GroupDataPromo.Controls.Add(this.LabelPrecioPromo);
             this.GroupDataPromo.Controls.Add(this.label17);
-            this.GroupDataPromo.Location = new System.Drawing.Point(203, 8);
+            this.GroupDataPromo.Location = new System.Drawing.Point(12, 139);
             this.GroupDataPromo.Name = "GroupDataPromo";
-            this.GroupDataPromo.Size = new System.Drawing.Size(370, 288);
+            this.GroupDataPromo.Size = new System.Drawing.Size(356, 157);
             this.GroupDataPromo.TabIndex = 10;
             this.GroupDataPromo.TabStop = false;
             this.GroupDataPromo.Text = "Datos de la promo";
             // 
-            // CheckListPromos
+            // TextIdPromo
             // 
-            this.CheckListPromos.FormattingEnabled = true;
-            this.CheckListPromos.Location = new System.Drawing.Point(83, 121);
-            this.CheckListPromos.Name = "CheckListPromos";
-            this.CheckListPromos.Size = new System.Drawing.Size(153, 154);
-            this.CheckListPromos.TabIndex = 13;
+            this.TextIdPromo.Location = new System.Drawing.Point(290, 83);
+            this.TextIdPromo.Name = "TextIdPromo";
+            this.TextIdPromo.ReadOnly = true;
+            this.TextIdPromo.Size = new System.Drawing.Size(52, 20);
+            this.TextIdPromo.TabIndex = 13;
+            this.TextIdPromo.Visible = false;
             // 
             // LinkClearPromo
             // 
             this.LinkClearPromo.AutoSize = true;
-            this.LinkClearPromo.Location = new System.Drawing.Point(250, 92);
+            this.LinkClearPromo.Location = new System.Drawing.Point(180, 83);
             this.LinkClearPromo.Name = "LinkClearPromo";
             this.LinkClearPromo.Size = new System.Drawing.Size(104, 13);
             this.LinkClearPromo.TabIndex = 12;
             this.LinkClearPromo.TabStop = true;
             this.LinkClearPromo.Text = "Restablecer campos";
+            this.LinkClearPromo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkClearPromo_LinkClicked);
             // 
             // ButtonDeletePromo
             // 
             this.ButtonDeletePromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeletePromo.Location = new System.Drawing.Point(286, 245);
+            this.ButtonDeletePromo.Location = new System.Drawing.Point(243, 115);
             this.ButtonDeletePromo.Name = "ButtonDeletePromo";
             this.ButtonDeletePromo.Size = new System.Drawing.Size(78, 30);
             this.ButtonDeletePromo.TabIndex = 11;
             this.ButtonDeletePromo.Text = "Eliminar";
             this.ButtonDeletePromo.UseVisualStyleBackColor = true;
+            this.ButtonDeletePromo.Click += new System.EventHandler(this.ButtonDeletePromo_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(80, 92);
+            this.label13.Location = new System.Drawing.Point(67, 76);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(13, 13);
             this.label13.TabIndex = 9;
@@ -666,50 +718,43 @@
             // 
             // ButtonNewPromo
             // 
-            this.ButtonNewPromo.Location = new System.Drawing.Point(286, 162);
+            this.ButtonNewPromo.Location = new System.Drawing.Point(28, 115);
             this.ButtonNewPromo.Name = "ButtonNewPromo";
             this.ButtonNewPromo.Size = new System.Drawing.Size(78, 31);
             this.ButtonNewPromo.TabIndex = 8;
             this.ButtonNewPromo.Text = "Alta";
             this.ButtonNewPromo.UseVisualStyleBackColor = true;
+            this.ButtonNewPromo.Click += new System.EventHandler(this.ButtonNewPromo_Click);
             // 
             // TextPricePromo
             // 
-            this.TextPricePromo.Location = new System.Drawing.Point(99, 89);
+            this.TextPricePromo.Location = new System.Drawing.Point(86, 76);
             this.TextPricePromo.Name = "TextPricePromo";
             this.TextPricePromo.Size = new System.Drawing.Size(52, 20);
             this.TextPricePromo.TabIndex = 6;
             // 
             // TextDescPromo
             // 
-            this.TextDescPromo.Location = new System.Drawing.Point(29, 34);
+            this.TextDescPromo.Location = new System.Drawing.Point(6, 34);
             this.TextDescPromo.Multiline = true;
             this.TextDescPromo.Name = "TextDescPromo";
-            this.TextDescPromo.Size = new System.Drawing.Size(325, 49);
+            this.TextDescPromo.Size = new System.Drawing.Size(344, 39);
             this.TextDescPromo.TabIndex = 5;
             // 
             // ButtonSavePromo
             // 
-            this.ButtonSavePromo.Location = new System.Drawing.Point(286, 199);
+            this.ButtonSavePromo.Location = new System.Drawing.Point(133, 115);
             this.ButtonSavePromo.Name = "ButtonSavePromo";
             this.ButtonSavePromo.Size = new System.Drawing.Size(78, 31);
             this.ButtonSavePromo.TabIndex = 1;
             this.ButtonSavePromo.Text = "Actualizar";
             this.ButtonSavePromo.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(26, 121);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Platos";
+            this.ButtonSavePromo.Click += new System.EventHandler(this.ButtonSavePromo_Click);
             // 
             // LabelPrecioPromo
             // 
             this.LabelPrecioPromo.AutoSize = true;
-            this.LabelPrecioPromo.Location = new System.Drawing.Point(25, 92);
+            this.LabelPrecioPromo.Location = new System.Drawing.Point(10, 76);
             this.LabelPrecioPromo.Name = "LabelPrecioPromo";
             this.LabelPrecioPromo.Size = new System.Drawing.Size(37, 13);
             this.LabelPrecioPromo.TabIndex = 1;
@@ -718,7 +763,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(26, 18);
+            this.label17.Location = new System.Drawing.Point(6, 18);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(63, 13);
             this.label17.TabIndex = 0;
@@ -728,7 +773,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(9, 8);
+            this.label18.Location = new System.Drawing.Point(9, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(50, 15);
             this.label18.TabIndex = 9;
@@ -736,11 +781,28 @@
             // 
             // DataGridPromos
             // 
+            this.DataGridPromos.AllowUserToAddRows = false;
+            this.DataGridPromos.AllowUserToDeleteRows = false;
+            this.DataGridPromos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridPromos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DataGridPromos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridPromos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridPromos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridPromos.Location = new System.Drawing.Point(12, 26);
+            this.DataGridPromos.Location = new System.Drawing.Point(12, 18);
             this.DataGridPromos.Name = "DataGridPromos";
-            this.DataGridPromos.Size = new System.Drawing.Size(174, 270);
+            this.DataGridPromos.ReadOnly = true;
+            this.DataGridPromos.Size = new System.Drawing.Size(356, 115);
             this.DataGridPromos.TabIndex = 8;
+            this.DataGridPromos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPromos_CellClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(374, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(139, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Platos asociados a la promo";
             // 
             // ButtonExit
             // 
@@ -755,6 +817,7 @@
             this.ButtonExit.TabIndex = 2;
             this.ButtonExit.Text = "Salir";
             this.ButtonExit.UseVisualStyleBackColor = false;
+            this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // AcercaDeLink
             // 
@@ -766,15 +829,6 @@
             this.AcercaDeLink.TabStop = true;
             this.AcercaDeLink.Text = "Acerca de...";
             // 
-            // TextIdMozo
-            // 
-            this.TextIdMozo.Location = new System.Drawing.Point(378, 26);
-            this.TextIdMozo.Name = "TextIdMozo";
-            this.TextIdMozo.ReadOnly = true;
-            this.TextIdMozo.Size = new System.Drawing.Size(35, 20);
-            this.TextIdMozo.TabIndex = 14;
-            this.TextIdMozo.Visible = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -785,7 +839,9 @@
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.Tabs);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Restaurant.NET";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -879,5 +935,7 @@
         private System.Windows.Forms.DataGridView DataGridPromos;
         private System.Windows.Forms.CheckedListBox CheckListPromos;
         private System.Windows.Forms.TextBox TextIdMozo;
+        private System.Windows.Forms.TextBox TextIdPlatos;
+        private System.Windows.Forms.TextBox TextIdPromo;
     }
 }

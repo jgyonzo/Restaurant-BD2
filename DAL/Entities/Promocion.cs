@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Promocion
+    public class Promocion
     {
         public UInt32 Id { get; set; }
         public string Descripcion { get; set; }

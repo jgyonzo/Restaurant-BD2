@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="MesaOperations.cs" />
     <Compile Include="MozoOperations.cs" />
+    <Compile Include="PlatoOperations.cs" />
+    <Compile Include="PromocionesOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -23,7 +23,7 @@ create table ventas (id int unsigned auto_increment primary key,
 
 create table platos (id int unsigned auto_increment primary key,
 					descripcion varchar(150),
-					rubro varchar(10),
+					rubro varchar(20),
 					precio_costo float,
 					precio_venta float); 
 
@@ -66,3 +66,24 @@ insert into mesas(sector) values (2);
 insert into mesas(sector) values (3);
 insert into mesas(sector) values (3);
 insert into mesas(sector) values (3);
+
+
+insert into platos(descripcion,precio_costo,precio_venta,rubro) values ('Milanesa de Ternera con Guarnicion',10.0,22.0,'Segundo Plato');
+insert into platos(descripcion,precio_costo,precio_venta,rubro) values ('Sopa de Caracol',4.0,8.50,'Primer Plato');
+insert into platos(descripcion,precio_costo,precio_venta,rubro) values ('Flan de Huevo',2.0,6.0,'Postre');
+
+select * from platos;
+select * from promociones;
+
+insert into promociones(descripcion,precio) values ('Mila + Papas + Coca',30);
+insert into promociones(descripcion,precio) values ('Mila + Papas + Cerveza',35);
+insert into promociones(descripcion,precio) values ('Sopa + Flan + Cerveza',31);
+insert into promociones(descripcion,precio) values ('Prueba',31);
+insert into promociones(descripcion,precio) values ('Prueba2',31);
+
+select LAST_INSERT_ID() as id;
+
+insert into platos_promociones(plato_id,promocion_id) values (1,1);
+insert into platos_promociones(plato_id,promocion_id) values (1,2);
+insert into platos_promociones(plato_id,promocion_id) values (2,3);
+insert into platos_promociones(plato_id,promocion_id) values (3,3);
