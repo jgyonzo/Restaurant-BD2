@@ -23,6 +23,20 @@ namespace BSL
             }
         }
 
+        public IEnumerable<Plato> GetAllFiltering(string filter)
+        {
+            try
+            {
+                PlatoDao dao = new PlatoDao();
+                return dao.GetAllFiltering(filter);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener platos " + ex.Message);
+                throw ex;
+            }
+        }
+
         public Plato GetOne(UInt32 id)
         {
             try

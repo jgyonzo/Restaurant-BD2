@@ -31,6 +31,28 @@ namespace DAL
             }
         }
 
+        public IEnumerable<Plato> GetAllFiltering(string filter)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    string SelectAllPlatosFiltering = "select * from platos where upper(descripcion) like ('%"+ filter.ToUpper() +"%') order by rubro,descripcion";
+                    conn.Open();
+                    var lista = conn.Query<Plato>(SelectAllPlatosFiltering, null, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public Plato GetOne(UInt32 id)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))

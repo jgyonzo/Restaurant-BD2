@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Mesa
+    public class Mesa
     {
         public UInt32 Id { get; set; }
         public UInt32 Sector { get; set; }

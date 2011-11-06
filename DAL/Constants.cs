@@ -11,8 +11,6 @@ namespace DAL
 
         public static string SelectAllMozos = "select * from mozos order by nombre";
 
-        public static string SelectAllSectores = "select distinct(sector) from mesas order by sector";
-
         public static string UpdateMozo = "update mozos set nombre = @Nombre, direccion =  @Direccion, dni = @Dni, sector = @Sector where id = @Id";
 
         public static string InsertMozo = "insert into mozos(nombre,direccion,dni,sector) values (@Nombre,@Direccion,@Dni,@Sector)";
@@ -49,5 +47,11 @@ namespace DAL
 
         //Genericas
         public static string SelectLastId = "select LAST_INSERT_ID() as id";
+
+        //MESAS
+        public static string SelectAllMesas = "select * from mesas order by sector,id";
+        public static string SelectAllSectores = "select distinct(sector) from mesas order by sector";
+        public static string InsertMesa = "insert into mesas(sector) values (@Sector)";
+        public static string DeleteMesa = "delete from mesas where id = @Id";
     }
 }

@@ -33,7 +33,8 @@ namespace Restaurant
         {
             //Cargo listado de mozos
             ReloadGridMozos();
-
+            //limpio todos los text
+            ClearAllMozo();
             //Cargo los sectores posibles
             try
             {

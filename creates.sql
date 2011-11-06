@@ -6,9 +6,7 @@ create table mozos (id int unsigned auto_increment primary key,
 					
 					
 create table mesas (id int unsigned auto_increment primary key,
-					sector int unsigned); 
-
-select DISTINCT(sector) from mesas;					
+					sector int unsigned); 				
 
 create table ventas (id int unsigned auto_increment primary key,
 					fecha datetime,
@@ -34,8 +32,6 @@ create table pedidos (plato_id int unsigned,
 						REFERENCES platos(id),
 					FOREIGN KEY(venta_id)
 						REFERENCES ventas(id));
-
-drop table promocion;
 
 create table promociones (id int unsigned auto_increment primary key,
 					descripcion varchar(150),

@@ -41,6 +41,7 @@ namespace Restaurant
             rubrosStr.Add("Postre");
                 
             ComboBoxPlatos.DataSource = rubrosStr;
+            ClearAllPlato();
         }
 
          private void DataGridPlatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -139,5 +140,31 @@ namespace Restaurant
              //TODO: Mostrar cartel de update exitoso o erroneo
          }
 
+         private void ButtonBuscarPlato_Click(object sender, EventArgs e)
+         {
+             if (TextBuscarPlato.Text == null || TextBuscarPlato.Text == "")
+             {
+                 ReloadGridPlatos();
+                 return;
+             }
+             try
+             {
+                 PlatoOperations po = new PlatoOperations();
+                 var platos = po.GetAllFiltering(TextBuscarPlato.Text);
+                 DataGridPlatos.DataSource = platos;
+                 DataGridPlatos.ClearSelection();
+             }
+             catch (Exception ex)
+             {
+                 //TODO:
+             }
+         }
+
+         private void ButtonClearSearch_Click(object sender, EventArgs e)
+         {
+             ReloadGridPlatos();
+             TextBuscarPlato.Clear();
+             ClearAllPlato();
+         }
     }
 }

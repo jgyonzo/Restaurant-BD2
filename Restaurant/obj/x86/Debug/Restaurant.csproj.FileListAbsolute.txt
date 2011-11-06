@@ -7,3 +7,19 @@ D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.Form1.
 D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.Properties.Resources.resources
 D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Mis documentos\UNSL\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\Restaurant.exe
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\Restaurant.pdb
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\BSL.dll
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\DAL.dll
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\MySql.Data.dll
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\BSL.pdb
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\DAL.pdb
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\bin\Debug\MySql.Data.xml
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.Properties.Resources.resources
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.MainWindow.resources
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.exe.licenses
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.exe
+D:\compartida\Dropbox\UNSL\BDII\tpe\Restaurant-BD2\Restaurant\obj\x86\Debug\Restaurant.pdb
