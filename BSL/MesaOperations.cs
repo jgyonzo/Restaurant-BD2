@@ -37,6 +37,20 @@ namespace BSL
             }
         }
 
+        public IEnumerable<Mesa> GetFromSector(UInt32 sector)
+        {
+            try
+            {
+                MesaDao dao = new MesaDao();
+                return dao.GetFromSector(sector);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener mesas: " + ex.Message);
+                throw ex;
+            }
+        }
+
         public void Insert(Mesa p)
         {
             MesaDao dao = new MesaDao();

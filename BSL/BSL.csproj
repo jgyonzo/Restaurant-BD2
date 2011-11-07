@@ -45,6 +45,7 @@
     <Compile Include="PlatoOperations.cs" />
     <Compile Include="PromocionesOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentasOperations.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

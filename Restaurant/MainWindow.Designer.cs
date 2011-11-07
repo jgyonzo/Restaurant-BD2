@@ -31,15 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tasbs = new System.Windows.Forms.TabControl();
-            this.TabResumen = new System.Windows.Forms.TabPage();
-            this.groupResumen = new System.Windows.Forms.GroupBox();
-            this.groupAcciones = new System.Windows.Forms.GroupBox();
-            this.ButCerrarMesaRapida = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ButAbrirMesaRapida = new System.Windows.Forms.Button();
-            this.ButCargarPedidoRapido = new System.Windows.Forms.Button();
-            this.groupMesas = new System.Windows.Forms.GroupBox();
-            this.groupPromociones = new System.Windows.Forms.GroupBox();
             this.TabMozos = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,10 +52,40 @@
             this.LabelListadoMozos = new System.Windows.Forms.Label();
             this.DataGridMozos = new System.Windows.Forms.DataGridView();
             this.TabVentas_Pedidos = new System.Windows.Forms.TabPage();
+            this.TextIdVenta = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ButtonNewVenta = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.ComboMesaVenta = new System.Windows.Forms.ComboBox();
+            this.ComboMozoVenta = new System.Windows.Forms.ComboBox();
             this.GroupVentas = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.DataGridItemsActuales = new System.Windows.Forms.DataGridView();
+            this.ButtonRemoveItem = new System.Windows.Forms.Button();
+            this.TextTipoBusqueda = new System.Windows.Forms.TextBox();
+            this.ButtonAddItemVenta = new System.Windows.Forms.Button();
+            this.ButtonBuscarPromosVenta = new System.Windows.Forms.Button();
+            this.ButtonClearItems = new System.Windows.Forms.Button();
+            this.ButtonBuscarPlatoVenta = new System.Windows.Forms.Button();
+            this.TextSearchItems = new System.Windows.Forms.TextBox();
+            this.DataGridItemsVenta = new System.Windows.Forms.DataGridView();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridVentas = new System.Windows.Forms.DataGridView();
+            this.ButtonFinVenta = new System.Windows.Forms.Button();
             this.TabConsultas = new System.Windows.Forms.TabPage();
+            this.TextDetallePrint = new System.Windows.Forms.TextBox();
+            this.LinkMozosVentas = new System.Windows.Forms.LinkLabel();
+            this.LinkPromocionesVendidas = new System.Windows.Forms.LinkLabel();
+            this.LinkComidasRubro = new System.Windows.Forms.LinkLabel();
+            this.LinkComidasTop = new System.Windows.Forms.LinkLabel();
+            this.LinkMozoTop = new System.Windows.Forms.LinkLabel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.DataGridConsultas = new System.Windows.Forms.DataGridView();
+            this.ButtonPrint = new System.Windows.Forms.Button();
+            this.DateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.DateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.TabPlatos = new System.Windows.Forms.TabPage();
             this.ButtonClearSearch = new System.Windows.Forms.Button();
             this.ButtonBuscarPlato = new System.Windows.Forms.Button();
@@ -88,9 +109,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.DataGridPlatos = new System.Windows.Forms.DataGridView();
             this.TabPromos = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ButtonClearSearchPromos = new System.Windows.Forms.Button();
+            this.ButtonBuscarPromo = new System.Windows.Forms.Button();
+            this.TextBuscarPromo = new System.Windows.Forms.TextBox();
             this.CheckListPromos = new System.Windows.Forms.CheckedListBox();
             this.GroupDataPromo = new System.Windows.Forms.GroupBox();
             this.TextIdPromo = new System.Windows.Forms.TextBox();
@@ -121,31 +142,19 @@
             this.DataGridMesas = new System.Windows.Forms.DataGridView();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.AcercaDeLink = new System.Windows.Forms.LinkLabel();
-            this.ButtonFinVenta = new System.Windows.Forms.Button();
-            this.ComboMozoVenta = new System.Windows.Forms.ComboBox();
-            this.ComboMesaVenta = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.ButtonNewVenta = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TextIdVenta = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.ButtonBuscarPlatoVenta = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.ButtonAddItemVenta = new System.Windows.Forms.Button();
-            this.TextTipoBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Tasbs.SuspendLayout();
-            this.TabResumen.SuspendLayout();
-            this.groupAcciones.SuspendLayout();
             this.TabMozos.SuspendLayout();
             this.GroupDatosMozos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).BeginInit();
             this.TabVentas_Pedidos.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.GroupVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridItemsActuales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridItemsVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridVentas)).BeginInit();
+            this.TabConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridConsultas)).BeginInit();
             this.TabPlatos.SuspendLayout();
             this.GroupDatosPlatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).BeginInit();
@@ -156,8 +165,6 @@
             this.groupBox1.SuspendLayout();
             this.GroupBoxMesas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -172,117 +179,17 @@
             // 
             // Tasbs
             // 
-            this.Tasbs.Controls.Add(this.TabResumen);
-            this.Tasbs.Controls.Add(this.TabMozos);
             this.Tasbs.Controls.Add(this.TabVentas_Pedidos);
             this.Tasbs.Controls.Add(this.TabConsultas);
+            this.Tasbs.Controls.Add(this.TabMozos);
             this.Tasbs.Controls.Add(this.TabPlatos);
             this.Tasbs.Controls.Add(this.TabPromos);
             this.Tasbs.Controls.Add(this.TabMesas);
             this.Tasbs.Location = new System.Drawing.Point(12, 12);
             this.Tasbs.Name = "Tasbs";
             this.Tasbs.SelectedIndex = 0;
-            this.Tasbs.Size = new System.Drawing.Size(591, 362);
+            this.Tasbs.Size = new System.Drawing.Size(636, 362);
             this.Tasbs.TabIndex = 1;
-            // 
-            // TabResumen
-            // 
-            this.TabResumen.Controls.Add(this.groupResumen);
-            this.TabResumen.Controls.Add(this.groupAcciones);
-            this.TabResumen.Controls.Add(this.groupMesas);
-            this.TabResumen.Controls.Add(this.groupPromociones);
-            this.TabResumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabResumen.Location = new System.Drawing.Point(4, 22);
-            this.TabResumen.Name = "TabResumen";
-            this.TabResumen.Padding = new System.Windows.Forms.Padding(3);
-            this.TabResumen.Size = new System.Drawing.Size(583, 336);
-            this.TabResumen.TabIndex = 1;
-            this.TabResumen.Text = "Resumen";
-            this.TabResumen.UseVisualStyleBackColor = true;
-            // 
-            // groupResumen
-            // 
-            this.groupResumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupResumen.Location = new System.Drawing.Point(290, 3);
-            this.groupResumen.Name = "groupResumen";
-            this.groupResumen.Size = new System.Drawing.Size(291, 133);
-            this.groupResumen.TabIndex = 3;
-            this.groupResumen.TabStop = false;
-            this.groupResumen.Text = "Resumen de ventas";
-            // 
-            // groupAcciones
-            // 
-            this.groupAcciones.Controls.Add(this.ButCerrarMesaRapida);
-            this.groupAcciones.Controls.Add(this.button1);
-            this.groupAcciones.Controls.Add(this.ButAbrirMesaRapida);
-            this.groupAcciones.Controls.Add(this.ButCargarPedidoRapido);
-            this.groupAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupAcciones.Location = new System.Drawing.Point(2, 3);
-            this.groupAcciones.Name = "groupAcciones";
-            this.groupAcciones.Size = new System.Drawing.Size(282, 134);
-            this.groupAcciones.TabIndex = 2;
-            this.groupAcciones.TabStop = false;
-            this.groupAcciones.Text = "Acciones rapidas";
-            // 
-            // ButCerrarMesaRapida
-            // 
-            this.ButCerrarMesaRapida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButCerrarMesaRapida.Location = new System.Drawing.Point(11, 91);
-            this.ButCerrarMesaRapida.Name = "ButCerrarMesaRapida";
-            this.ButCerrarMesaRapida.Size = new System.Drawing.Size(247, 27);
-            this.ButCerrarMesaRapida.TabIndex = 3;
-            this.ButCerrarMesaRapida.Text = "Cerrar Mesa";
-            this.ButCerrarMesaRapida.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(140, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 24);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "...disponible...";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // ButAbrirMesaRapida
-            // 
-            this.ButAbrirMesaRapida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButAbrirMesaRapida.Location = new System.Drawing.Point(10, 28);
-            this.ButAbrirMesaRapida.Name = "ButAbrirMesaRapida";
-            this.ButAbrirMesaRapida.Size = new System.Drawing.Size(249, 27);
-            this.ButAbrirMesaRapida.TabIndex = 1;
-            this.ButAbrirMesaRapida.Text = "Abrir Mesa";
-            this.ButAbrirMesaRapida.UseVisualStyleBackColor = true;
-            // 
-            // ButCargarPedidoRapido
-            // 
-            this.ButCargarPedidoRapido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButCargarPedidoRapido.Location = new System.Drawing.Point(11, 61);
-            this.ButCargarPedidoRapido.Name = "ButCargarPedidoRapido";
-            this.ButCargarPedidoRapido.Size = new System.Drawing.Size(123, 24);
-            this.ButCargarPedidoRapido.TabIndex = 0;
-            this.ButCargarPedidoRapido.Text = "Cargar Pedido";
-            this.ButCargarPedidoRapido.UseVisualStyleBackColor = true;
-            // 
-            // groupMesas
-            // 
-            this.groupMesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupMesas.Location = new System.Drawing.Point(291, 137);
-            this.groupMesas.Name = "groupMesas";
-            this.groupMesas.Size = new System.Drawing.Size(291, 164);
-            this.groupMesas.TabIndex = 1;
-            this.groupMesas.TabStop = false;
-            this.groupMesas.Text = "Mesas libres";
-            // 
-            // groupPromociones
-            // 
-            this.groupPromociones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPromociones.Location = new System.Drawing.Point(0, 137);
-            this.groupPromociones.Name = "groupPromociones";
-            this.groupPromociones.Size = new System.Drawing.Size(285, 164);
-            this.groupPromociones.TabIndex = 0;
-            this.groupPromociones.TabStop = false;
-            this.groupPromociones.Text = "Promociones del dia";
             // 
             // TabMozos
             // 
@@ -295,7 +202,7 @@
             this.TabMozos.Location = new System.Drawing.Point(4, 22);
             this.TabMozos.Name = "TabMozos";
             this.TabMozos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabMozos.Size = new System.Drawing.Size(583, 336);
+            this.TabMozos.Size = new System.Drawing.Size(628, 336);
             this.TabMozos.TabIndex = 2;
             this.TabMozos.Text = "Mozos";
             this.TabMozos.UseVisualStyleBackColor = true;
@@ -303,7 +210,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(475, 20);
+            this.button4.Location = new System.Drawing.Point(328, 22);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(19, 18);
             this.button4.TabIndex = 19;
@@ -312,7 +219,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(500, 16);
+            this.button5.Location = new System.Drawing.Point(353, 18);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(80, 26);
             this.button5.TabIndex = 18;
@@ -321,7 +228,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(329, 20);
+            this.textBox2.Location = new System.Drawing.Point(182, 22);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 20);
             this.textBox2.TabIndex = 17;
@@ -343,14 +250,14 @@
             this.GroupDatosMozos.Controls.Add(this.label1);
             this.GroupDatosMozos.Location = new System.Drawing.Point(6, 179);
             this.GroupDatosMozos.Name = "GroupDatosMozos";
-            this.GroupDatosMozos.Size = new System.Drawing.Size(567, 141);
+            this.GroupDatosMozos.Size = new System.Drawing.Size(616, 141);
             this.GroupDatosMozos.TabIndex = 4;
             this.GroupDatosMozos.TabStop = false;
             this.GroupDatosMozos.Text = "Datos del empleado";
             // 
             // TextIdMozo
             // 
-            this.TextIdMozo.Location = new System.Drawing.Point(378, 26);
+            this.TextIdMozo.Location = new System.Drawing.Point(403, 25);
             this.TextIdMozo.Name = "TextIdMozo";
             this.TextIdMozo.ReadOnly = true;
             this.TextIdMozo.Size = new System.Drawing.Size(35, 20);
@@ -360,7 +267,7 @@
             // LinkClearMozos
             // 
             this.LinkClearMozos.AutoSize = true;
-            this.LinkClearMozos.Location = new System.Drawing.Point(249, 111);
+            this.LinkClearMozos.Location = new System.Drawing.Point(274, 110);
             this.LinkClearMozos.Name = "LinkClearMozos";
             this.LinkClearMozos.Size = new System.Drawing.Size(104, 13);
             this.LinkClearMozos.TabIndex = 13;
@@ -371,7 +278,7 @@
             // ButtonDeleteMozo
             // 
             this.ButtonDeleteMozo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeleteMozo.Location = new System.Drawing.Point(444, 102);
+            this.ButtonDeleteMozo.Location = new System.Drawing.Point(469, 101);
             this.ButtonDeleteMozo.Name = "ButtonDeleteMozo";
             this.ButtonDeleteMozo.Size = new System.Drawing.Size(83, 31);
             this.ButtonDeleteMozo.TabIndex = 12;
@@ -381,7 +288,7 @@
             // 
             // ButtonNewMozo
             // 
-            this.ButtonNewMozo.Location = new System.Drawing.Point(444, 25);
+            this.ButtonNewMozo.Location = new System.Drawing.Point(469, 24);
             this.ButtonNewMozo.Name = "ButtonNewMozo";
             this.ButtonNewMozo.Size = new System.Drawing.Size(83, 31);
             this.ButtonNewMozo.TabIndex = 8;
@@ -391,28 +298,28 @@
             // 
             // TextDniMozo
             // 
-            this.TextDniMozo.Location = new System.Drawing.Point(141, 76);
+            this.TextDniMozo.Location = new System.Drawing.Point(166, 75);
             this.TextDniMozo.Name = "TextDniMozo";
             this.TextDniMozo.Size = new System.Drawing.Size(212, 20);
             this.TextDniMozo.TabIndex = 7;
             // 
             // TextDirMozo
             // 
-            this.TextDirMozo.Location = new System.Drawing.Point(141, 50);
+            this.TextDirMozo.Location = new System.Drawing.Point(166, 49);
             this.TextDirMozo.Name = "TextDirMozo";
             this.TextDirMozo.Size = new System.Drawing.Size(212, 20);
             this.TextDirMozo.TabIndex = 6;
             // 
             // TextNombreMozo
             // 
-            this.TextNombreMozo.Location = new System.Drawing.Point(141, 25);
+            this.TextNombreMozo.Location = new System.Drawing.Point(166, 24);
             this.TextNombreMozo.Name = "TextNombreMozo";
             this.TextNombreMozo.Size = new System.Drawing.Size(212, 20);
             this.TextNombreMozo.TabIndex = 5;
             // 
             // ButtonSaveMozos
             // 
-            this.ButtonSaveMozos.Location = new System.Drawing.Point(444, 62);
+            this.ButtonSaveMozos.Location = new System.Drawing.Point(469, 61);
             this.ButtonSaveMozos.Name = "ButtonSaveMozos";
             this.ButtonSaveMozos.Size = new System.Drawing.Size(83, 31);
             this.ButtonSaveMozos.TabIndex = 1;
@@ -423,7 +330,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 105);
+            this.label4.Location = new System.Drawing.Point(54, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 4;
@@ -433,7 +340,7 @@
             // 
             this.ComboMozoSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboMozoSector.FormattingEnabled = true;
-            this.ComboMozoSector.Location = new System.Drawing.Point(141, 102);
+            this.ComboMozoSector.Location = new System.Drawing.Point(166, 101);
             this.ComboMozoSector.Name = "ComboMozoSector";
             this.ComboMozoSector.Size = new System.Drawing.Size(56, 21);
             this.ComboMozoSector.TabIndex = 3;
@@ -441,7 +348,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 76);
+            this.label3.Location = new System.Drawing.Point(51, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 2;
@@ -450,7 +357,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 50);
+            this.label2.Location = new System.Drawing.Point(51, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -459,7 +366,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 25);
+            this.label1.Location = new System.Drawing.Point(51, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 0;
@@ -487,7 +394,7 @@
             this.DataGridMozos.Location = new System.Drawing.Point(6, 48);
             this.DataGridMozos.Name = "DataGridMozos";
             this.DataGridMozos.ReadOnly = true;
-            this.DataGridMozos.Size = new System.Drawing.Size(567, 125);
+            this.DataGridMozos.Size = new System.Drawing.Size(616, 125);
             this.DataGridMozos.TabIndex = 0;
             this.DataGridMozos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMozos_CellClick);
             // 
@@ -497,31 +404,210 @@
             this.TabVentas_Pedidos.Controls.Add(this.groupBox2);
             this.TabVentas_Pedidos.Controls.Add(this.GroupVentas);
             this.TabVentas_Pedidos.Controls.Add(this.label16);
-            this.TabVentas_Pedidos.Controls.Add(this.dataGridView1);
+            this.TabVentas_Pedidos.Controls.Add(this.DataGridVentas);
             this.TabVentas_Pedidos.Controls.Add(this.ButtonFinVenta);
             this.TabVentas_Pedidos.Location = new System.Drawing.Point(4, 22);
             this.TabVentas_Pedidos.Name = "TabVentas_Pedidos";
             this.TabVentas_Pedidos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabVentas_Pedidos.Size = new System.Drawing.Size(583, 336);
+            this.TabVentas_Pedidos.Size = new System.Drawing.Size(628, 336);
             this.TabVentas_Pedidos.TabIndex = 3;
             this.TabVentas_Pedidos.Text = "Ventas y Pedidos";
             this.TabVentas_Pedidos.UseVisualStyleBackColor = true;
+            this.TabVentas_Pedidos.Enter += new System.EventHandler(this.TabVentas_Pedidos_Enter);
+            // 
+            // TextIdVenta
+            // 
+            this.TextIdVenta.Location = new System.Drawing.Point(446, 23);
+            this.TextIdVenta.Name = "TextIdVenta";
+            this.TextIdVenta.ReadOnly = true;
+            this.TextIdVenta.Size = new System.Drawing.Size(26, 20);
+            this.TextIdVenta.TabIndex = 14;
+            this.TextIdVenta.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ButtonNewVenta);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.ComboMesaVenta);
+            this.groupBox2.Controls.Add(this.ComboMozoVenta);
+            this.groupBox2.Location = new System.Drawing.Point(447, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(175, 96);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nueva venta";
+            // 
+            // ButtonNewVenta
+            // 
+            this.ButtonNewVenta.Location = new System.Drawing.Point(91, 56);
+            this.ButtonNewVenta.Name = "ButtonNewVenta";
+            this.ButtonNewVenta.Size = new System.Drawing.Size(78, 34);
+            this.ButtonNewVenta.TabIndex = 5;
+            this.ButtonNewVenta.Text = "Iniciar Venta";
+            this.ButtonNewVenta.UseVisualStyleBackColor = true;
+            this.ButtonNewVenta.Click += new System.EventHandler(this.ButtonNewVenta_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Mozo:";
+            // 
+            // ComboMesaVenta
+            // 
+            this.ComboMesaVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMesaVenta.FormattingEnabled = true;
+            this.ComboMesaVenta.Location = new System.Drawing.Point(6, 64);
+            this.ComboMesaVenta.Name = "ComboMesaVenta";
+            this.ComboMesaVenta.Size = new System.Drawing.Size(79, 21);
+            this.ComboMesaVenta.TabIndex = 2;
+            // 
+            // ComboMozoVenta
+            // 
+            this.ComboMozoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMozoVenta.FormattingEnabled = true;
+            this.ComboMozoVenta.Location = new System.Drawing.Point(6, 32);
+            this.ComboMozoVenta.Name = "ComboMozoVenta";
+            this.ComboMozoVenta.Size = new System.Drawing.Size(163, 21);
+            this.ComboMozoVenta.TabIndex = 1;
+            this.ComboMozoVenta.SelectedIndexChanged += new System.EventHandler(this.ComboMozoVenta_SelectedIndexChanged);
             // 
             // GroupVentas
             // 
+            this.GroupVentas.Controls.Add(this.label22);
+            this.GroupVentas.Controls.Add(this.label21);
+            this.GroupVentas.Controls.Add(this.DataGridItemsActuales);
+            this.GroupVentas.Controls.Add(this.ButtonRemoveItem);
             this.GroupVentas.Controls.Add(this.TextTipoBusqueda);
             this.GroupVentas.Controls.Add(this.ButtonAddItemVenta);
-            this.GroupVentas.Controls.Add(this.button7);
-            this.GroupVentas.Controls.Add(this.button6);
+            this.GroupVentas.Controls.Add(this.ButtonBuscarPromosVenta);
+            this.GroupVentas.Controls.Add(this.ButtonClearItems);
             this.GroupVentas.Controls.Add(this.ButtonBuscarPlatoVenta);
-            this.GroupVentas.Controls.Add(this.textBox3);
-            this.GroupVentas.Controls.Add(this.dataGridView2);
+            this.GroupVentas.Controls.Add(this.TextSearchItems);
+            this.GroupVentas.Controls.Add(this.DataGridItemsVenta);
             this.GroupVentas.Location = new System.Drawing.Point(7, 153);
             this.GroupVentas.Name = "GroupVentas";
-            this.GroupVentas.Size = new System.Drawing.Size(563, 172);
+            this.GroupVentas.Size = new System.Drawing.Size(615, 172);
             this.GroupVentas.TabIndex = 9;
             this.GroupVentas.TabStop = false;
             this.GroupVentas.Text = "Agregar platos y promociones";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(425, 28);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(93, 13);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Items ya cargados";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(173, 22);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 13);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Buscar:";
+            // 
+            // DataGridItemsActuales
+            // 
+            this.DataGridItemsActuales.AllowUserToAddRows = false;
+            this.DataGridItemsActuales.AllowUserToDeleteRows = false;
+            this.DataGridItemsActuales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridItemsActuales.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.DataGridItemsActuales.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridItemsActuales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridItemsActuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridItemsActuales.Location = new System.Drawing.Point(335, 47);
+            this.DataGridItemsActuales.Name = "DataGridItemsActuales";
+            this.DataGridItemsActuales.ReadOnly = true;
+            this.DataGridItemsActuales.Size = new System.Drawing.Size(274, 119);
+            this.DataGridItemsActuales.TabIndex = 18;
+            // 
+            // ButtonRemoveItem
+            // 
+            this.ButtonRemoveItem.Location = new System.Drawing.Point(262, 106);
+            this.ButtonRemoveItem.Name = "ButtonRemoveItem";
+            this.ButtonRemoveItem.Size = new System.Drawing.Size(67, 37);
+            this.ButtonRemoveItem.TabIndex = 17;
+            this.ButtonRemoveItem.Text = "<< Quitar";
+            this.ButtonRemoveItem.UseVisualStyleBackColor = true;
+            this.ButtonRemoveItem.Click += new System.EventHandler(this.ButtonRemoveItem_Click);
+            // 
+            // TextTipoBusqueda
+            // 
+            this.TextTipoBusqueda.Location = new System.Drawing.Point(277, 146);
+            this.TextTipoBusqueda.Name = "TextTipoBusqueda";
+            this.TextTipoBusqueda.ReadOnly = true;
+            this.TextTipoBusqueda.Size = new System.Drawing.Size(26, 20);
+            this.TextTipoBusqueda.TabIndex = 16;
+            this.TextTipoBusqueda.Visible = false;
+            // 
+            // ButtonAddItemVenta
+            // 
+            this.ButtonAddItemVenta.Location = new System.Drawing.Point(262, 63);
+            this.ButtonAddItemVenta.Name = "ButtonAddItemVenta";
+            this.ButtonAddItemVenta.Size = new System.Drawing.Size(67, 37);
+            this.ButtonAddItemVenta.TabIndex = 15;
+            this.ButtonAddItemVenta.Text = "Agregar >>";
+            this.ButtonAddItemVenta.UseVisualStyleBackColor = true;
+            this.ButtonAddItemVenta.Click += new System.EventHandler(this.ButtonAddItemVenta_Click);
+            // 
+            // ButtonBuscarPromosVenta
+            // 
+            this.ButtonBuscarPromosVenta.Location = new System.Drawing.Point(277, 15);
+            this.ButtonBuscarPromosVenta.Name = "ButtonBuscarPromosVenta";
+            this.ButtonBuscarPromosVenta.Size = new System.Drawing.Size(52, 26);
+            this.ButtonBuscarPromosVenta.TabIndex = 14;
+            this.ButtonBuscarPromosVenta.Text = "Promos";
+            this.ButtonBuscarPromosVenta.UseVisualStyleBackColor = true;
+            this.ButtonBuscarPromosVenta.Click += new System.EventHandler(this.ButtonBuscarPromosVenta_Click);
+            // 
+            // ButtonClearItems
+            // 
+            this.ButtonClearItems.Location = new System.Drawing.Point(153, 19);
+            this.ButtonClearItems.Name = "ButtonClearItems";
+            this.ButtonClearItems.Size = new System.Drawing.Size(19, 20);
+            this.ButtonClearItems.TabIndex = 13;
+            this.ButtonClearItems.Text = "X";
+            this.ButtonClearItems.UseVisualStyleBackColor = true;
+            this.ButtonClearItems.Click += new System.EventHandler(this.ButtonClearItems_Click);
+            // 
+            // ButtonBuscarPlatoVenta
+            // 
+            this.ButtonBuscarPlatoVenta.Location = new System.Drawing.Point(222, 15);
+            this.ButtonBuscarPlatoVenta.Name = "ButtonBuscarPlatoVenta";
+            this.ButtonBuscarPlatoVenta.Size = new System.Drawing.Size(49, 26);
+            this.ButtonBuscarPlatoVenta.TabIndex = 12;
+            this.ButtonBuscarPlatoVenta.Text = "Platos";
+            this.ButtonBuscarPlatoVenta.UseVisualStyleBackColor = true;
+            this.ButtonBuscarPlatoVenta.Click += new System.EventHandler(this.ButtonBuscarPlatoVenta_Click);
+            // 
+            // TextSearchItems
+            // 
+            this.TextSearchItems.Location = new System.Drawing.Point(6, 19);
+            this.TextSearchItems.Name = "TextSearchItems";
+            this.TextSearchItems.Size = new System.Drawing.Size(141, 20);
+            this.TextSearchItems.TabIndex = 11;
+            // 
+            // DataGridItemsVenta
+            // 
+            this.DataGridItemsVenta.AllowUserToAddRows = false;
+            this.DataGridItemsVenta.AllowUserToDeleteRows = false;
+            this.DataGridItemsVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridItemsVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.DataGridItemsVenta.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridItemsVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridItemsVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridItemsVenta.Location = new System.Drawing.Point(6, 47);
+            this.DataGridItemsVenta.Name = "DataGridItemsVenta";
+            this.DataGridItemsVenta.ReadOnly = true;
+            this.DataGridItemsVenta.Size = new System.Drawing.Size(250, 119);
+            this.DataGridItemsVenta.TabIndex = 8;
             // 
             // label16
             // 
@@ -533,30 +619,171 @@
             this.label16.TabIndex = 8;
             this.label16.Text = "Ventas en proceso:";
             // 
-            // dataGridView1
+            // DataGridVentas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(382, 130);
-            this.dataGridView1.TabIndex = 7;
+            this.DataGridVentas.AllowUserToAddRows = false;
+            this.DataGridVentas.AllowUserToDeleteRows = false;
+            this.DataGridVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.DataGridVentas.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridVentas.Location = new System.Drawing.Point(6, 23);
+            this.DataGridVentas.Name = "DataGridVentas";
+            this.DataGridVentas.ReadOnly = true;
+            this.DataGridVentas.Size = new System.Drawing.Size(417, 130);
+            this.DataGridVentas.TabIndex = 7;
+            this.DataGridVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridVentas_CellClick);
+            // 
+            // ButtonFinVenta
+            // 
+            this.ButtonFinVenta.Location = new System.Drawing.Point(478, 14);
+            this.ButtonFinVenta.Name = "ButtonFinVenta";
+            this.ButtonFinVenta.Size = new System.Drawing.Size(114, 36);
+            this.ButtonFinVenta.TabIndex = 0;
+            this.ButtonFinVenta.Text = "Finalizar venta";
+            this.ButtonFinVenta.UseVisualStyleBackColor = true;
+            this.ButtonFinVenta.Click += new System.EventHandler(this.ButtonFinVenta_Click);
             // 
             // TabConsultas
             // 
+            this.TabConsultas.Controls.Add(this.TextDetallePrint);
+            this.TabConsultas.Controls.Add(this.LinkMozosVentas);
+            this.TabConsultas.Controls.Add(this.LinkPromocionesVendidas);
+            this.TabConsultas.Controls.Add(this.LinkComidasRubro);
+            this.TabConsultas.Controls.Add(this.LinkComidasTop);
+            this.TabConsultas.Controls.Add(this.LinkMozoTop);
+            this.TabConsultas.Controls.Add(this.label24);
+            this.TabConsultas.Controls.Add(this.label23);
+            this.TabConsultas.Controls.Add(this.DataGridConsultas);
+            this.TabConsultas.Controls.Add(this.ButtonPrint);
+            this.TabConsultas.Controls.Add(this.DateTimePickerTo);
+            this.TabConsultas.Controls.Add(this.DateTimePickerFrom);
             this.TabConsultas.Location = new System.Drawing.Point(4, 22);
             this.TabConsultas.Name = "TabConsultas";
             this.TabConsultas.Padding = new System.Windows.Forms.Padding(3);
-            this.TabConsultas.Size = new System.Drawing.Size(583, 336);
+            this.TabConsultas.Size = new System.Drawing.Size(628, 336);
             this.TabConsultas.TabIndex = 5;
             this.TabConsultas.Text = "Consultas";
             this.TabConsultas.UseVisualStyleBackColor = true;
+            // 
+            // TextDetallePrint
+            // 
+            this.TextDetallePrint.Location = new System.Drawing.Point(506, 239);
+            this.TextDetallePrint.Name = "TextDetallePrint";
+            this.TextDetallePrint.ReadOnly = true;
+            this.TextDetallePrint.Size = new System.Drawing.Size(35, 20);
+            this.TextDetallePrint.TabIndex = 15;
+            this.TextDetallePrint.Visible = false;
+            // 
+            // LinkMozosVentas
+            // 
+            this.LinkMozosVentas.AutoSize = true;
+            this.LinkMozosVentas.Location = new System.Drawing.Point(209, 275);
+            this.LinkMozosVentas.Name = "LinkMozosVentas";
+            this.LinkMozosVentas.Size = new System.Drawing.Size(234, 13);
+            this.LinkMozosVentas.TabIndex = 10;
+            this.LinkMozosVentas.TabStop = true;
+            this.LinkMozosVentas.Text = "5- Cantidad de ventas realizadas por cada mozo";
+            // 
+            // LinkPromocionesVendidas
+            // 
+            this.LinkPromocionesVendidas.AutoSize = true;
+            this.LinkPromocionesVendidas.Location = new System.Drawing.Point(206, 246);
+            this.LinkPromocionesVendidas.Name = "LinkPromocionesVendidas";
+            this.LinkPromocionesVendidas.Size = new System.Drawing.Size(126, 13);
+            this.LinkPromocionesVendidas.TabIndex = 9;
+            this.LinkPromocionesVendidas.TabStop = true;
+            this.LinkPromocionesVendidas.Text = "4- Promociones vendidas";
+            // 
+            // LinkComidasRubro
+            // 
+            this.LinkComidasRubro.AutoSize = true;
+            this.LinkComidasRubro.Location = new System.Drawing.Point(24, 303);
+            this.LinkComidasRubro.Name = "LinkComidasRubro";
+            this.LinkComidasRubro.Size = new System.Drawing.Size(150, 13);
+            this.LinkComidasRubro.TabIndex = 8;
+            this.LinkComidasRubro.TabStop = true;
+            this.LinkComidasRubro.Text = "3- Comidas vendidas por rubro";
+            // 
+            // LinkComidasTop
+            // 
+            this.LinkComidasTop.AutoSize = true;
+            this.LinkComidasTop.Location = new System.Drawing.Point(24, 275);
+            this.LinkComidasTop.Name = "LinkComidasTop";
+            this.LinkComidasTop.Size = new System.Drawing.Size(127, 13);
+            this.LinkComidasTop.TabIndex = 7;
+            this.LinkComidasTop.TabStop = true;
+            this.LinkComidasTop.Text = "2- Comidas mas vendidas";
+            this.LinkComidasTop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkComidasTop_LinkClicked);
+            // 
+            // LinkMozoTop
+            // 
+            this.LinkMozoTop.AutoSize = true;
+            this.LinkMozoTop.Location = new System.Drawing.Point(24, 246);
+            this.LinkMozoTop.Name = "LinkMozoTop";
+            this.LinkMozoTop.Size = new System.Drawing.Size(156, 13);
+            this.LinkMozoTop.TabIndex = 6;
+            this.LinkMozoTop.TabStop = true;
+            this.LinkMozoTop.Text = "1- Mozo que mas ventas realizó";
+            this.LinkMozoTop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkMozoTop_LinkClicked);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(349, 181);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(35, 13);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Hasta";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(18, 180);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(38, 13);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Desde";
+            // 
+            // DataGridConsultas
+            // 
+            this.DataGridConsultas.AllowUserToAddRows = false;
+            this.DataGridConsultas.AllowUserToDeleteRows = false;
+            this.DataGridConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DataGridConsultas.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DataGridConsultas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.DataGridConsultas.Location = new System.Drawing.Point(6, 6);
+            this.DataGridConsultas.Name = "DataGridConsultas";
+            this.DataGridConsultas.ReadOnly = true;
+            this.DataGridConsultas.Size = new System.Drawing.Size(616, 125);
+            this.DataGridConsultas.TabIndex = 3;
+            // 
+            // ButtonPrint
+            // 
+            this.ButtonPrint.Location = new System.Drawing.Point(258, 137);
+            this.ButtonPrint.Name = "ButtonPrint";
+            this.ButtonPrint.Size = new System.Drawing.Size(109, 23);
+            this.ButtonPrint.TabIndex = 2;
+            this.ButtonPrint.Text = "Imprimir Resultados";
+            this.ButtonPrint.UseVisualStyleBackColor = true;
+            this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
+            // 
+            // DateTimePickerTo
+            // 
+            this.DateTimePickerTo.Location = new System.Drawing.Point(387, 180);
+            this.DateTimePickerTo.Name = "DateTimePickerTo";
+            this.DateTimePickerTo.Size = new System.Drawing.Size(200, 20);
+            this.DateTimePickerTo.TabIndex = 1;
+            // 
+            // DateTimePickerFrom
+            // 
+            this.DateTimePickerFrom.Location = new System.Drawing.Point(62, 180);
+            this.DateTimePickerFrom.Name = "DateTimePickerFrom";
+            this.DateTimePickerFrom.Size = new System.Drawing.Size(200, 20);
+            this.DateTimePickerFrom.TabIndex = 0;
             // 
             // TabPlatos
             // 
@@ -569,7 +796,7 @@
             this.TabPlatos.Location = new System.Drawing.Point(4, 22);
             this.TabPlatos.Name = "TabPlatos";
             this.TabPlatos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPlatos.Size = new System.Drawing.Size(583, 336);
+            this.TabPlatos.Size = new System.Drawing.Size(628, 336);
             this.TabPlatos.TabIndex = 6;
             this.TabPlatos.Text = "Platos";
             this.TabPlatos.UseVisualStyleBackColor = true;
@@ -577,7 +804,7 @@
             // 
             // ButtonClearSearch
             // 
-            this.ButtonClearSearch.Location = new System.Drawing.Point(472, 16);
+            this.ButtonClearSearch.Location = new System.Drawing.Point(335, 18);
             this.ButtonClearSearch.Name = "ButtonClearSearch";
             this.ButtonClearSearch.Size = new System.Drawing.Size(19, 18);
             this.ButtonClearSearch.TabIndex = 10;
@@ -587,7 +814,7 @@
             // 
             // ButtonBuscarPlato
             // 
-            this.ButtonBuscarPlato.Location = new System.Drawing.Point(497, 12);
+            this.ButtonBuscarPlato.Location = new System.Drawing.Point(360, 14);
             this.ButtonBuscarPlato.Name = "ButtonBuscarPlato";
             this.ButtonBuscarPlato.Size = new System.Drawing.Size(80, 26);
             this.ButtonBuscarPlato.TabIndex = 9;
@@ -597,7 +824,7 @@
             // 
             // TextBuscarPlato
             // 
-            this.TextBuscarPlato.Location = new System.Drawing.Point(326, 16);
+            this.TextBuscarPlato.Location = new System.Drawing.Point(189, 18);
             this.TextBuscarPlato.Name = "TextBuscarPlato";
             this.TextBuscarPlato.Size = new System.Drawing.Size(141, 20);
             this.TextBuscarPlato.TabIndex = 8;
@@ -621,14 +848,14 @@
             this.GroupDatosPlatos.Controls.Add(this.label8);
             this.GroupDatosPlatos.Location = new System.Drawing.Point(6, 174);
             this.GroupDatosPlatos.Name = "GroupDatosPlatos";
-            this.GroupDatosPlatos.Size = new System.Drawing.Size(565, 151);
+            this.GroupDatosPlatos.Size = new System.Drawing.Size(616, 151);
             this.GroupDatosPlatos.TabIndex = 7;
             this.GroupDatosPlatos.TabStop = false;
             this.GroupDatosPlatos.Text = "Datos del plato";
             // 
             // TextIdPlatos
             // 
-            this.TextIdPlatos.Location = new System.Drawing.Point(404, 89);
+            this.TextIdPlatos.Location = new System.Drawing.Point(423, 89);
             this.TextIdPlatos.Name = "TextIdPlatos";
             this.TextIdPlatos.ReadOnly = true;
             this.TextIdPlatos.Size = new System.Drawing.Size(43, 20);
@@ -638,7 +865,7 @@
             // LinkClearPlatos
             // 
             this.LinkClearPlatos.AutoSize = true;
-            this.LinkClearPlatos.Location = new System.Drawing.Point(299, 122);
+            this.LinkClearPlatos.Location = new System.Drawing.Point(318, 122);
             this.LinkClearPlatos.Name = "LinkClearPlatos";
             this.LinkClearPlatos.Size = new System.Drawing.Size(104, 13);
             this.LinkClearPlatos.TabIndex = 12;
@@ -649,7 +876,7 @@
             // ButtonDeletePlato
             // 
             this.ButtonDeletePlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeletePlato.Location = new System.Drawing.Point(466, 99);
+            this.ButtonDeletePlato.Location = new System.Drawing.Point(485, 99);
             this.ButtonDeletePlato.Name = "ButtonDeletePlato";
             this.ButtonDeletePlato.Size = new System.Drawing.Size(83, 30);
             this.ButtonDeletePlato.TabIndex = 11;
@@ -660,7 +887,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(292, 89);
+            this.label11.Location = new System.Drawing.Point(311, 89);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 10;
@@ -669,7 +896,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(110, 89);
+            this.label10.Location = new System.Drawing.Point(129, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 9;
@@ -677,7 +904,7 @@
             // 
             // ButtonNewPlato
             // 
-            this.ButtonNewPlato.Location = new System.Drawing.Point(466, 25);
+            this.ButtonNewPlato.Location = new System.Drawing.Point(485, 25);
             this.ButtonNewPlato.Name = "ButtonNewPlato";
             this.ButtonNewPlato.Size = new System.Drawing.Size(82, 31);
             this.ButtonNewPlato.TabIndex = 8;
@@ -687,21 +914,21 @@
             // 
             // TextPricePlatoV
             // 
-            this.TextPricePlatoV.Location = new System.Drawing.Point(311, 89);
+            this.TextPricePlatoV.Location = new System.Drawing.Point(330, 89);
             this.TextPricePlatoV.Name = "TextPricePlatoV";
             this.TextPricePlatoV.Size = new System.Drawing.Size(52, 20);
             this.TextPricePlatoV.TabIndex = 7;
             // 
             // TextPricePlatoC
             // 
-            this.TextPricePlatoC.Location = new System.Drawing.Point(129, 89);
+            this.TextPricePlatoC.Location = new System.Drawing.Point(148, 89);
             this.TextPricePlatoC.Name = "TextPricePlatoC";
             this.TextPricePlatoC.Size = new System.Drawing.Size(52, 20);
             this.TextPricePlatoC.TabIndex = 6;
             // 
             // TextDescPlatos
             // 
-            this.TextDescPlatos.Location = new System.Drawing.Point(28, 31);
+            this.TextDescPlatos.Location = new System.Drawing.Point(47, 31);
             this.TextDescPlatos.Multiline = true;
             this.TextDescPlatos.Name = "TextDescPlatos";
             this.TextDescPlatos.Size = new System.Drawing.Size(401, 42);
@@ -709,7 +936,7 @@
             // 
             // ButtonSavePlato
             // 
-            this.ButtonSavePlato.Location = new System.Drawing.Point(466, 62);
+            this.ButtonSavePlato.Location = new System.Drawing.Point(485, 62);
             this.ButtonSavePlato.Name = "ButtonSavePlato";
             this.ButtonSavePlato.Size = new System.Drawing.Size(82, 31);
             this.ButtonSavePlato.TabIndex = 1;
@@ -720,7 +947,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 121);
+            this.label5.Location = new System.Drawing.Point(46, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 4;
@@ -730,7 +957,7 @@
             // 
             this.ComboBoxPlatos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxPlatos.FormattingEnabled = true;
-            this.ComboBoxPlatos.Location = new System.Drawing.Point(113, 118);
+            this.ComboBoxPlatos.Location = new System.Drawing.Point(132, 118);
             this.ComboBoxPlatos.Name = "ComboBoxPlatos";
             this.ComboBoxPlatos.Size = new System.Drawing.Size(125, 21);
             this.ComboBoxPlatos.TabIndex = 3;
@@ -738,7 +965,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(197, 89);
+            this.label6.Location = new System.Drawing.Point(216, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 2;
@@ -747,7 +974,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 89);
+            this.label7.Location = new System.Drawing.Point(46, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 1;
@@ -756,7 +983,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 17);
+            this.label8.Location = new System.Drawing.Point(44, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 0;
@@ -784,15 +1011,15 @@
             this.DataGridPlatos.Location = new System.Drawing.Point(6, 44);
             this.DataGridPlatos.Name = "DataGridPlatos";
             this.DataGridPlatos.ReadOnly = true;
-            this.DataGridPlatos.Size = new System.Drawing.Size(565, 124);
+            this.DataGridPlatos.Size = new System.Drawing.Size(616, 124);
             this.DataGridPlatos.TabIndex = 5;
             this.DataGridPlatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPlatos_CellClick);
             // 
             // TabPromos
             // 
-            this.TabPromos.Controls.Add(this.button2);
-            this.TabPromos.Controls.Add(this.button3);
-            this.TabPromos.Controls.Add(this.textBox1);
+            this.TabPromos.Controls.Add(this.ButtonClearSearchPromos);
+            this.TabPromos.Controls.Add(this.ButtonBuscarPromo);
+            this.TabPromos.Controls.Add(this.TextBuscarPromo);
             this.TabPromos.Controls.Add(this.CheckListPromos);
             this.TabPromos.Controls.Add(this.GroupDataPromo);
             this.TabPromos.Controls.Add(this.label18);
@@ -801,44 +1028,46 @@
             this.TabPromos.Location = new System.Drawing.Point(4, 22);
             this.TabPromos.Name = "TabPromos";
             this.TabPromos.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPromos.Size = new System.Drawing.Size(583, 336);
+            this.TabPromos.Size = new System.Drawing.Size(628, 336);
             this.TabPromos.TabIndex = 7;
             this.TabPromos.Text = "Promociones";
             this.TabPromos.UseVisualStyleBackColor = true;
             this.TabPromos.Enter += new System.EventHandler(this.TabPromos_Enter);
             // 
-            // button2
+            // ButtonClearSearchPromos
             // 
-            this.button2.Location = new System.Drawing.Point(149, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 18);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ButtonClearSearchPromos.Location = new System.Drawing.Point(149, 8);
+            this.ButtonClearSearchPromos.Name = "ButtonClearSearchPromos";
+            this.ButtonClearSearchPromos.Size = new System.Drawing.Size(19, 18);
+            this.ButtonClearSearchPromos.TabIndex = 16;
+            this.ButtonClearSearchPromos.Text = "X";
+            this.ButtonClearSearchPromos.UseVisualStyleBackColor = true;
+            this.ButtonClearSearchPromos.Click += new System.EventHandler(this.ButtonClearSearchPromos_Click);
             // 
-            // button3
+            // ButtonBuscarPromo
             // 
-            this.button3.Location = new System.Drawing.Point(174, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 26);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ButtonBuscarPromo.Location = new System.Drawing.Point(174, 4);
+            this.ButtonBuscarPromo.Name = "ButtonBuscarPromo";
+            this.ButtonBuscarPromo.Size = new System.Drawing.Size(80, 26);
+            this.ButtonBuscarPromo.TabIndex = 15;
+            this.ButtonBuscarPromo.Text = "Buscar";
+            this.ButtonBuscarPromo.UseVisualStyleBackColor = true;
+            this.ButtonBuscarPromo.Click += new System.EventHandler(this.ButtonBuscarPromo_Click);
             // 
-            // textBox1
+            // TextBuscarPromo
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 14;
+            this.TextBuscarPromo.Location = new System.Drawing.Point(3, 8);
+            this.TextBuscarPromo.Name = "TextBuscarPromo";
+            this.TextBuscarPromo.Size = new System.Drawing.Size(141, 20);
+            this.TextBuscarPromo.TabIndex = 14;
             // 
             // CheckListPromos
             // 
             this.CheckListPromos.CheckOnClick = true;
             this.CheckListPromos.FormattingEnabled = true;
-            this.CheckListPromos.Location = new System.Drawing.Point(368, 53);
+            this.CheckListPromos.Location = new System.Drawing.Point(400, 38);
             this.CheckListPromos.Name = "CheckListPromos";
-            this.CheckListPromos.Size = new System.Drawing.Size(203, 274);
+            this.CheckListPromos.Size = new System.Drawing.Size(222, 289);
             this.CheckListPromos.TabIndex = 13;
             // 
             // GroupDataPromo
@@ -855,14 +1084,14 @@
             this.GroupDataPromo.Controls.Add(this.label17);
             this.GroupDataPromo.Location = new System.Drawing.Point(6, 170);
             this.GroupDataPromo.Name = "GroupDataPromo";
-            this.GroupDataPromo.Size = new System.Drawing.Size(356, 157);
+            this.GroupDataPromo.Size = new System.Drawing.Size(376, 157);
             this.GroupDataPromo.TabIndex = 10;
             this.GroupDataPromo.TabStop = false;
             this.GroupDataPromo.Text = "Datos de la promo";
             // 
             // TextIdPromo
             // 
-            this.TextIdPromo.Location = new System.Drawing.Point(290, 83);
+            this.TextIdPromo.Location = new System.Drawing.Point(300, 83);
             this.TextIdPromo.Name = "TextIdPromo";
             this.TextIdPromo.ReadOnly = true;
             this.TextIdPromo.Size = new System.Drawing.Size(52, 20);
@@ -872,7 +1101,7 @@
             // LinkClearPromo
             // 
             this.LinkClearPromo.AutoSize = true;
-            this.LinkClearPromo.Location = new System.Drawing.Point(180, 83);
+            this.LinkClearPromo.Location = new System.Drawing.Point(190, 83);
             this.LinkClearPromo.Name = "LinkClearPromo";
             this.LinkClearPromo.Size = new System.Drawing.Size(104, 13);
             this.LinkClearPromo.TabIndex = 12;
@@ -883,7 +1112,7 @@
             // ButtonDeletePromo
             // 
             this.ButtonDeletePromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonDeletePromo.Location = new System.Drawing.Point(243, 115);
+            this.ButtonDeletePromo.Location = new System.Drawing.Point(253, 115);
             this.ButtonDeletePromo.Name = "ButtonDeletePromo";
             this.ButtonDeletePromo.Size = new System.Drawing.Size(78, 30);
             this.ButtonDeletePromo.TabIndex = 11;
@@ -894,7 +1123,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(67, 76);
+            this.label13.Location = new System.Drawing.Point(77, 76);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(13, 13);
             this.label13.TabIndex = 9;
@@ -902,7 +1131,7 @@
             // 
             // ButtonNewPromo
             // 
-            this.ButtonNewPromo.Location = new System.Drawing.Point(28, 115);
+            this.ButtonNewPromo.Location = new System.Drawing.Point(38, 115);
             this.ButtonNewPromo.Name = "ButtonNewPromo";
             this.ButtonNewPromo.Size = new System.Drawing.Size(78, 31);
             this.ButtonNewPromo.TabIndex = 8;
@@ -912,14 +1141,14 @@
             // 
             // TextPricePromo
             // 
-            this.TextPricePromo.Location = new System.Drawing.Point(86, 76);
+            this.TextPricePromo.Location = new System.Drawing.Point(96, 76);
             this.TextPricePromo.Name = "TextPricePromo";
             this.TextPricePromo.Size = new System.Drawing.Size(52, 20);
             this.TextPricePromo.TabIndex = 6;
             // 
             // TextDescPromo
             // 
-            this.TextDescPromo.Location = new System.Drawing.Point(6, 34);
+            this.TextDescPromo.Location = new System.Drawing.Point(16, 34);
             this.TextDescPromo.Multiline = true;
             this.TextDescPromo.Name = "TextDescPromo";
             this.TextDescPromo.Size = new System.Drawing.Size(344, 39);
@@ -927,7 +1156,7 @@
             // 
             // ButtonSavePromo
             // 
-            this.ButtonSavePromo.Location = new System.Drawing.Point(133, 115);
+            this.ButtonSavePromo.Location = new System.Drawing.Point(143, 115);
             this.ButtonSavePromo.Name = "ButtonSavePromo";
             this.ButtonSavePromo.Size = new System.Drawing.Size(78, 31);
             this.ButtonSavePromo.TabIndex = 1;
@@ -938,7 +1167,7 @@
             // LabelPrecioPromo
             // 
             this.LabelPrecioPromo.AutoSize = true;
-            this.LabelPrecioPromo.Location = new System.Drawing.Point(10, 76);
+            this.LabelPrecioPromo.Location = new System.Drawing.Point(20, 76);
             this.LabelPrecioPromo.Name = "LabelPrecioPromo";
             this.LabelPrecioPromo.Size = new System.Drawing.Size(37, 13);
             this.LabelPrecioPromo.TabIndex = 1;
@@ -947,7 +1176,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 18);
+            this.label17.Location = new System.Drawing.Point(16, 18);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(63, 13);
             this.label17.TabIndex = 0;
@@ -975,14 +1204,14 @@
             this.DataGridPromos.Location = new System.Drawing.Point(6, 49);
             this.DataGridPromos.Name = "DataGridPromos";
             this.DataGridPromos.ReadOnly = true;
-            this.DataGridPromos.Size = new System.Drawing.Size(356, 115);
+            this.DataGridPromos.Size = new System.Drawing.Size(376, 115);
             this.DataGridPromos.TabIndex = 8;
             this.DataGridPromos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPromos_CellClick);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(368, 37);
+            this.label14.Location = new System.Drawing.Point(416, 11);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(139, 13);
             this.label14.TabIndex = 4;
@@ -998,7 +1227,7 @@
             this.TabMesas.Location = new System.Drawing.Point(4, 22);
             this.TabMesas.Name = "TabMesas";
             this.TabMesas.Padding = new System.Windows.Forms.Padding(3);
-            this.TabMesas.Size = new System.Drawing.Size(583, 336);
+            this.TabMesas.Size = new System.Drawing.Size(628, 336);
             this.TabMesas.TabIndex = 8;
             this.TabMesas.Text = "Mesas";
             this.TabMesas.UseVisualStyleBackColor = true;
@@ -1007,7 +1236,7 @@
             // LinkClearMesas
             // 
             this.LinkClearMesas.AutoSize = true;
-            this.LinkClearMesas.Location = new System.Drawing.Point(362, 151);
+            this.LinkClearMesas.Location = new System.Drawing.Point(394, 156);
             this.LinkClearMesas.Name = "LinkClearMesas";
             this.LinkClearMesas.Size = new System.Drawing.Size(104, 13);
             this.LinkClearMesas.TabIndex = 17;
@@ -1021,7 +1250,7 @@
             this.groupBox1.Controls.Add(this.TextIdMesas);
             this.groupBox1.Controls.Add(this.TextNroMesa);
             this.groupBox1.Controls.Add(this.ButtonDeleteMesa);
-            this.groupBox1.Location = new System.Drawing.Point(308, 23);
+            this.groupBox1.Location = new System.Drawing.Point(340, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 104);
             this.groupBox1.TabIndex = 8;
@@ -1071,7 +1300,7 @@
             this.GroupBoxMesas.Controls.Add(this.ButtonNewMesa);
             this.GroupBoxMesas.Controls.Add(this.label12);
             this.GroupBoxMesas.Controls.Add(this.ComboSectoresMesas);
-            this.GroupBoxMesas.Location = new System.Drawing.Point(308, 194);
+            this.GroupBoxMesas.Location = new System.Drawing.Point(340, 194);
             this.GroupBoxMesas.Name = "GroupBoxMesas";
             this.GroupBoxMesas.Size = new System.Drawing.Size(225, 119);
             this.GroupBoxMesas.TabIndex = 7;
@@ -1110,7 +1339,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(5, 5);
+            this.label20.Location = new System.Drawing.Point(37, 5);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 15);
             this.label20.TabIndex = 6;
@@ -1125,7 +1354,7 @@
             this.DataGridMesas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridMesas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.DataGridMesas.Location = new System.Drawing.Point(8, 23);
+            this.DataGridMesas.Location = new System.Drawing.Point(40, 23);
             this.DataGridMesas.Name = "DataGridMesas";
             this.DataGridMesas.ReadOnly = true;
             this.DataGridMesas.Size = new System.Drawing.Size(199, 290);
@@ -1157,156 +1386,12 @@
             this.AcercaDeLink.TabStop = true;
             this.AcercaDeLink.Text = "Acerca de...";
             // 
-            // ButtonFinVenta
-            // 
-            this.ButtonFinVenta.Location = new System.Drawing.Point(426, 15);
-            this.ButtonFinVenta.Name = "ButtonFinVenta";
-            this.ButtonFinVenta.Size = new System.Drawing.Size(114, 36);
-            this.ButtonFinVenta.TabIndex = 0;
-            this.ButtonFinVenta.Text = "Finalizar venta";
-            this.ButtonFinVenta.UseVisualStyleBackColor = true;
-            // 
-            // ComboMozoVenta
-            // 
-            this.ComboMozoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboMozoVenta.FormattingEnabled = true;
-            this.ComboMozoVenta.Location = new System.Drawing.Point(3, 32);
-            this.ComboMozoVenta.Name = "ComboMozoVenta";
-            this.ComboMozoVenta.Size = new System.Drawing.Size(169, 21);
-            this.ComboMozoVenta.TabIndex = 1;
-            // 
-            // ComboMesaVenta
-            // 
-            this.ComboMesaVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboMesaVenta.FormattingEnabled = true;
-            this.ComboMesaVenta.Location = new System.Drawing.Point(32, 56);
-            this.ComboMesaVenta.Name = "ComboMesaVenta";
-            this.ComboMesaVenta.Size = new System.Drawing.Size(51, 21);
-            this.ComboMesaVenta.TabIndex = 2;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(0, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 13);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Mozo:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(0, 59);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(33, 13);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Mesa";
-            // 
-            // ButtonNewVenta
-            // 
-            this.ButtonNewVenta.Location = new System.Drawing.Point(89, 56);
-            this.ButtonNewVenta.Name = "ButtonNewVenta";
-            this.ButtonNewVenta.Size = new System.Drawing.Size(80, 34);
-            this.ButtonNewVenta.TabIndex = 5;
-            this.ButtonNewVenta.Text = "Iniciar Venta";
-            this.ButtonNewVenta.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.ButtonNewVenta);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.ComboMesaVenta);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.ComboMozoVenta);
-            this.groupBox2.Location = new System.Drawing.Point(394, 57);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(175, 96);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nueva venta";
-            // 
-            // TextIdVenta
-            // 
-            this.TextIdVenta.Location = new System.Drawing.Point(546, 31);
-            this.TextIdVenta.Name = "TextIdVenta";
-            this.TextIdVenta.ReadOnly = true;
-            this.TextIdVenta.Size = new System.Drawing.Size(26, 20);
-            this.TextIdVenta.TabIndex = 14;
-            this.TextIdVenta.Visible = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 47);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(417, 119);
-            this.dataGridView2.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(161, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(19, 18);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "X";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // ButtonBuscarPlatoVenta
-            // 
-            this.ButtonBuscarPlatoVenta.Location = new System.Drawing.Point(186, 15);
-            this.ButtonBuscarPlatoVenta.Name = "ButtonBuscarPlatoVenta";
-            this.ButtonBuscarPlatoVenta.Size = new System.Drawing.Size(80, 26);
-            this.ButtonBuscarPlatoVenta.TabIndex = 12;
-            this.ButtonBuscarPlatoVenta.Text = "Buscar platos";
-            this.ButtonBuscarPlatoVenta.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(15, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(272, 15);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 26);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Buscar promociones";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // ButtonAddItemVenta
-            // 
-            this.ButtonAddItemVenta.Location = new System.Drawing.Point(429, 78);
-            this.ButtonAddItemVenta.Name = "ButtonAddItemVenta";
-            this.ButtonAddItemVenta.Size = new System.Drawing.Size(113, 37);
-            this.ButtonAddItemVenta.TabIndex = 15;
-            this.ButtonAddItemVenta.Text = "Agregar item >>";
-            this.ButtonAddItemVenta.UseVisualStyleBackColor = true;
-            // 
-            // TextTipoBusqueda
-            // 
-            this.TextTipoBusqueda.Location = new System.Drawing.Point(409, 19);
-            this.TextTipoBusqueda.Name = "TextTipoBusqueda";
-            this.TextTipoBusqueda.ReadOnly = true;
-            this.TextTipoBusqueda.Size = new System.Drawing.Size(26, 20);
-            this.TextTipoBusqueda.TabIndex = 16;
-            this.TextTipoBusqueda.Visible = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(615, 430);
+            this.ClientSize = new System.Drawing.Size(660, 430);
             this.Controls.Add(this.AcercaDeLink);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.Tasbs);
@@ -1318,8 +1403,6 @@
             this.Text = "Restaurant.NET";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Tasbs.ResumeLayout(false);
-            this.TabResumen.ResumeLayout(false);
-            this.groupAcciones.ResumeLayout(false);
             this.TabMozos.ResumeLayout(false);
             this.TabMozos.PerformLayout();
             this.GroupDatosMozos.ResumeLayout(false);
@@ -1327,9 +1410,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).EndInit();
             this.TabVentas_Pedidos.ResumeLayout(false);
             this.TabVentas_Pedidos.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.GroupVentas.ResumeLayout(false);
             this.GroupVentas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridItemsActuales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridItemsVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridVentas)).EndInit();
+            this.TabConsultas.ResumeLayout(false);
+            this.TabConsultas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridConsultas)).EndInit();
             this.TabPlatos.ResumeLayout(false);
             this.TabPlatos.PerformLayout();
             this.GroupDatosPlatos.ResumeLayout(false);
@@ -1347,9 +1437,6 @@
             this.GroupBoxMesas.ResumeLayout(false);
             this.GroupBoxMesas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1359,18 +1446,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl Tasbs;
-        private System.Windows.Forms.TabPage TabResumen;
         private System.Windows.Forms.TabPage TabMozos;
         private System.Windows.Forms.TabPage TabVentas_Pedidos;
         private System.Windows.Forms.Button ButtonExit;
-        private System.Windows.Forms.GroupBox groupResumen;
-        private System.Windows.Forms.GroupBox groupAcciones;
-        private System.Windows.Forms.GroupBox groupMesas;
-        private System.Windows.Forms.GroupBox groupPromociones;
-        private System.Windows.Forms.Button ButAbrirMesaRapida;
-        private System.Windows.Forms.Button ButCargarPedidoRapido;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button ButCerrarMesaRapida;
         private System.Windows.Forms.TabPage TabConsultas;
         private System.Windows.Forms.TabPage TabPlatos;
         private System.Windows.Forms.LinkLabel AcercaDeLink;
@@ -1427,9 +1505,9 @@
         private System.Windows.Forms.Button ButtonBuscarPlato;
         private System.Windows.Forms.TextBox TextBuscarPlato;
         private System.Windows.Forms.Button ButtonClearSearch;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button ButtonClearSearchPromos;
+        private System.Windows.Forms.Button ButtonBuscarPromo;
+        private System.Windows.Forms.TextBox TextBuscarPromo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
@@ -1448,10 +1526,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox GroupVentas;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridVentas;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button ButtonNewVenta;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox ComboMesaVenta;
         private System.Windows.Forms.ComboBox ComboMozoVenta;
@@ -1459,10 +1536,26 @@
         private System.Windows.Forms.TextBox TextIdVenta;
         private System.Windows.Forms.TextBox TextTipoBusqueda;
         private System.Windows.Forms.Button ButtonAddItemVenta;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ButtonBuscarPromosVenta;
+        private System.Windows.Forms.Button ButtonClearItems;
         private System.Windows.Forms.Button ButtonBuscarPlatoVenta;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox TextSearchItems;
+        private System.Windows.Forms.DataGridView DataGridItemsVenta;
+        private System.Windows.Forms.DataGridView DataGridItemsActuales;
+        private System.Windows.Forms.Button ButtonRemoveItem;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DataGridView DataGridConsultas;
+        private System.Windows.Forms.Button ButtonPrint;
+        private System.Windows.Forms.DateTimePicker DateTimePickerTo;
+        private System.Windows.Forms.DateTimePicker DateTimePickerFrom;
+        private System.Windows.Forms.LinkLabel LinkMozoTop;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.LinkLabel LinkMozosVentas;
+        private System.Windows.Forms.LinkLabel LinkPromocionesVendidas;
+        private System.Windows.Forms.LinkLabel LinkComidasRubro;
+        private System.Windows.Forms.LinkLabel LinkComidasTop;
+        private System.Windows.Forms.TextBox TextDetallePrint;
     }
 }

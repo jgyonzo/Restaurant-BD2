@@ -24,6 +24,20 @@ namespace BSL
             }
         }
 
+        public Promocion GetOne(UInt32 id)
+        {
+            try
+            {
+                PromocionesDao dao = new PromocionesDao();
+                return dao.GetOne(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener promociones " + ex.Message);
+                throw ex;
+            }
+        }
+
         public IEnumerable<Plato_Promocion> GetAllPlatos(Promocion p)
         {
             try
@@ -34,6 +48,20 @@ namespace BSL
             catch (Exception ex)
             {
                 Console.WriteLine("Error al obtener los platos de la promocion " + ex.Message);
+                throw ex;
+            }
+        }
+
+        public IEnumerable<Promocion> GetAllFiltering(string filter)
+        {
+            try
+            {
+                PromocionesDao dao = new PromocionesDao();
+                return dao.GetAllFiltering(filter);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener promociones: " + ex.Message);
                 throw ex;
             }
         }

@@ -31,6 +31,27 @@ namespace DAL
             }
         }
 
+        public IEnumerable<Mesa> GetFromSector(UInt32 sector)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    conn.Open();
+                    var lista = conn.Query<Mesa>(Constants.SelectMesasBySector, new { Sector = sector }, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public IEnumerable<Sector> getAllSectores()
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))

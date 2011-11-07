@@ -12,5 +12,10 @@ namespace DAL.Entities
         public string Direccion { get; set; }
         public UInt64 Dni { get; set; }
         public UInt32 Sector { get; set; }
+
+        public override string ToString()
+        {
+            return "" + Sector + " - " + Nombre;
+        }
     }
 }

@@ -157,5 +157,32 @@ namespace Restaurant
             ClearAllPromo();
             //TODO: Mostrar cartel de update exitoso o erroneo
         }
+
+        private void ButtonBuscarPromo_Click(object sender, EventArgs e)
+        {
+            if (TextBuscarPromo.Text == null || TextBuscarPromo.Text == "")
+            {
+                ReloadGridPromos();
+                return;
+            }
+            try
+            {
+                PromocionesOperations po = new PromocionesOperations();
+                var platos = po.GetAllFiltering(TextBuscarPromo.Text);
+                DataGridPromos.DataSource = platos;
+                DataGridPromos.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                //TODO:
+            }
+        }
+
+        private void ButtonClearSearchPromos_Click(object sender, EventArgs e)
+        {
+            ReloadGridPromos();
+            TextBuscarPromo.Clear();
+            ClearAllPromo();
+        }
     }
 }

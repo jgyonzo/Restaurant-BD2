@@ -32,6 +32,31 @@ namespace DAL
             }
         }
 
+        public Promocion GetOne(UInt32 id)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    conn.Open();
+                    var lista = conn.Query<Promocion>(Constants.SelectPromocion, new { Id = id }, null, true, null, CommandType.Text);
+                    if (lista.Count() == 0)
+                    {
+                        throw new Exception("Promo no encontrada");
+                    }
+                    return lista.ElementAt(0);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public IEnumerable<Plato_Promocion> GetPlatos(Promocion p)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
@@ -40,6 +65,28 @@ namespace DAL
                 {
                     conn.Open();
                     var lista = conn.Query<Plato_Promocion>(Constants.SelectPlatosByPromo, p, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public IEnumerable<Promocion> GetAllFiltering(string filter)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    string SelectAllPlatosFiltering = "select * from promociones where upper(descripcion) like ('%" + filter.ToUpper() + "%') order by descripcion";
+                    conn.Open();
+                    var lista = conn.Query<Promocion>(SelectAllPlatosFiltering, null, null, true, null, CommandType.Text);
                     return lista;
                 }
                 catch (Exception ex)

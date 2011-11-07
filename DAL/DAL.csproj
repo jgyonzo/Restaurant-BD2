@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="ConsultasDao.cs" />
+    <Compile Include="Entities\ComidaTop.cs" />
     <Compile Include="Entities\Mesa.cs" />
     <Compile Include="Entities\Mozo.cs" />
     <Compile Include="Entities\Pedido.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="PromocionesDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlMapper.cs" />
+    <Compile Include="VentasDao.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
