@@ -61,6 +61,9 @@
             this.LabelListadoMozos = new System.Windows.Forms.Label();
             this.DataGridMozos = new System.Windows.Forms.DataGridView();
             this.TabVentas_Pedidos = new System.Windows.Forms.TabPage();
+            this.GroupVentas = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TabConsultas = new System.Windows.Forms.TabPage();
             this.TabPlatos = new System.Windows.Forms.TabPage();
             this.ButtonClearSearch = new System.Windows.Forms.Button();
@@ -118,6 +121,21 @@
             this.DataGridMesas = new System.Windows.Forms.DataGridView();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.AcercaDeLink = new System.Windows.Forms.LinkLabel();
+            this.ButtonFinVenta = new System.Windows.Forms.Button();
+            this.ComboMozoVenta = new System.Windows.Forms.ComboBox();
+            this.ComboMesaVenta = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.ButtonNewVenta = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TextIdVenta = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.ButtonBuscarPlatoVenta = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.ButtonAddItemVenta = new System.Windows.Forms.Button();
+            this.TextTipoBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Tasbs.SuspendLayout();
             this.TabResumen.SuspendLayout();
@@ -125,6 +143,9 @@
             this.TabMozos.SuspendLayout();
             this.GroupDatosMozos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).BeginInit();
+            this.TabVentas_Pedidos.SuspendLayout();
+            this.GroupVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.TabPlatos.SuspendLayout();
             this.GroupDatosPlatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).BeginInit();
@@ -135,6 +156,8 @@
             this.groupBox1.SuspendLayout();
             this.GroupBoxMesas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -470,6 +493,12 @@
             // 
             // TabVentas_Pedidos
             // 
+            this.TabVentas_Pedidos.Controls.Add(this.TextIdVenta);
+            this.TabVentas_Pedidos.Controls.Add(this.groupBox2);
+            this.TabVentas_Pedidos.Controls.Add(this.GroupVentas);
+            this.TabVentas_Pedidos.Controls.Add(this.label16);
+            this.TabVentas_Pedidos.Controls.Add(this.dataGridView1);
+            this.TabVentas_Pedidos.Controls.Add(this.ButtonFinVenta);
             this.TabVentas_Pedidos.Location = new System.Drawing.Point(4, 22);
             this.TabVentas_Pedidos.Name = "TabVentas_Pedidos";
             this.TabVentas_Pedidos.Padding = new System.Windows.Forms.Padding(3);
@@ -477,6 +506,47 @@
             this.TabVentas_Pedidos.TabIndex = 3;
             this.TabVentas_Pedidos.Text = "Ventas y Pedidos";
             this.TabVentas_Pedidos.UseVisualStyleBackColor = true;
+            // 
+            // GroupVentas
+            // 
+            this.GroupVentas.Controls.Add(this.TextTipoBusqueda);
+            this.GroupVentas.Controls.Add(this.ButtonAddItemVenta);
+            this.GroupVentas.Controls.Add(this.button7);
+            this.GroupVentas.Controls.Add(this.button6);
+            this.GroupVentas.Controls.Add(this.ButtonBuscarPlatoVenta);
+            this.GroupVentas.Controls.Add(this.textBox3);
+            this.GroupVentas.Controls.Add(this.dataGridView2);
+            this.GroupVentas.Location = new System.Drawing.Point(7, 153);
+            this.GroupVentas.Name = "GroupVentas";
+            this.GroupVentas.Size = new System.Drawing.Size(563, 172);
+            this.GroupVentas.TabIndex = 9;
+            this.GroupVentas.TabStop = false;
+            this.GroupVentas.Text = "Agregar platos y promociones";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 5);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(111, 15);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Ventas en proceso:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(382, 130);
+            this.dataGridView1.TabIndex = 7;
             // 
             // TabConsultas
             // 
@@ -1087,6 +1157,150 @@
             this.AcercaDeLink.TabStop = true;
             this.AcercaDeLink.Text = "Acerca de...";
             // 
+            // ButtonFinVenta
+            // 
+            this.ButtonFinVenta.Location = new System.Drawing.Point(426, 15);
+            this.ButtonFinVenta.Name = "ButtonFinVenta";
+            this.ButtonFinVenta.Size = new System.Drawing.Size(114, 36);
+            this.ButtonFinVenta.TabIndex = 0;
+            this.ButtonFinVenta.Text = "Finalizar venta";
+            this.ButtonFinVenta.UseVisualStyleBackColor = true;
+            // 
+            // ComboMozoVenta
+            // 
+            this.ComboMozoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMozoVenta.FormattingEnabled = true;
+            this.ComboMozoVenta.Location = new System.Drawing.Point(3, 32);
+            this.ComboMozoVenta.Name = "ComboMozoVenta";
+            this.ComboMozoVenta.Size = new System.Drawing.Size(169, 21);
+            this.ComboMozoVenta.TabIndex = 1;
+            // 
+            // ComboMesaVenta
+            // 
+            this.ComboMesaVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMesaVenta.FormattingEnabled = true;
+            this.ComboMesaVenta.Location = new System.Drawing.Point(32, 56);
+            this.ComboMesaVenta.Name = "ComboMesaVenta";
+            this.ComboMesaVenta.Size = new System.Drawing.Size(51, 21);
+            this.ComboMesaVenta.TabIndex = 2;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(0, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Mozo:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(0, 59);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(33, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Mesa";
+            // 
+            // ButtonNewVenta
+            // 
+            this.ButtonNewVenta.Location = new System.Drawing.Point(89, 56);
+            this.ButtonNewVenta.Name = "ButtonNewVenta";
+            this.ButtonNewVenta.Size = new System.Drawing.Size(80, 34);
+            this.ButtonNewVenta.TabIndex = 5;
+            this.ButtonNewVenta.Text = "Iniciar Venta";
+            this.ButtonNewVenta.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ButtonNewVenta);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.ComboMesaVenta);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.ComboMozoVenta);
+            this.groupBox2.Location = new System.Drawing.Point(394, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(175, 96);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nueva venta";
+            // 
+            // TextIdVenta
+            // 
+            this.TextIdVenta.Location = new System.Drawing.Point(546, 31);
+            this.TextIdVenta.Name = "TextIdVenta";
+            this.TextIdVenta.ReadOnly = true;
+            this.TextIdVenta.Size = new System.Drawing.Size(26, 20);
+            this.TextIdVenta.TabIndex = 14;
+            this.TextIdVenta.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 47);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(417, 119);
+            this.dataGridView2.TabIndex = 8;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(161, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(19, 18);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "X";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // ButtonBuscarPlatoVenta
+            // 
+            this.ButtonBuscarPlatoVenta.Location = new System.Drawing.Point(186, 15);
+            this.ButtonBuscarPlatoVenta.Name = "ButtonBuscarPlatoVenta";
+            this.ButtonBuscarPlatoVenta.Size = new System.Drawing.Size(80, 26);
+            this.ButtonBuscarPlatoVenta.TabIndex = 12;
+            this.ButtonBuscarPlatoVenta.Text = "Buscar platos";
+            this.ButtonBuscarPlatoVenta.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(15, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(141, 20);
+            this.textBox3.TabIndex = 11;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(272, 15);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(120, 26);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "Buscar promociones";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // ButtonAddItemVenta
+            // 
+            this.ButtonAddItemVenta.Location = new System.Drawing.Point(429, 78);
+            this.ButtonAddItemVenta.Name = "ButtonAddItemVenta";
+            this.ButtonAddItemVenta.Size = new System.Drawing.Size(113, 37);
+            this.ButtonAddItemVenta.TabIndex = 15;
+            this.ButtonAddItemVenta.Text = "Agregar item >>";
+            this.ButtonAddItemVenta.UseVisualStyleBackColor = true;
+            // 
+            // TextTipoBusqueda
+            // 
+            this.TextTipoBusqueda.Location = new System.Drawing.Point(409, 19);
+            this.TextTipoBusqueda.Name = "TextTipoBusqueda";
+            this.TextTipoBusqueda.ReadOnly = true;
+            this.TextTipoBusqueda.Size = new System.Drawing.Size(26, 20);
+            this.TextTipoBusqueda.TabIndex = 16;
+            this.TextTipoBusqueda.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1111,6 +1325,11 @@
             this.GroupDatosMozos.ResumeLayout(false);
             this.GroupDatosMozos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).EndInit();
+            this.TabVentas_Pedidos.ResumeLayout(false);
+            this.TabVentas_Pedidos.PerformLayout();
+            this.GroupVentas.ResumeLayout(false);
+            this.GroupVentas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.TabPlatos.ResumeLayout(false);
             this.TabPlatos.PerformLayout();
             this.GroupDatosPlatos.ResumeLayout(false);
@@ -1128,6 +1347,9 @@
             this.GroupBoxMesas.ResumeLayout(false);
             this.GroupBoxMesas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1224,5 +1446,23 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridView DataGridMesas;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox GroupVentas;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button ButtonNewVenta;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox ComboMesaVenta;
+        private System.Windows.Forms.ComboBox ComboMozoVenta;
+        private System.Windows.Forms.Button ButtonFinVenta;
+        private System.Windows.Forms.TextBox TextIdVenta;
+        private System.Windows.Forms.TextBox TextTipoBusqueda;
+        private System.Windows.Forms.Button ButtonAddItemVenta;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ButtonBuscarPlatoVenta;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
