@@ -15,3 +15,4 @@
 	- poder buscar platos
 	- actualizar el monto total de la promo mostrando el descuento con el precio propuesto
 14- Buscador de platos y promociones: checkbox para filtrar por disponibles y no disponibles.
+15- Validacion de campos obligatorios
