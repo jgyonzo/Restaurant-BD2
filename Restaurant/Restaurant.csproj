@@ -39,6 +39,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,27 +53,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MesasUI.cs">
+    <Compile Include="Modelo1\MesasUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MozosUI.cs">
+    <Compile Include="Modelo1\MozosUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlatoUI.cs">
+    <Compile Include="Modelo1\PlatoUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="PromocionesUI.cs">
+    <Compile Include="Modelo1\PromocionesUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainWindow.cs">
+    <Compile Include="Modelo1\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="Modelo1\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentasUI.cs">
+    <Compile Include="Modelo1\VentasUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -83,9 +86,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="MainWindow.resx">
+    <EmbeddedResource Include="Modelo1\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\DAL.Entities.Mozo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

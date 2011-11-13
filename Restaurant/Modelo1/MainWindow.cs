@@ -81,6 +81,11 @@ namespace Restaurant
                 //TODO
             }
         }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            this.comboMozoTipoBusq.SelectedItem = "Nombre";
+        }
     }
 
     public class MozoTop

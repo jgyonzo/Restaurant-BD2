@@ -1,0 +1,17 @@
+1- id de mesa es autogenerado. FAIL! .... elegir el numero.
+2- Agregar estado a mesas, mozos, platos, promociones para inactivaciones
+3- ingresar sector a mano en mesas
+4- validaciones de campos tipo texto (usar masked textBox)
+5- buscar por multiples criterios en mozos, platos, promociones
+6- ordenar los dataGrids clickeando en los headers
+7- consultas que faltan hacerlas en stored procedures
+8- triggers por insert/update que actualice fechas de modif en tabla mozos, platos, promociones
+9- toda la app debe ser maximizable
+10- Habilitar botones solo cuando sea necesario
+11- Confirmacion para las inactivaciones
+12- Informe de alta/actualizacion/inactivacion exitosa, fallida
+13- Rediseñar pantalla de promociones:
+	- mostrar precio junto al plato
+	- poder buscar platos
+	- actualizar el monto total de la promo mostrando el descuento con el precio propuesto
+14- Buscador de platos y promociones: checkbox para filtrar por disponibles y no disponibles.

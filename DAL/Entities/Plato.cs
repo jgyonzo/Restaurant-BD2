@@ -15,7 +15,7 @@ namespace DAL.Entities
 
         public override string ToString()
         {
-            return Descripcion;
+            return Descripcion + " - $" + Precio_Venta;
         }
 
         public override bool Equals(object obj)
