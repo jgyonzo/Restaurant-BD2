@@ -46,9 +46,7 @@ namespace Restaurant
         {
             try
             {
-                string fecha_from = DateTimePickerFrom.Value.ToString("dd/MM/yyyy HH:mm:ss");
-                string fecha_to = DateTimePickerTo.Value.ToString("dd/MM/yyyy HH:mm:ss");
-                Mozo mozoTop = ConsultasDao.GetMozoTop(fecha_from, fecha_to);
+                Mozo mozoTop = ConsultasDao.GetMozoTop();
                 List<MozoTop> datasource = new List<MozoTop>();
                 MozoTop m = new MozoTop();
                 m.Consulta = "Mozo que más ventas realizó";
@@ -72,9 +70,9 @@ namespace Restaurant
             {
                 string fecha_from = DateTimePickerFrom.Value.ToString("dd/MM/yyyy HH:mm:ss");
                 string fecha_to = DateTimePickerTo.Value.ToString("dd/MM/yyyy HH:mm:ss");
-                var comidas = ConsultasDao.GetComidaTop(fecha_from, fecha_to);
+                var comidas = ConsultasDao.GetComidasTop(fecha_from, fecha_to);
                 DataGridConsultas.DataSource = comidas;
-                TextDetallePrint.Text = "Comidas más vendidas";
+                TextDetallePrint.Text = "Top 10 comidas más vendidas";
             }
             catch (Exception ex)
             {
@@ -85,6 +83,54 @@ namespace Restaurant
         private void MainWindow_Load(object sender, EventArgs e)
         {
             this.comboMozoTipoBusq.SelectedItem = "Nombre";
+        }
+
+        private void LinkComidasRubro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                string fecha_from = DateTimePickerFrom.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                string fecha_to = DateTimePickerTo.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                var comidas = ConsultasDao.GetComidasByRubro(fecha_from, fecha_to);
+                DataGridConsultas.DataSource = comidas;
+                TextDetallePrint.Text = "Comidas vendidas por rubro";
+            }
+            catch (Exception ex)
+            {
+                //TODO
+            }
+        }
+
+        private void LinkPromocionesVendidas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                string fecha_from = DateTimePickerFrom.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                string fecha_to = DateTimePickerTo.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                var comidas = ConsultasDao.GetPromosVendidas(fecha_from, fecha_to);
+                DataGridConsultas.DataSource = comidas;
+                TextDetallePrint.Text = "Promociones vendidas";
+            }
+            catch (Exception ex)
+            {
+                //TODO
+            }
+        }
+
+        private void LinkMozosVentas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                string fecha_from = DateTimePickerFrom.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                string fecha_to = DateTimePickerTo.Value.ToString("dd/MM/yyyy HH:mm:ss");
+                var comidas = ConsultasDao.GetMozosTop(fecha_from, fecha_to);
+                DataGridConsultas.DataSource = comidas;
+                TextDetallePrint.Text = "Cantidad de ventas realizadas por cada mozo";
+            }
+            catch (Exception ex)
+            {
+                //TODO
+            }
         }
     }
 

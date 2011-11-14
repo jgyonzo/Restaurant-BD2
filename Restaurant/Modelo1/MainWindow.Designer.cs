@@ -74,6 +74,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.GroupDatosMozos = new System.Windows.Forms.GroupBox();
+            this.TextDniMozo = new System.Windows.Forms.NumericUpDown();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -81,7 +82,6 @@
             this.LinkClearMozos = new System.Windows.Forms.LinkLabel();
             this.ButtonDeleteMozo = new System.Windows.Forms.Button();
             this.ButtonNewMozo = new System.Windows.Forms.Button();
-            this.TextDniMozo = new System.Windows.Forms.TextBox();
             this.TextDirMozo = new System.Windows.Forms.TextBox();
             this.TextNombreMozo = new System.Windows.Forms.TextBox();
             this.ButtonSaveMozos = new System.Windows.Forms.Button();
@@ -101,6 +101,7 @@
             this.ButtonBuscarPlato = new System.Windows.Forms.Button();
             this.TextBuscarPlato = new System.Windows.Forms.TextBox();
             this.GroupDatosPlatos = new System.Windows.Forms.GroupBox();
+            this.TextPricePlatoC = new System.Windows.Forms.NumericUpDown();
             this.TextIdPlatos = new System.Windows.Forms.TextBox();
             this.LinkClearPlatos = new System.Windows.Forms.LinkLabel();
             this.ButtonDeletePlato = new System.Windows.Forms.Button();
@@ -108,7 +109,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.ButtonNewPlato = new System.Windows.Forms.Button();
             this.TextPricePlatoV = new System.Windows.Forms.TextBox();
-            this.TextPricePlatoC = new System.Windows.Forms.TextBox();
             this.TextDescPlatos = new System.Windows.Forms.TextBox();
             this.ButtonSavePlato = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -116,8 +116,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.DataGridPlatos = new System.Windows.Forms.DataGridView();
+            this.platoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabPromos = new System.Windows.Forms.TabPage();
             this.ButtonClearSearchPromos = new System.Windows.Forms.Button();
             this.ButtonBuscarPromo = new System.Windows.Forms.Button();
@@ -138,6 +138,7 @@
             this.DataGridPromos = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.TabMesas = new System.Windows.Forms.TabPage();
+            this.buttonActivateMesa = new System.Windows.Forms.Button();
             this.LinkClearMesas = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -150,6 +151,13 @@
             this.ComboSectoresMesas = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.DataGridMesas = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCostoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Tasbs.SuspendLayout();
             this.TabVentas_Pedidos.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -162,11 +170,14 @@
             this.TabMozos.SuspendLayout();
             this.groupBuscarMozo.SuspendLayout();
             this.GroupDatosMozos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TextDniMozo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).BeginInit();
             this.TabPlatos.SuspendLayout();
             this.GroupDatosPlatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).BeginInit();
             this.TabPromos.SuspendLayout();
             this.GroupDataPromo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPromos)).BeginInit();
@@ -174,6 +185,7 @@
             this.groupBox1.SuspendLayout();
             this.GroupBoxMesas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tasbs
@@ -482,6 +494,7 @@
             this.LinkMozosVentas.TabIndex = 10;
             this.LinkMozosVentas.TabStop = true;
             this.LinkMozosVentas.Text = "5- Cantidad de ventas realizadas por cada mozo";
+            this.LinkMozosVentas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkMozosVentas_LinkClicked);
             // 
             // LinkPromocionesVendidas
             // 
@@ -492,6 +505,7 @@
             this.LinkPromocionesVendidas.TabIndex = 9;
             this.LinkPromocionesVendidas.TabStop = true;
             this.LinkPromocionesVendidas.Text = "4- Promociones vendidas";
+            this.LinkPromocionesVendidas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkPromocionesVendidas_LinkClicked);
             // 
             // LinkComidasRubro
             // 
@@ -502,6 +516,7 @@
             this.LinkComidasRubro.TabIndex = 8;
             this.LinkComidasRubro.TabStop = true;
             this.LinkComidasRubro.Text = "3- Comidas vendidas por rubro";
+            this.LinkComidasRubro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkComidasRubro_LinkClicked);
             // 
             // LinkComidasTop
             // 
@@ -665,6 +680,7 @@
             // 
             // GroupDatosMozos
             // 
+            this.GroupDatosMozos.Controls.Add(this.TextDniMozo);
             this.GroupDatosMozos.Controls.Add(this.label27);
             this.GroupDatosMozos.Controls.Add(this.label26);
             this.GroupDatosMozos.Controls.Add(this.label25);
@@ -672,7 +688,6 @@
             this.GroupDatosMozos.Controls.Add(this.LinkClearMozos);
             this.GroupDatosMozos.Controls.Add(this.ButtonDeleteMozo);
             this.GroupDatosMozos.Controls.Add(this.ButtonNewMozo);
-            this.GroupDatosMozos.Controls.Add(this.TextDniMozo);
             this.GroupDatosMozos.Controls.Add(this.TextDirMozo);
             this.GroupDatosMozos.Controls.Add(this.TextNombreMozo);
             this.GroupDatosMozos.Controls.Add(this.ButtonSaveMozos);
@@ -689,11 +704,35 @@
             this.GroupDatosMozos.TabStop = false;
             this.GroupDatosMozos.Text = "Datos del empleado";
             // 
+            // TextDniMozo
+            // 
+            this.TextDniMozo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextDniMozo.Location = new System.Drawing.Point(166, 78);
+            this.TextDniMozo.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.TextDniMozo.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.TextDniMozo.Name = "TextDniMozo";
+            this.TextDniMozo.Size = new System.Drawing.Size(98, 26);
+            this.TextDniMozo.TabIndex = 19;
+            this.TextDniMozo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TextDniMozo.Value = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(384, 77);
+            this.label27.Location = new System.Drawing.Point(270, 78);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(14, 18);
             this.label27.TabIndex = 17;
@@ -721,7 +760,7 @@
             // 
             // TextIdMozo
             // 
-            this.TextIdMozo.Location = new System.Drawing.Point(236, 104);
+            this.TextIdMozo.Location = new System.Drawing.Point(229, 110);
             this.TextIdMozo.Name = "TextIdMozo";
             this.TextIdMozo.ReadOnly = true;
             this.TextIdMozo.Size = new System.Drawing.Size(35, 20);
@@ -765,14 +804,6 @@
             this.ButtonNewMozo.UseVisualStyleBackColor = true;
             this.ButtonNewMozo.Click += new System.EventHandler(this.ButtonNewMozo_Click);
             // 
-            // TextDniMozo
-            // 
-            this.TextDniMozo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextDniMozo.Location = new System.Drawing.Point(166, 75);
-            this.TextDniMozo.Name = "TextDniMozo";
-            this.TextDniMozo.Size = new System.Drawing.Size(212, 26);
-            this.TextDniMozo.TabIndex = 7;
-            // 
             // TextDirMozo
             // 
             this.TextDirMozo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -804,7 +835,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 101);
+            this.label4.Location = new System.Drawing.Point(6, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 18);
             this.label4.TabIndex = 4;
@@ -815,7 +846,7 @@
             this.ComboMozoSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboMozoSector.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboMozoSector.FormattingEnabled = true;
-            this.ComboMozoSector.Location = new System.Drawing.Point(166, 101);
+            this.ComboMozoSector.Location = new System.Drawing.Point(166, 109);
             this.ComboMozoSector.Name = "ComboMozoSector";
             this.ComboMozoSector.Size = new System.Drawing.Size(56, 26);
             this.ComboMozoSector.TabIndex = 3;
@@ -824,7 +855,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 75);
+            this.label3.Location = new System.Drawing.Point(7, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 18);
             this.label3.TabIndex = 2;
@@ -861,7 +892,7 @@
             this.DataGridMozos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGridMozos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataGridMozos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DataGridMozos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
@@ -870,6 +901,7 @@
             this.DataGridMozos.DataSource = this.mozoBindingSource;
             this.DataGridMozos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.DataGridMozos.Location = new System.Drawing.Point(3, 88);
+            this.DataGridMozos.MultiSelect = false;
             this.DataGridMozos.Name = "DataGridMozos";
             this.DataGridMozos.ReadOnly = true;
             this.DataGridMozos.Size = new System.Drawing.Size(769, 276);
@@ -914,11 +946,8 @@
             // 
             // TabPlatos
             // 
-            this.TabPlatos.Controls.Add(this.ButtonClearSearch);
-            this.TabPlatos.Controls.Add(this.ButtonBuscarPlato);
-            this.TabPlatos.Controls.Add(this.TextBuscarPlato);
+            this.TabPlatos.Controls.Add(this.groupBox3);
             this.TabPlatos.Controls.Add(this.GroupDatosPlatos);
-            this.TabPlatos.Controls.Add(this.label9);
             this.TabPlatos.Controls.Add(this.DataGridPlatos);
             this.TabPlatos.Location = new System.Drawing.Point(4, 22);
             this.TabPlatos.Name = "TabPlatos";
@@ -931,7 +960,7 @@
             // 
             // ButtonClearSearch
             // 
-            this.ButtonClearSearch.Location = new System.Drawing.Point(335, 18);
+            this.ButtonClearSearch.Location = new System.Drawing.Point(158, 19);
             this.ButtonClearSearch.Name = "ButtonClearSearch";
             this.ButtonClearSearch.Size = new System.Drawing.Size(19, 18);
             this.ButtonClearSearch.TabIndex = 10;
@@ -941,7 +970,7 @@
             // 
             // ButtonBuscarPlato
             // 
-            this.ButtonBuscarPlato.Location = new System.Drawing.Point(360, 14);
+            this.ButtonBuscarPlato.Location = new System.Drawing.Point(183, 19);
             this.ButtonBuscarPlato.Name = "ButtonBuscarPlato";
             this.ButtonBuscarPlato.Size = new System.Drawing.Size(80, 26);
             this.ButtonBuscarPlato.TabIndex = 9;
@@ -951,13 +980,14 @@
             // 
             // TextBuscarPlato
             // 
-            this.TextBuscarPlato.Location = new System.Drawing.Point(189, 18);
+            this.TextBuscarPlato.Location = new System.Drawing.Point(11, 19);
             this.TextBuscarPlato.Name = "TextBuscarPlato";
             this.TextBuscarPlato.Size = new System.Drawing.Size(141, 20);
             this.TextBuscarPlato.TabIndex = 8;
             // 
             // GroupDatosPlatos
             // 
+            this.GroupDatosPlatos.Controls.Add(this.TextPricePlatoC);
             this.GroupDatosPlatos.Controls.Add(this.TextIdPlatos);
             this.GroupDatosPlatos.Controls.Add(this.LinkClearPlatos);
             this.GroupDatosPlatos.Controls.Add(this.ButtonDeletePlato);
@@ -965,7 +995,6 @@
             this.GroupDatosPlatos.Controls.Add(this.label10);
             this.GroupDatosPlatos.Controls.Add(this.ButtonNewPlato);
             this.GroupDatosPlatos.Controls.Add(this.TextPricePlatoV);
-            this.GroupDatosPlatos.Controls.Add(this.TextPricePlatoC);
             this.GroupDatosPlatos.Controls.Add(this.TextDescPlatos);
             this.GroupDatosPlatos.Controls.Add(this.ButtonSavePlato);
             this.GroupDatosPlatos.Controls.Add(this.label5);
@@ -973,12 +1002,26 @@
             this.GroupDatosPlatos.Controls.Add(this.label6);
             this.GroupDatosPlatos.Controls.Add(this.label7);
             this.GroupDatosPlatos.Controls.Add(this.label8);
-            this.GroupDatosPlatos.Location = new System.Drawing.Point(6, 174);
+            this.GroupDatosPlatos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GroupDatosPlatos.Location = new System.Drawing.Point(3, 360);
             this.GroupDatosPlatos.Name = "GroupDatosPlatos";
-            this.GroupDatosPlatos.Size = new System.Drawing.Size(616, 151);
+            this.GroupDatosPlatos.Size = new System.Drawing.Size(766, 151);
             this.GroupDatosPlatos.TabIndex = 7;
             this.GroupDatosPlatos.TabStop = false;
             this.GroupDatosPlatos.Text = "Datos del plato";
+            // 
+            // TextPricePlatoC
+            // 
+            this.TextPricePlatoC.DecimalPlaces = 2;
+            this.TextPricePlatoC.Location = new System.Drawing.Point(148, 89);
+            this.TextPricePlatoC.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.TextPricePlatoC.Name = "TextPricePlatoC";
+            this.TextPricePlatoC.Size = new System.Drawing.Size(62, 20);
+            this.TextPricePlatoC.TabIndex = 14;
             // 
             // TextIdPlatos
             // 
@@ -1046,13 +1089,6 @@
             this.TextPricePlatoV.Size = new System.Drawing.Size(52, 20);
             this.TextPricePlatoV.TabIndex = 7;
             // 
-            // TextPricePlatoC
-            // 
-            this.TextPricePlatoC.Location = new System.Drawing.Point(148, 89);
-            this.TextPricePlatoC.Name = "TextPricePlatoC";
-            this.TextPricePlatoC.Size = new System.Drawing.Size(52, 20);
-            this.TextPricePlatoC.TabIndex = 6;
-            // 
             // TextDescPlatos
             // 
             this.TextDescPlatos.Location = new System.Drawing.Point(47, 31);
@@ -1116,31 +1152,35 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Descripción";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 15);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Listado:";
-            // 
             // DataGridPlatos
             // 
             this.DataGridPlatos.AllowUserToAddRows = false;
             this.DataGridPlatos.AllowUserToDeleteRows = false;
+            this.DataGridPlatos.AutoGenerateColumns = false;
             this.DataGridPlatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DataGridPlatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.DataGridPlatos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataGridPlatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridPlatos.Location = new System.Drawing.Point(6, 44);
+            this.DataGridPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DataGridPlatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.rubroDataGridViewTextBoxColumn,
+            this.precioCostoDataGridViewTextBoxColumn,
+            this.precioVentaDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.DataGridPlatos.DataSource = this.platoBindingSource;
+            this.DataGridPlatos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.DataGridPlatos.Location = new System.Drawing.Point(0, 71);
+            this.DataGridPlatos.MultiSelect = false;
             this.DataGridPlatos.Name = "DataGridPlatos";
             this.DataGridPlatos.ReadOnly = true;
-            this.DataGridPlatos.Size = new System.Drawing.Size(616, 124);
+            this.DataGridPlatos.Size = new System.Drawing.Size(772, 283);
             this.DataGridPlatos.TabIndex = 5;
             this.DataGridPlatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPlatos_CellClick);
+            // 
+            // platoBindingSource
+            // 
+            this.platoBindingSource.DataSource = typeof(DAL.Entities.Plato);
             // 
             // TabPromos
             // 
@@ -1346,6 +1386,7 @@
             // 
             // TabMesas
             // 
+            this.TabMesas.Controls.Add(this.buttonActivateMesa);
             this.TabMesas.Controls.Add(this.LinkClearMesas);
             this.TabMesas.Controls.Add(this.groupBox1);
             this.TabMesas.Controls.Add(this.GroupBoxMesas);
@@ -1359,6 +1400,16 @@
             this.TabMesas.Text = "Mesas";
             this.TabMesas.UseVisualStyleBackColor = true;
             this.TabMesas.Enter += new System.EventHandler(this.TabMesas_Enter);
+            // 
+            // buttonActivateMesa
+            // 
+            this.buttonActivateMesa.Location = new System.Drawing.Point(599, 137);
+            this.buttonActivateMesa.Name = "buttonActivateMesa";
+            this.buttonActivateMesa.Size = new System.Drawing.Size(81, 31);
+            this.buttonActivateMesa.TabIndex = 18;
+            this.buttonActivateMesa.Text = "button1";
+            this.buttonActivateMesa.UseVisualStyleBackColor = true;
+            this.buttonActivateMesa.Click += new System.EventHandler(this.buttonActivateMesa_Click);
             // 
             // LinkClearMesas
             // 
@@ -1488,6 +1539,67 @@
             this.DataGridMesas.TabIndex = 5;
             this.DataGridMesas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMesas_CellClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rubroDataGridViewTextBoxColumn
+            // 
+            this.rubroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rubroDataGridViewTextBoxColumn.DataPropertyName = "Rubro";
+            this.rubroDataGridViewTextBoxColumn.HeaderText = "Rubro";
+            this.rubroDataGridViewTextBoxColumn.Name = "rubroDataGridViewTextBoxColumn";
+            this.rubroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioCostoDataGridViewTextBoxColumn
+            // 
+            this.precioCostoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.precioCostoDataGridViewTextBoxColumn.DataPropertyName = "Precio_Costo";
+            this.precioCostoDataGridViewTextBoxColumn.HeaderText = "Precio de costo";
+            this.precioCostoDataGridViewTextBoxColumn.Name = "precioCostoDataGridViewTextBoxColumn";
+            this.precioCostoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn
+            // 
+            this.precioVentaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta";
+            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de venta";
+            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
+            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.TextBuscarPlato);
+            this.groupBox3.Controls.Add(this.ButtonBuscarPlato);
+            this.groupBox3.Controls.Add(this.ButtonClearSearch);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(766, 62);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Busqueda";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1518,13 +1630,15 @@
             this.groupBuscarMozo.PerformLayout();
             this.GroupDatosMozos.ResumeLayout(false);
             this.GroupDatosMozos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TextDniMozo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).EndInit();
             this.TabPlatos.ResumeLayout(false);
-            this.TabPlatos.PerformLayout();
             this.GroupDatosPlatos.ResumeLayout(false);
             this.GroupDatosPlatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).EndInit();
             this.TabPromos.ResumeLayout(false);
             this.TabPromos.PerformLayout();
             this.GroupDataPromo.ResumeLayout(false);
@@ -1537,6 +1651,8 @@
             this.GroupBoxMesas.ResumeLayout(false);
             this.GroupBoxMesas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1556,20 +1672,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ComboMozoSector;
         private System.Windows.Forms.Button ButtonNewMozo;
-        private System.Windows.Forms.TextBox TextDniMozo;
         private System.Windows.Forms.TextBox TextDirMozo;
         private System.Windows.Forms.TextBox TextNombreMozo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox GroupDatosPlatos;
         private System.Windows.Forms.Button ButtonNewPlato;
-        private System.Windows.Forms.TextBox TextPricePlatoC;
         private System.Windows.Forms.TextBox TextDescPlatos;
         private System.Windows.Forms.Button ButtonSavePlato;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox ComboBoxPlatos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView DataGridPlatos;
         private System.Windows.Forms.Button ButtonDeleteMozo;
         private System.Windows.Forms.Button ButtonDeletePlato;
@@ -1663,5 +1776,16 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboMozoTipoBusq;
+        private System.Windows.Forms.Button buttonActivateMesa;
+        private System.Windows.Forms.NumericUpDown TextDniMozo;
+        private System.Windows.Forms.NumericUpDown TextPricePlatoC;
+        private System.Windows.Forms.BindingSource platoBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rubroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioCostoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -10,5 +10,6 @@ namespace DAL.Entities
         public UInt32 Id { get; set; }
         public string Descripcion { get; set; }
         public float Precio { get; set; }
+        public string Estado { get; set; }
     }
 }

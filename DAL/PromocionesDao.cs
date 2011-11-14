@@ -57,7 +57,7 @@ namespace DAL
             }
         }
 
-        public IEnumerable<Plato_Promocion> GetPlatos(Promocion p)
+        public IEnumerable<Plato_Promocion> GetPlatosByPromo(Promocion p)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
@@ -78,7 +78,31 @@ namespace DAL
             }
         }
 
-        public IEnumerable<Promocion> GetAllFiltering(string filter)
+        /// <summary>
+        /// Devuelve todas las promociones en las que participa el plato
+        /// </summary>
+        public IEnumerable<Plato_Promocion> GetPromosByPlato(Plato p)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    conn.Open();
+                    var lista = conn.Query<Plato_Promocion>(Constants.SelectPromosByPlato, p, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public IEnumerable<Promocion> SearchByDesc(string filter)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
@@ -100,8 +124,33 @@ namespace DAL
             }
         }
 
-        public int Update(Promocion p, IEnumerable platos)
+        public IEnumerable<Promocion> SearchByEstado(string estado)
         {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    conn.Open();
+                    var lista = conn.Query<Promocion>(Constants.SearchPromocionesByEstado, new { Estado = estado}, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void Update(Promocion p, IEnumerable<Plato> platos)
+        {
+            if (platos == null || platos.Count() == 0)
+            {
+                throw new DataException("No se pueden quitar todos los platos de una promoción");
+            }
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
                 MySqlTransaction trans = null;
@@ -112,24 +161,24 @@ namespace DAL
                     if (conn.Execute(Constants.UpdatePromo, p, trans, null, CommandType.Text) == -1)
                     {
                         //Promo not updated
-                        return -1;
+                        throw new DataException("Error al actualizar la promoción como NO DISPONIBLE");
                     }
-                    if (DeleteAllPlatos(p,conn,trans) == -1)
+                    if (DeleteAllPlatos(p, conn, trans) == -1)
                     {
                         //Update de platos no realizado
-                        return -1;
+                        throw new DataException("Error al actualizar los platos asociados a la promoción");
                     }
-                    foreach (var obj in platos)
+                    foreach (var plato in platos)
                     {
-                        var plato = obj as Plato;
                         Plato_Promocion pp = new Plato_Promocion();
                         pp.Plato_Id = plato.Id;
                         pp.Promocion_Id = p.Id;
                         if (conn.Execute(Constants.InsertPlatoPromo, pp, trans, null, CommandType.Text) == -1)
                         {
-                            return -1;
+                            throw new DataException("Error al actualizar los platos asociados a la promoción");
                         }
                     }
+                    trans.Commit();
                 }
                 catch (Exception ex)
                 {
@@ -138,15 +187,20 @@ namespace DAL
                 }
                 finally
                 {
-                    trans.Commit();
                     conn.Close();
                 }
             }
-            return 1;
         }
 
-        public int Insert(Promocion p, IEnumerable platos)
+        /// <summary>
+        /// Genera una nueva promocion con los platos asociados, si algo sale mal, lanza exception
+        /// </summary>
+        public void Insert(Promocion p, IEnumerable<Plato> platos)
         {
+            if (platos == null || platos.Count() == 0)
+            {
+                throw new DataException("No se puede generar una promoción sin platos asociados");
+            }
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
                 MySqlTransaction trans = null;
@@ -157,22 +211,22 @@ namespace DAL
                     if (conn.Execute(Constants.InsertPromo, p, trans, null, CommandType.Text) == -1)
                     {
                         //Promo not updated
-                        return -1;
+                        throw new DataException("Error al generar la nueva promoción");
                     }
                     
                     long id = conn.Query<long>(Constants.SelectLastId, null, trans, true, null, CommandType.Text).ElementAt(0);
 
-                    foreach (var obj in platos)
+                    foreach (var plato in platos)
                     {
-                        Plato plato = obj as Plato;
                         Plato_Promocion pp = new Plato_Promocion();
                         pp.Plato_Id = plato.Id;
                         pp.Promocion_Id = Convert.ToUInt32(id);
                         if (conn.Execute(Constants.InsertPlatoPromo, pp, trans, null, CommandType.Text) == -1)
                         {
-                            return -1;
+                            throw new DataException("Error al generar la nueva promoción");
                         }
                     }
+                    trans.Commit();
                 }
                 catch (Exception ex)
                 {
@@ -181,44 +235,41 @@ namespace DAL
                 }
                 finally
                 {
-                    trans.Commit();
                     conn.Close();
                 }
             }
-            return 1;
         }
 
-        public int Delete(Promocion p)
+        public int Inactivate(Promocion p)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
-                MySqlTransaction trans = null;
                 try
                 {
                     conn.Open();
-                    trans = conn.BeginTransaction();
-                    if (conn.Execute(Constants.DeletePromo, p, trans, null, CommandType.Text) == -1)
-                    {
-                        //Promo not updated
-                        return -1;
-                    }
-                    if (DeleteAllPlatos(p, conn, trans) == -1)
-                    {
-                        return -1;
-                    }
+                    return conn.Execute(Constants.DeletePromo, p, null, null, CommandType.Text);
                 }
                 catch (Exception ex)
                 {
-                    trans.Rollback();
-                    throw ex;
+                    throw new DataException("Error al marcar como no disponible una promocion", ex);
                 }
                 finally
                 {
-                    trans.Commit();
                     conn.Close();
                 }
             }
-            return 1;
+        }
+
+        public int Inactivate(UInt32 promoId, MySqlConnection conn, MySqlTransaction trans)
+        {
+            try
+            {
+                return conn.Execute(Constants.DeletePromo, new { Id = promoId}, trans, null, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error al marcar como no disponible una promocion", ex);
+            }
         }
 
         public int DeleteAllPlatos(Promocion p)
@@ -243,14 +294,47 @@ namespace DAL
 
         public int DeleteAllPlatos(Promocion p, MySqlConnection conn, MySqlTransaction trans)
         {
+            try
+            {
+                return conn.Execute(Constants.DeletePlatosByPromo, p, trans, null, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Activate(Promocion p)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
                 try
                 {
-                    return conn.Execute(Constants.DeletePlatosByPromo, p, trans, null, CommandType.Text);
+                    conn.Open();
+                    var platos = GetPlatosByPromo(p);
+                    PlatoDao platoDao = new PlatoDao();
+                    foreach (var pl in platos)
+                    {
+                        var plato = platoDao.GetOne(pl.Plato_Id);
+                        if (plato.Estado != "DISPONIBLE")
+                        {
+                            throw new DataException("No se puede marcar como DISPONIBLE una promoción que contiene platos NO DISPONIBLES");
+                        }
+                    }
+                    if (conn.Execute(Constants.ActivatePromo, p, null, null, CommandType.Text) == -1)
+                    {
+                        throw new DataException("No se actualizó la promoción como DISPONIBLE");
+                    }
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
     }
 }

@@ -67,7 +67,7 @@ namespace Restaurant
             PromocionesOperations po = new PromocionesOperations();
             Promocion p = new Promocion();
             p.Id = elem.Id;
-            var platos = po.GetAllPlatos(p);
+            var platos = po.GetPlatosByPromo(p);
 
             foreach (var plato in platos)
             {
@@ -104,7 +104,7 @@ namespace Restaurant
             PromocionesOperations po = new PromocionesOperations();
             try
             {
-                po.Insert(p,CheckListPromos.CheckedItems);
+                po.Insert(p,CheckListPromos.CheckedItems.Cast<Plato>());
             }
             catch (Exception ex)
             {
@@ -126,7 +126,7 @@ namespace Restaurant
             PromocionesOperations po = new PromocionesOperations();
             try
             {
-                po.Update(p, CheckListPromos.CheckedItems);
+                po.Update(p, CheckListPromos.CheckedItems.Cast<Plato>());
             }
             catch (Exception ex)
             {
@@ -146,7 +146,7 @@ namespace Restaurant
             PromocionesOperations po = new PromocionesOperations();
             try
             {
-                po.Delete(p);
+                po.Inactivate(p);
             }
             catch (Exception ex)
             {
@@ -168,7 +168,7 @@ namespace Restaurant
             try
             {
                 PromocionesOperations po = new PromocionesOperations();
-                var platos = po.GetAllFiltering(TextBuscarPromo.Text);
+                var platos = po.SearchByDesc(TextBuscarPromo.Text);
                 DataGridPromos.DataSource = platos;
                 DataGridPromos.ClearSelection();
             }

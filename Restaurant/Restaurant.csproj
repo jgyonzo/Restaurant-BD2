@@ -90,6 +90,7 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\DAL.Entities.Mozo.datasource" />
+    <None Include="Properties\DataSources\DAL.Entities.Plato.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

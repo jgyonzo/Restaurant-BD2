@@ -38,12 +38,12 @@ namespace BSL
             }
         }
 
-        public IEnumerable<Plato_Promocion> GetAllPlatos(Promocion p)
+        public IEnumerable<Plato_Promocion> GetPlatosByPromo(Promocion p)
         {
             try
             {
                 PromocionesDao dao = new PromocionesDao();
-                return dao.GetPlatos(p);
+                return dao.GetPlatosByPromo(p);
             }
             catch (Exception ex)
             {
@@ -52,12 +52,26 @@ namespace BSL
             }
         }
 
-        public IEnumerable<Promocion> GetAllFiltering(string filter)
+        public IEnumerable<Plato_Promocion> GetPromosByPlato(Plato p)
         {
             try
             {
                 PromocionesDao dao = new PromocionesDao();
-                return dao.GetAllFiltering(filter);
+                return dao.GetPromosByPlato(p);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener las promociones asociadas al plato " + ex.Message);
+                throw ex;
+            }
+        }
+
+        public IEnumerable<Promocion> SearchByDesc(string filter)
+        {
+            try
+            {
+                PromocionesDao dao = new PromocionesDao();
+                return dao.SearchByDesc(filter);
             }
             catch (Exception ex)
             {
@@ -66,31 +80,45 @@ namespace BSL
             }
         }
 
-        public void Update(Promocion p, IEnumerable platos)
+        public IEnumerable<Promocion> SearchByEstado(string estado)
         {
-            PromocionesDao dao = new PromocionesDao();
-            if (dao.Update(p,platos) != 1)
+            try
             {
-                throw new Exception("No se actualizo la informacion");
+                PromocionesDao dao = new PromocionesDao();
+                return dao.SearchByEstado(estado);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener promociones: " + ex.Message);
+                throw ex;
             }
         }
 
-        public void Insert(Promocion p, IEnumerable platos)
+        public void Update(Promocion p, IEnumerable<Plato> platos)
         {
             PromocionesDao dao = new PromocionesDao();
-            if (dao.Insert(p,platos) != 1)
+            dao.Update(p,platos);
+        }
+
+        public void Insert(Promocion p, IEnumerable<Plato> platos)
+        {
+            PromocionesDao dao = new PromocionesDao();
+            dao.Insert(p,platos);
+        }
+
+        public void Inactivate(Promocion p)
+        {
+            PromocionesDao dao = new PromocionesDao();
+            if (dao.Inactivate(p) != 1)
             {
-                throw new Exception("No se inserto la informacion");
+                throw new Exception("No se actualizó como NO DISPONIBLE la promoción");
             }
         }
 
-        public void Delete(Promocion p)
+        public void Activate(Promocion p)
         {
             PromocionesDao dao = new PromocionesDao();
-            if (dao.Delete(p) != 1)
-            {
-                throw new Exception("No se elimino la promocion");
-            }
+            dao.Activate(p);
         }
     }
 }

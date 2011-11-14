@@ -12,6 +12,7 @@ namespace DAL.Entities
         public string Rubro { get; set; }
         public float Precio_Costo { get; set; }
         public float Precio_Venta { get; set; }
+        public string Estado { get; set; }
 
         public override string ToString()
         {

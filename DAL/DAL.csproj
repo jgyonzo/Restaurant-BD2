@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="ConsultasDao.cs" />
-    <Compile Include="Entities\ComidaTop.cs" />
+    <Compile Include="Entities\ConsultasEntities.cs" />
     <Compile Include="Entities\Mesa.cs" />
     <Compile Include="Entities\Mozo.cs" />
     <Compile Include="Entities\Pedido.cs" />

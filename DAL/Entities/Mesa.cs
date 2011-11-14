@@ -9,6 +9,7 @@ namespace DAL.Entities
     {
         public UInt32 Id { get; set; }
         public UInt32 Sector { get; set; }
+        public string Estado { get; set; }
 
         public override string ToString()
         {

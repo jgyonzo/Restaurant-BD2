@@ -1,6 +1,6 @@
-1- id de mesa es autogenerado. FAIL! .... elegir el numero.
-2- Agregar estado a mesas, mozos, platos, promociones para inactivaciones
-3- ingresar sector a mano en mesas
+1- id de mesa es autogenerado. FAIL! .... elegir el numero. (grafico) OK
+2- Agregar estado a mesas, mozos, platos, promociones para inactivaciones OK
+3- ingresar sector a mano en mesas (grafico)
 4- validaciones de campos tipo texto (usar masked textBox)
 5- buscar por multiples criterios en mozos, platos, promociones
 6- ordenar los dataGrids clickeando en los headers

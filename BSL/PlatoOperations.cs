@@ -23,12 +23,26 @@ namespace BSL
             }
         }
 
-        public IEnumerable<Plato> GetAllFiltering(string filter)
+        public IEnumerable<Plato> SearchByDesc(string filter)
         {
             try
             {
                 PlatoDao dao = new PlatoDao();
-                return dao.GetAllFiltering(filter);
+                return dao.SearchByDesc(filter);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener platos " + ex.Message);
+                throw ex;
+            }
+        }
+
+        public IEnumerable<Plato> SearchByRubro(string rubro)
+        {
+            try
+            {
+                PlatoDao dao = new PlatoDao();
+                return dao.SearchByRubro(rubro);
             }
             catch (Exception ex)
             {
@@ -56,7 +70,7 @@ namespace BSL
             PlatoDao dao = new PlatoDao();
             if (dao.Update(p) != 1)
             {
-                throw new Exception("No se actualizo la informacion");
+                throw new Exception("No se actualizó el plato");
             }
         }
 
@@ -65,16 +79,22 @@ namespace BSL
             PlatoDao dao = new PlatoDao();
             if (dao.Insert(p) != 1)
             {
-                throw new Exception("No se inserto la informacion");
+                throw new Exception("No se insertó el plato");
             }
         }
 
         public void Delete(Plato p)
         {
             PlatoDao dao = new PlatoDao();
-            if (dao.Delete(p) != 1)
+           dao.Inactivate(p);
+        }
+
+        public void Activate(Plato p)
+        {
+            PlatoDao dao = new PlatoDao();
+            if (dao.Activate(p) != 1)
             {
-                throw new Exception("No se elimino el plato");
+                throw new Exception("No se actualizó como DISPONIBLE el plato");
             }
         }
     }

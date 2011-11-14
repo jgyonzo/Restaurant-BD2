@@ -66,7 +66,7 @@ namespace Restaurant
          private void ClearAllPlato()
          {
              TextDescPlatos.Clear();
-             TextPricePlatoC.Clear();
+             TextPricePlatoC.ResetText();
              TextPricePlatoV.Clear();
              TextIdPlatos.Clear();
              ComboBoxPlatos.SelectedItem = "Primer Plato";
@@ -78,7 +78,15 @@ namespace Restaurant
              Plato p = new Plato();
              p.Descripcion = TextDescPlatos.Text;
              p.Precio_Costo = (float)(Convert.ToDouble(TextPricePlatoC.Text));
-             p.Precio_Venta = (float)(Convert.ToDouble(TextPricePlatoV.Text));
+             try
+             {
+                 p.Precio_Venta = (float)(Convert.ToDouble(TextPricePlatoV.Text));
+             }
+             catch (FormatException ex)
+             {
+                 MessageBox.Show("Precio incorrecto", "Error numerico");
+                 return;
+             }
              p.Rubro = ComboBoxPlatos.SelectedItem.ToString();
 
              PlatoOperations po = new PlatoOperations();
@@ -122,22 +130,31 @@ namespace Restaurant
 
          private void ButtonDeletePlato_Click(object sender, EventArgs e)
          {
-             Plato p = new Plato();
-             p.Id = Convert.ToUInt32(TextIdPlatos.Text);
-
-             PlatoOperations po = new PlatoOperations();
-             try
+             DialogResult res = MessageBox.Show("¿Realmente desea actualizar el plato?", "Confirmar actualizacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+             if (res == DialogResult.OK)
              {
-                 po.Delete(p);
-             }
-             catch (Exception ex)
-             {
-                 //TODO:
-             }
+                 Plato p = new Plato();
+                 p.Id = Convert.ToUInt32(TextIdPlatos.Text);
 
-             ReloadGridPlatos();
-             ClearAllPlato();
-             //TODO: Mostrar cartel de update exitoso o erroneo
+                 PlatoOperations po = new PlatoOperations();
+                 try
+                 {
+                     po.Delete(p);
+                 }
+                 catch (Exception ex)
+                 {
+                     //TODO:
+                 }
+
+                 ReloadGridPlatos();
+                 ClearAllPlato();
+                 //TODO: Mostrar cartel de update exitoso o erroneo
+                 MessageBox.Show("Operación realizada con éxito!", "Confirmar actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+             else
+             {
+                 MessageBox.Show("Operación cancelada!", "Confirmar actualización", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+             }
          }
 
          private void ButtonBuscarPlato_Click(object sender, EventArgs e)
@@ -150,7 +167,7 @@ namespace Restaurant
              try
              {
                  PlatoOperations po = new PlatoOperations();
-                 var platos = po.GetAllFiltering(TextBuscarPlato.Text);
+                 var platos = po.SearchByDesc(TextBuscarPlato.Text);
                  DataGridPlatos.DataSource = platos;
                  DataGridPlatos.ClearSelection();
              }

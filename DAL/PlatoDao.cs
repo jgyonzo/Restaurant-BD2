@@ -31,7 +31,7 @@ namespace DAL
             }
         }
 
-        public IEnumerable<Plato> GetAllFiltering(string filter)
+        public IEnumerable<Plato> SearchByDesc(string filter)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
@@ -40,6 +40,49 @@ namespace DAL
                     string SelectAllPlatosFiltering = "select * from platos where upper(descripcion) like ('%"+ filter.ToUpper() +"%') order by rubro,descripcion";
                     conn.Open();
                     var lista = conn.Query<Plato>(SelectAllPlatosFiltering, null, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public IEnumerable<Plato> SearchByRubro(string rubro)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    string SelectAllPlatosFiltering = "select * from platos where rubro = '" + rubro + "' order by descripcion";
+                    conn.Open();
+                    var lista = conn.Query<Plato>(SelectAllPlatosFiltering, null, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public IEnumerable<Plato> SearchByEstado(string estado)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    conn.Open();
+                    var lista = conn.Query<Plato>(Constants.SearchPlatosByEstado, new { Estado = estado}, null, true, null, CommandType.Text);
                     return lista;
                 }
                 catch (Exception ex)
@@ -118,14 +161,50 @@ namespace DAL
             }
         }
 
-        public int Delete(Plato p)
+        public void Inactivate(Plato p)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                MySqlTransaction trans = null;
+                try
+                {
+                    conn.Open();
+                    trans = conn.BeginTransaction();
+                    if (conn.Execute(Constants.DeletePlato, p, null, null, CommandType.Text) == -1)
+                    {
+                        throw new DataException("Error al actualizar como NO DISPONIBLE un plato");
+                    }
+                    PromocionesDao promoDao = new PromocionesDao();
+                    var promos = promoDao.GetPromosByPlato(p);
+                    foreach (var pr in promos)
+                    {
+                        if (promoDao.Inactivate(pr.Promocion_Id, conn, trans) == -1)
+                        {
+                            throw new DataException("Error al actualizar como NO DISPONIBLE la promocion con id =" + pr.Promocion_Id +  " asociada al plato");
+                        }
+                    }
+                    trans.Commit();
+                }
+                catch (Exception ex)
+                {
+                    trans.Rollback();
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public int Activate(Plato p)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {
                 try
                 {
                     conn.Open();
-                    return conn.Execute(Constants.DeletePlato, p, null, null, CommandType.Text);
+                    return conn.Execute(Constants.ActivatePlato, p, null, null, CommandType.Text);
                 }
                 catch (Exception ex)
                 {

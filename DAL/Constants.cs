@@ -9,53 +9,48 @@ namespace DAL
     {
         public static string QueryConn = "host=localhost;user id=root;password=asd;database=bd2;";
 
-        public static string SelectAllMozos = "select * from mozos order by sector,nombre";
-
+        //MOZOS
+        public static string SelectAllMozos = "select * from mozos where estado = 'ACTIVO' order by sector,nombre";
         public static string UpdateMozo = "update mozos set nombre = @Nombre, direccion =  @Direccion, dni = @Dni, sector = @Sector where id = @Id";
-
         public static string InsertMozo = "insert into mozos(nombre,direccion,dni,sector) values (@Nombre,@Direccion,@Dni,@Sector)";
-
-        public static string DeleteMozo = "delete from mozos where id = @Id";
+        public static string DeleteMozo = "update mozos set estado = 'DESVINCULADO' where id = @Id";
+        public static string SelectOneMozoByDni = "select * from mozos where dni = @Dni";
+        public static string SearchMozosBySector = "select * from mozos where sector = @Sector order by nombre";
 
         //PLATOS
-        public static string SelectAllPlatos = "select * from platos order by rubro,descripcion";
-
+        public static string SelectAllPlatos = "select * from platos order by estado,rubro,descripcion";
+        public static string SearchPlatosByEstado = "select * from platos where estado = @Estado order by rubro,descripcion";
         public static string SelectOnePlato = "select * from platos where id = @Id";
-
         public static string UpdatePlato = "update platos set descripcion = @Descripcion, rubro =  @Rubro,precio_costo  = @Precio_Costo, precio_venta = @Precio_Venta where id = @Id";
-
+        public static string ActivatePlato = "update platos set estado = 'DISPONIBLE' where id = @Id";
         public static string InsertPlato = "insert into platos(descripcion,rubro,precio_costo,precio_venta) values (@Descripcion,@Rubro,@Precio_Costo,@Precio_Venta)";
-
-        public static string DeletePlato = "delete from platos where id = @Id";
+        public static string DeletePlato = "update platos set estado = 'NO DISPONIBLE' where id = @Id";
 
         //PROMOCIONES
-        public static string SelectAllPromociones = "select * from promociones order by descripcion";
-
+        public static string SelectAllPromociones = "select * from promociones order by estado,descripcion";
         public static string SelectPlatosByPromo = "select * from platos_promociones where promocion_id = @Id";
-
         public static string UpdatePromo = "update promociones set descripcion = @Descripcion,precio = @Precio where id = @Id";
-
+        public static string ActivatePromo = "update promociones set estado = 'DISPONIBLE' where id = @Id";
         public static string InsertPlatoPromo = "insert into platos_promociones (plato_id,promocion_id) values (@Plato_Id,@Promocion_Id)";
-
         public static string InsertPromo = "insert into promociones(descripcion,precio) values (@Descripcion,@Precio)";
-
         public static string DeletePlatoPromo = "delete from platos_promociones where plato_id = @Plato_Id and promocion_id = @Promocion_Id";
-
         public static string DeletePlatosByPromo = "delete from platos_promociones where promocion_id = @Id";
-
-        public static string DeletePromo = "delete from promociones where id = @Id";
-
+        public static string DeletePromo = "update promociones set estado = 'NO DISPONIBLE' where id = @Id";
         public static string SelectPromocion = "select * from promociones where id = @Id";
+        public static string SelectPromosByPlato = "select * from platos_promociones where plato_id = @Id";
+        public static string SearchPromocionesByEstado = "select * from promociones where estado = @Estado order by descripcion";
 
         //Genericas
         public static string SelectLastId = "select LAST_INSERT_ID() as id";
 
         //MESAS
-        public static string SelectAllMesas = "select * from mesas order by sector,id";
-        public static string SelectMesasBySector = "select * from mesas m where sector = @Sector and not exists(select 1 from ventas v where v.mesa_id = m.id and estado = 'ABIERTA') order by sector,id";
+        public static string SelectAllMesas = "select * from mesas order by estado,sector,id";
+        public static string SearchMesasByEstado = "select * from mesas where estado = @Estado order by sector,id";
+        public static string SelectMesasDisponiblesBySector = "select * from mesas m where sector = @Sector and estado = 'EN SERVICIO' and not exists(select 1 from ventas v where v.mesa_id = m.id and estado = 'ABIERTA') order by sector,id";
         public static string SelectAllSectores = "select distinct(sector) from mesas order by sector";
-        public static string InsertMesa = "insert into mesas(sector) values (@Sector)";
-        public static string DeleteMesa = "delete from mesas where id = @Id";
+        public static string InsertMesa = "insert into mesas(id,sector) values (@Id,@Sector)";
+        public static string InactivateMesa = "update mesas set estado = 'FUERA DE SERVICIO' where id = @Id";
+        public static string ActivateMesa = "update mesas set estado = 'EN SERVICIO' where id = @Id";
 
         //VENTAS
         public static string SelectVentasAbiertas = "select * from ventas where estado = 'ABIERTA' order by fecha";

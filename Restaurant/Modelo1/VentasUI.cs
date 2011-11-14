@@ -126,7 +126,7 @@ namespace Restaurant
             {
                 var elem = (Mozo)ComboMozoVenta.SelectedItem;
                 MesaOperations mo = new MesaOperations();
-                var mesas = mo.GetFromSector(elem.Sector);
+                var mesas = mo.GetDisponiblesMesasBySector(elem.Sector);
                 ComboMesaVenta.DataSource = mesas;
             }
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace Restaurant
                 ReloadGridVentas();
 
                 MesaOperations mo = new MesaOperations();
-                var mesas = mo.GetFromSector(mozo.Sector);
+                var mesas = mo.GetDisponiblesMesasBySector(mozo.Sector);
                 ComboMesaVenta.DataSource = mesas;
             }
             catch (Exception ex)
@@ -176,7 +176,7 @@ namespace Restaurant
 
                 var elem = (Mozo)ComboMozoVenta.SelectedItem;
                 MesaOperations mo = new MesaOperations();
-                var mesas = mo.GetFromSector(elem.Sector);
+                var mesas = mo.GetDisponiblesMesasBySector(elem.Sector);
                 ComboMesaVenta.DataSource = mesas;
             }
             catch (Exception ex)
@@ -212,7 +212,7 @@ namespace Restaurant
             try
             {
                 PlatoOperations po = new PlatoOperations();
-                var platos = po.GetAllFiltering(TextSearchItems.Text);
+                var platos = po.SearchByDesc(TextSearchItems.Text);
                 List<Item> items = new List<Item>();
                 foreach (var p in platos)
                 {
@@ -248,7 +248,7 @@ namespace Restaurant
             try
             {
                 PromocionesOperations po = new PromocionesOperations();
-                var promos = po.GetAllFiltering(TextSearchItems.Text);
+                var promos = po.SearchByDesc(TextSearchItems.Text);
                 List<Item> items = new List<Item>();
                 foreach (var p in promos)
                 {

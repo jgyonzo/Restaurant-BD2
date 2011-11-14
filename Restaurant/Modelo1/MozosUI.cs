@@ -39,7 +39,7 @@ namespace Restaurant
             try
             {
                 MesaOperations meo = new MesaOperations();
-                var sectores = meo.getAllSectores();
+                var sectores = meo.GetAllSectores();
                 List<string> sectoresStr = new List<string>();
                 foreach (var s in sectores)
                 {
@@ -73,7 +73,7 @@ namespace Restaurant
 
         private void ClearAllMozo()
         {
-            TextDniMozo.Clear();
+            TextDniMozo.ResetText();
             TextDirMozo.Clear();
             TextNombreMozo.Clear();
             TextIdMozo.Clear();

@@ -91,7 +91,26 @@ namespace Restaurant
             MesaOperations po = new MesaOperations();
             try
             {
-                po.Delete(p);
+                po.Inactivate(p);
+            }
+            catch (Exception ex)
+            {
+                //TODO:
+            }
+
+            ReloadGridMesas();
+            ClearAllMesa();
+        }
+
+        private void buttonActivateMesa_Click(object sender, EventArgs e)
+        {
+            Mesa p = new Mesa();
+            p.Id = Convert.ToUInt32(TextIdMesas.Text);
+
+            MesaOperations po = new MesaOperations();
+            try
+            {
+                po.Activate(p);
             }
             catch (Exception ex)
             {
