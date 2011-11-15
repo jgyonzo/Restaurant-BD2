@@ -134,7 +134,7 @@ namespace DAL
             }
         }
 
-        public Mozo GetOneByDni(UInt32 dni)
+        public Mozo GetOneByDni(UInt64 dni)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
             {

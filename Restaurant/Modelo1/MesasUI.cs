@@ -22,6 +22,8 @@ namespace Restaurant
                 var mesas = po.GetAll();
                 DataGridMesas.DataSource = mesas;
                 DataGridMesas.ClearSelection();
+                ButtonDeleteMesa.Enabled = false;
+                buttonActivateMesa.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -32,11 +34,6 @@ namespace Restaurant
         private void TabMesas_Enter(object sender, EventArgs e)
         {
             ReloadGridMesas();
-            List<UInt32> sectores = new List<UInt32>();
-            sectores.Add(1);
-            sectores.Add(2);
-            sectores.Add(3);
-            ComboSectoresMesas.DataSource = sectores;
             ClearAllMesa();
         }
 
@@ -44,8 +41,11 @@ namespace Restaurant
         {
             TextNroMesa.Clear();
             TextIdMesas.Clear();
-            ComboSectoresMesas.SelectedItem = Convert.ToUInt32(1);
+            TextIdMesa.ResetText();
+            TextSectorMesa.ResetText();
             DataGridMesas.ClearSelection();
+            ButtonDeleteMesa.Enabled = false;
+            buttonActivateMesa.Enabled = false;
         }
 
         private void LinkClearMesas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -53,72 +53,128 @@ namespace Restaurant
             ClearAllMesa();
         }
 
-        private void DataGridMesas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridMesas_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
             var list = (IEnumerable<Mesa>)DataGridMesas.DataSource;
             var elem = list.ElementAt(e.RowIndex);
             TextNroMesa.Text = "" + elem.Id;
             TextIdMesas.Text = "" + elem.Id;
-            ComboSectoresMesas.SelectedItem = elem.Sector;
+            if (elem.Estado == "EN SERVICIO")
+            {
+                ButtonDeleteMesa.Enabled = true;
+                buttonActivateMesa.Enabled = false;
+            }
+            else
+            {
+                ButtonDeleteMesa.Enabled = false;
+                buttonActivateMesa.Enabled = true;
+            }
         }
 
         private void ButtonNewMesa_Click(object sender, EventArgs e)
         {
+            if (TextIdMesa.Text == null || TextIdMesa.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un ID para la mesa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (TextSectorMesa.Text == null || TextSectorMesa.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un sector para la mesa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Mesa p = new Mesa();
-            p.Sector = (UInt32)ComboSectoresMesas.SelectedItem;
-
-            MesaOperations po = new MesaOperations();
             try
             {
-                po.Insert(p);
+                p.Sector = Convert.ToUInt32(TextSectorMesa.Text);
             }
-            catch (Exception ex)
+            catch (FormatException ex)
             {
-                //TODO:
+                MessageBox.Show("El sector debe ser numérico", "Error numérico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            try
+            {
+                p.Id = Convert.ToUInt32(TextIdMesa.Text);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El ID debe ser numérico", "Error numérico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult res = MessageBox.Show("¿Realmente desea agregar la mesa?", "Confirmar agregar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
+            {
+                MesaOperations po = new MesaOperations();
+                try
+                {
+                    po.Insert(p);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: ID duplicado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            ReloadGridMesas();
-            ClearAllMesa();
-            //TODO: Mostrar cartel de update exitoso o erroneo
+                ReloadGridMesas();
+                ClearAllMesa();
+            }
         }
 
         private void ButtonDeleteMesa_Click(object sender, EventArgs e)
         {
-            Mesa p = new Mesa();
-            p.Id = Convert.ToUInt32(TextIdMesas.Text);
-
-            MesaOperations po = new MesaOperations();
-            try
+            if (TextIdMesas.Text == null || TextIdMesas.Text == "")
             {
-                po.Inactivate(p);
+                MessageBox.Show("Debe seleccionar una mesa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            catch (Exception ex)
+            DialogResult res = MessageBox.Show("¿Realmente desea marcar como fuera de servicio la mesa?", "Confirmar fuera de servicio", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
             {
-                //TODO:
-            }
+                Mesa p = new Mesa();
+                p.Id = Convert.ToUInt32(TextIdMesas.Text);
 
-            ReloadGridMesas();
-            ClearAllMesa();
+                MesaOperations po = new MesaOperations();
+                try
+                {
+                    po.Inactivate(p);
+                }
+                catch (Exception ex)
+                {
+                    //TODO:
+                }
+
+                ReloadGridMesas();
+                ClearAllMesa();
+            }
         }
 
         private void buttonActivateMesa_Click(object sender, EventArgs e)
         {
-            Mesa p = new Mesa();
-            p.Id = Convert.ToUInt32(TextIdMesas.Text);
-
-            MesaOperations po = new MesaOperations();
-            try
+            if (TextIdMesas.Text == null || TextIdMesas.Text == "")
             {
-                po.Activate(p);
+                MessageBox.Show("Debe seleccionar una mesa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            catch (Exception ex)
+            DialogResult res = MessageBox.Show("¿Realmente desea marcar como en servicio la mesa?", "Confirmar en servicio", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
             {
-                //TODO:
-            }
+                Mesa p = new Mesa();
+                p.Id = Convert.ToUInt32(TextIdMesas.Text);
 
-            ReloadGridMesas();
-            ClearAllMesa();
+                MesaOperations po = new MesaOperations();
+                try
+                {
+                    po.Activate(p);
+                }
+                catch (Exception ex)
+                {
+                    //TODO:
+                }
+
+                ReloadGridMesas();
+                ClearAllMesa();
+            }
         }
     }
 }

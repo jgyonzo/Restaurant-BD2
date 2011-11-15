@@ -21,6 +21,9 @@ namespace Restaurant
                 var platos = po.GetAbiertas();
                 DataGridVentas.DataSource = platos;
                 DataGridVentas.ClearSelection();
+                ButtonFinVenta.Enabled = false;
+                ButtonAddItemVenta.Enabled = false;
+                ButtonRemoveItem.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -35,6 +38,9 @@ namespace Restaurant
                 VentasOperations po = new VentasOperations();
                 var platos = po.GetAbiertas();
                 DataGridVentas.DataSource = platos;
+                ButtonFinVenta.Enabled = true;
+                ButtonAddItemVenta.Enabled = true;
+                ButtonRemoveItem.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -64,7 +70,7 @@ namespace Restaurant
                     Promocion p = pro.GetOne(promo.Promocion_Id);
                     i.Descripción = p.Descripcion;
                     i.Precio = p.Precio;
-                    i.Tipo = "PROMO";
+                    i.Tipo = "Promoción";
                     items.Add(i);
                 }
                 foreach (var pedido in pedidos)
@@ -75,11 +81,11 @@ namespace Restaurant
                     Plato p = plo.GetOne(pedido.Plato_Id);
                     i.Descripción = p.Descripcion;
                     i.Precio = p.Precio_Venta;
-                    i.Tipo = "PLATO";
+                    i.Tipo = p.Rubro;
                     items.Add(i);
                 }
                 DataGridItemsActuales.DataSource = items;
-                DataGridItemsActuales.ClearSelection();
+                //DataGridItemsActuales.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -116,6 +122,8 @@ namespace Restaurant
         public void ClearAllVenta()
         {
             TextSearchItems.Clear();
+            TextIdVenta.Clear();
+            TextTipoBusqueda.Clear();
             ReloadGridItems();
             ReloadGridItemsActuales();
         }
@@ -141,7 +149,7 @@ namespace Restaurant
             {
                 if (ComboMozoVenta.SelectedItem == null || ComboMesaVenta.SelectedItem == null)
                 {
-                    //TODO: Marcar error
+                    MessageBox.Show("No hay mesas disponibles en este sector", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 Venta v = new Venta();
@@ -165,27 +173,32 @@ namespace Restaurant
 
         private void ButtonFinVenta_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult res = MessageBox.Show("¿Realmente desea finalizar la venta?", "Confirmar finalizar venta", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (res == DialogResult.OK)
             {
-                //TODO: Error no hay venta seleccionada
-                Venta v = new Venta();
-                v.Id = Convert.ToUInt32(TextIdVenta.Text);
-                VentasOperations vo = new VentasOperations();
-                vo.Close(v);
-                ReloadGridVentas();
+                try
+                {
+                    //TODO: Error no hay venta seleccionada
+                    Venta v = new Venta();
+                    v.Id = Convert.ToUInt32(TextIdVenta.Text);
+                    VentasOperations vo = new VentasOperations();
+                    vo.Close(v);
+                    ReloadGridVentas();
+                    ClearAllVenta();
 
-                var elem = (Mozo)ComboMozoVenta.SelectedItem;
-                MesaOperations mo = new MesaOperations();
-                var mesas = mo.GetDisponiblesMesasBySector(elem.Sector);
-                ComboMesaVenta.DataSource = mesas;
-            }
-            catch (Exception ex)
-            {
-                //TODO
+                    var elem = (Mozo)ComboMozoVenta.SelectedItem;
+                    MesaOperations mo = new MesaOperations();
+                    var mesas = mo.GetDisponiblesMesasBySector(elem.Sector);
+                    ComboMesaVenta.DataSource = mesas;
+                }
+                catch (Exception ex)
+                {
+                    //TODO
+                }
             }
         }
 
-        private void DataGridVentas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridVentas_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -195,6 +208,9 @@ namespace Restaurant
                 TextIdVenta.Text = "" + elem.Id;
 
                 LoadItemsActuales();
+                ButtonFinVenta.Enabled = true;
+                ButtonAddItemVenta.Enabled = true;
+                ButtonRemoveItem.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -220,7 +236,7 @@ namespace Restaurant
                     i.Descripción = p.Descripcion;
                     i.Id = p.Id;
                     i.Precio = p.Precio_Venta;
-                    i.Tipo = "PLATO";
+                    i.Tipo = p.Rubro;
                     items.Add(i);
                 }
                 DataGridItemsVenta.DataSource = items;
@@ -256,7 +272,7 @@ namespace Restaurant
                     i.Descripción = p.Descripcion;
                     i.Id = p.Id;
                     i.Precio = p.Precio;
-                    i.Tipo = "PROMO";
+                    i.Tipo = "Promoción";
                     items.Add(i);
                 }
                 DataGridItemsVenta.DataSource = items;
@@ -270,12 +286,17 @@ namespace Restaurant
 
         private void ButtonAddItemVenta_Click(object sender, EventArgs e)
         {
+            if (DataGridItemsVenta.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un item para agregarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             try
             {
                 var items = (List<Item>)DataGridItemsVenta.DataSource;
                 Item i = (Item)items.ElementAt(DataGridItemsVenta.CurrentRow.Index);
                 VentasOperations vo = new VentasOperations();
-                if (i.Tipo == "PROMO")
+                if (i.Tipo == "Promoción")
                 {
                     var venta_id = Convert.ToUInt32(TextIdVenta.Text);
                     vo.AddPromo(i.Id, venta_id, i.Precio);
@@ -286,7 +307,7 @@ namespace Restaurant
                     vo.AddPedido(i.Id, venta_id, i.Precio);
                 }
                 LoadItemsActuales();
-                ReloadGridVentas();
+                ReloadGridVentasSinClear();
             }
             catch (Exception ex)
             {
@@ -296,12 +317,17 @@ namespace Restaurant
 
         private void ButtonRemoveItem_Click(object sender, EventArgs e)
         {
+            if (DataGridItemsActuales.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un item para quitarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             try
             {
                 var items = (List<ItemCargado>)DataGridItemsActuales.DataSource;
                 ItemCargado i = (ItemCargado)items.ElementAt(DataGridItemsActuales.CurrentRow.Index);
                 VentasOperations vo = new VentasOperations();
-                if (i.Tipo == "PROMO")
+                if (i.Tipo == "Promoción")
                 {
                     var venta_id = Convert.ToUInt32(TextIdVenta.Text);
                     vo.RemovePromo(i.Id, venta_id, i.Precio);
@@ -312,7 +338,7 @@ namespace Restaurant
                     vo.RemovePedido(i.Id, venta_id, i.Precio);
                 }
                 LoadItemsActuales();
-                ReloadGridVentas();
+                ReloadGridVentasSinClear();
             }
             catch (Exception ex)
             {

@@ -53,7 +53,7 @@ namespace DAL
         public static string ActivateMesa = "update mesas set estado = 'EN SERVICIO' where id = @Id";
 
         //VENTAS
-        public static string SelectVentasAbiertas = "select * from ventas where estado = 'ABIERTA' order by fecha";
+        public static string SelectVentasAbiertas = "select v.*, (select nombre from mozos m where m.id = v.mozo_id) nombre_mozo from ventas v where estado = 'ABIERTA' order by fecha";
         public static string InsertVenta = "insert into ventas(fecha,estado,mozo_id,mesa_id,importe_total) values (sysdate(),'ABIERTA', @Mozo_Id , @Mesa_Id , 0)";
         public static string CerrarVenta = "update ventas set estado = 'CERRADA' where id = @Id";
         public static string SelectPromosByVenta = "select * from ventas_promociones where venta_id = @Id";

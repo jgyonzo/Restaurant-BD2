@@ -89,7 +89,7 @@ namespace Restaurant
         private void ClearAllPromo()
         {
             TextDescPromo.Clear();
-            TextPricePromo.Clear();
+            TextPricePromo.ResetText();
             TextIdPromo.Clear();
             ReloadCheckListPromos();
             DataGridPromos.ClearSelection();

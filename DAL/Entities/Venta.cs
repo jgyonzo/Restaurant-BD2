@@ -13,5 +13,6 @@ namespace DAL.Entities
         public string Estado { get; set; }
         public UInt32 Id { get; set; }
         public UInt32 Mozo_Id { get; set; }
+        public string Nombre_Mozo { get; set; }
     }
 }

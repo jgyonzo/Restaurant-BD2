@@ -106,7 +106,7 @@ namespace DAL
                     var lista = conn.Query<Plato>(Constants.SelectOnePlato, new {Id = id}, null, true, null, CommandType.Text);
                     if (lista.Count() == 0)
                     {
-                        throw new Exception("Plato no encontrado");
+                        return null;
                     }
                     return lista.ElementAt(0);
                 }

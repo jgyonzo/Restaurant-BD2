@@ -89,8 +89,13 @@
     <EmbeddedResource Include="Modelo1\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\DAL.Entities.Mesa.datasource" />
     <None Include="Properties\DataSources\DAL.Entities.Mozo.datasource" />
     <None Include="Properties\DataSources\DAL.Entities.Plato.datasource" />
+    <None Include="Properties\DataSources\DAL.Entities.Promocion.datasource" />
+    <None Include="Properties\DataSources\DAL.Entities.Venta.datasource" />
+    <None Include="Properties\DataSources\Item.datasource" />
+    <None Include="Properties\DataSources\ItemCargado.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

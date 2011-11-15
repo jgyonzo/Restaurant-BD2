@@ -83,6 +83,9 @@ namespace Restaurant
         private void MainWindow_Load(object sender, EventArgs e)
         {
             this.comboMozoTipoBusq.SelectedItem = "Nombre";
+            this.comboPlatoTipoBusq.SelectedItem = "Descripción";
+            this.textSearchMozos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textSearchMozos_KeyPress);
+            this.TextBuscarPlato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBuscarPlato_KeyPress);
         }
 
         private void LinkComidasRubro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

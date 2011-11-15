@@ -14,6 +14,7 @@ namespace BSL
             try
             {
                 MozoDao dao = new MozoDao();
+
                 return dao.GetAll();
             }
             catch (Exception ex)
@@ -82,7 +83,7 @@ namespace BSL
             }
         }
 
-        public Mozo GetOneByDni(UInt32 dni)
+        public Mozo GetOneByDni(UInt64 dni)
         {
             try
             {
