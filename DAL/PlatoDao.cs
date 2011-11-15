@@ -53,6 +53,28 @@ namespace DAL
             }
         }
 
+        public IEnumerable<Plato> SearchByDescDisponible(string filter)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))
+            {
+                try
+                {
+                    string SelectAllPlatosFiltering = "select * from platos where upper(descripcion) like ('%" + filter.ToUpper() + "%') and estado = 'DISPONIBLE' order by rubro,descripcion";
+                    conn.Open();
+                    var lista = conn.Query<Plato>(SelectAllPlatosFiltering, null, null, true, null, CommandType.Text);
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public IEnumerable<Plato> SearchByRubro(string rubro)
         {
             using (MySqlConnection conn = new MySqlConnection(Constants.QueryConn))

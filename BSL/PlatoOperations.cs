@@ -37,6 +37,20 @@ namespace BSL
             }
         }
 
+        public IEnumerable<Plato> SearchByDescDisponible(string filter)
+        {
+            try
+            {
+                PlatoDao dao = new PlatoDao();
+                return dao.SearchByDescDisponible(filter);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener platos " + ex.Message);
+                throw ex;
+            }
+        }
+
         public IEnumerable<Plato> SearchByRubro(string rubro)
         {
             try

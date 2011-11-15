@@ -161,7 +161,7 @@ namespace DAL
                     if (conn.Execute(Constants.UpdatePromo, p, trans, null, CommandType.Text) == -1)
                     {
                         //Promo not updated
-                        throw new DataException("Error al actualizar la promoción como NO DISPONIBLE");
+                        throw new DataException("Error al actualizar la promoción");
                     }
                     if (DeleteAllPlatos(p, conn, trans) == -1)
                     {

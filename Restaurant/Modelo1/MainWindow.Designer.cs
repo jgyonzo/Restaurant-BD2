@@ -56,13 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.DataGridPlatos = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rubroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCostoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.platoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabMozos = new System.Windows.Forms.TabPage();
             this.groupBuscarMozo = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -88,19 +81,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGridMozos = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mozoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabVentas_Pedidos = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DataGridVentas = new System.Windows.Forms.DataGridView();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Mozo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importeTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TextIdVenta = new System.Windows.Forms.TextBox();
             this.ButtonNewVenta = new System.Windows.Forms.Button();
@@ -112,10 +96,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.DataGridItemsActuales = new System.Windows.Forms.DataGridView();
-            this.descripciónDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCargadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ButtonRemoveItem = new System.Windows.Forms.Button();
             this.TextTipoBusqueda = new System.Windows.Forms.TextBox();
@@ -125,9 +105,6 @@
             this.ButtonBuscarPlatoVenta = new System.Windows.Forms.Button();
             this.TextSearchItems = new System.Windows.Forms.TextBox();
             this.DataGridItemsVenta = new System.Windows.Forms.DataGridView();
-            this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabConsultas = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -147,17 +124,25 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.DataGridConsultas = new System.Windows.Forms.DataGridView();
             this.TabPromos = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridPlatosPromo = new System.Windows.Forms.DataGridView();
+            this.buttonRemovePlatoPromo = new System.Windows.Forms.Button();
+            this.buttonAddPlatoPromo = new System.Windows.Forms.Button();
+            this.buttonClearPlatosPromo = new System.Windows.Forms.Button();
+            this.buttonBuscarPlatoPromo = new System.Windows.Forms.Button();
+            this.textSearchPlatosPromo = new System.Windows.Forms.TextBox();
+            this.dataGridPlatosToAdd = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.TextBuscarPromo = new System.Windows.Forms.TextBox();
             this.ButtonClearSearchPromos = new System.Windows.Forms.Button();
             this.ButtonBuscarPromo = new System.Windows.Forms.Button();
             this.DataGridPromos = new System.Windows.Forms.DataGridView();
-            this.CheckListPromos = new System.Windows.Forms.CheckedListBox();
             this.GroupDataPromo = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelPP = new System.Windows.Forms.Label();
+            this.buttonActivatePromo = new System.Windows.Forms.Button();
             this.TextPricePromo = new System.Windows.Forms.NumericUpDown();
             this.TextIdPromo = new System.Windows.Forms.TextBox();
             this.LinkClearPromo = new System.Windows.Forms.LinkLabel();
@@ -183,14 +168,37 @@
             this.ButtonNewMesa = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.DataGridMesas = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCostoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.platoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mozoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mesaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importeTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.promocionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.promocionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descripcionDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubroDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubroDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tasbs.SuspendLayout();
             this.TabPlatos.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -198,17 +206,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).BeginInit();
             this.TabMozos.SuspendLayout();
             this.groupBuscarMozo.SuspendLayout();
             this.GroupDatosMozos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TextDniMozo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).BeginInit();
             this.TabVentas_Pedidos.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.GroupVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridItemsActuales)).BeginInit();
@@ -222,6 +227,9 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridConsultas)).BeginInit();
             this.TabPromos.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPlatosPromo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPlatosToAdd)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPromos)).BeginInit();
@@ -233,8 +241,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.TextIdMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextSectorMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mesaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mesaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Tasbs
@@ -571,58 +582,6 @@
             this.DataGridPlatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPlatos_CellClick);
             this.DataGridPlatos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPlatos_RowEnter);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rubroDataGridViewTextBoxColumn
-            // 
-            this.rubroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rubroDataGridViewTextBoxColumn.DataPropertyName = "Rubro";
-            this.rubroDataGridViewTextBoxColumn.HeaderText = "Rubro";
-            this.rubroDataGridViewTextBoxColumn.Name = "rubroDataGridViewTextBoxColumn";
-            this.rubroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioCostoDataGridViewTextBoxColumn
-            // 
-            this.precioCostoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precioCostoDataGridViewTextBoxColumn.DataPropertyName = "Precio_Costo";
-            this.precioCostoDataGridViewTextBoxColumn.HeaderText = "Precio de costo";
-            this.precioCostoDataGridViewTextBoxColumn.Name = "precioCostoDataGridViewTextBoxColumn";
-            this.precioCostoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioVentaDataGridViewTextBoxColumn
-            // 
-            this.precioVentaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta";
-            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de venta";
-            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
-            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // platoBindingSource
-            // 
-            this.platoBindingSource.DataSource = typeof(DAL.Entities.Plato);
-            // 
             // TabMozos
             // 
             this.TabMozos.Controls.Add(this.groupBuscarMozo);
@@ -936,42 +895,6 @@
             this.DataGridMozos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMozos_CellClick);
             this.DataGridMozos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMozos_RowEnter);
             // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dniDataGridViewTextBoxColumn
-            // 
-            this.dniDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dniDataGridViewTextBoxColumn.DataPropertyName = "Dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
-            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
-            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sectorDataGridViewTextBoxColumn
-            // 
-            this.sectorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sectorDataGridViewTextBoxColumn.DataPropertyName = "Sector";
-            this.sectorDataGridViewTextBoxColumn.HeaderText = "Sector";
-            this.sectorDataGridViewTextBoxColumn.Name = "sectorDataGridViewTextBoxColumn";
-            this.sectorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mozoBindingSource
-            // 
-            this.mozoBindingSource.DataSource = typeof(DAL.Entities.Mozo);
-            // 
             // TabVentas_Pedidos
             // 
             this.TabVentas_Pedidos.Controls.Add(this.groupBox7);
@@ -1024,14 +947,6 @@
             this.DataGridVentas.TabIndex = 7;
             this.DataGridVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridVentas_RowEnter);
             // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // Nombre_Mozo
             // 
             this.Nombre_Mozo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -1039,26 +954,6 @@
             this.Nombre_Mozo.HeaderText = "Mozo";
             this.Nombre_Mozo.Name = "Nombre_Mozo";
             this.Nombre_Mozo.ReadOnly = true;
-            // 
-            // mesaIdDataGridViewTextBoxColumn
-            // 
-            this.mesaIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mesaIdDataGridViewTextBoxColumn.DataPropertyName = "Mesa_Id";
-            this.mesaIdDataGridViewTextBoxColumn.HeaderText = "Mesa";
-            this.mesaIdDataGridViewTextBoxColumn.Name = "mesaIdDataGridViewTextBoxColumn";
-            this.mesaIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // importeTotalDataGridViewTextBoxColumn
-            // 
-            this.importeTotalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.importeTotalDataGridViewTextBoxColumn.DataPropertyName = "Importe_Total";
-            this.importeTotalDataGridViewTextBoxColumn.HeaderText = "Importe total";
-            this.importeTotalDataGridViewTextBoxColumn.Name = "importeTotalDataGridViewTextBoxColumn";
-            this.importeTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ventaBindingSource
-            // 
-            this.ventaBindingSource.DataSource = typeof(DAL.Entities.Venta);
             // 
             // groupBox2
             // 
@@ -1194,11 +1089,6 @@
             this.DataGridItemsActuales.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataGridItemsActuales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridItemsActuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridItemsActuales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.descripciónDataGridViewTextBoxColumn1,
-            this.cantDataGridViewTextBoxColumn,
-            this.tipoDataGridViewTextBoxColumn1,
-            this.precioDataGridViewTextBoxColumn1});
             this.DataGridItemsActuales.DataSource = this.itemCargadoBindingSource;
             this.DataGridItemsActuales.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DataGridItemsActuales.Location = new System.Drawing.Point(3, 205);
@@ -1207,42 +1097,6 @@
             this.DataGridItemsActuales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridItemsActuales.Size = new System.Drawing.Size(760, 110);
             this.DataGridItemsActuales.TabIndex = 18;
-            // 
-            // descripciónDataGridViewTextBoxColumn1
-            // 
-            this.descripciónDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripciónDataGridViewTextBoxColumn1.DataPropertyName = "Descripción";
-            this.descripciónDataGridViewTextBoxColumn1.HeaderText = "Descripción";
-            this.descripciónDataGridViewTextBoxColumn1.Name = "descripciónDataGridViewTextBoxColumn1";
-            this.descripciónDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cantDataGridViewTextBoxColumn
-            // 
-            this.cantDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantDataGridViewTextBoxColumn.DataPropertyName = "Cant";
-            this.cantDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantDataGridViewTextBoxColumn.Name = "cantDataGridViewTextBoxColumn";
-            this.cantDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoDataGridViewTextBoxColumn1
-            // 
-            this.tipoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoDataGridViewTextBoxColumn1.DataPropertyName = "Tipo";
-            this.tipoDataGridViewTextBoxColumn1.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn1.Name = "tipoDataGridViewTextBoxColumn1";
-            this.tipoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn1
-            // 
-            this.precioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precioDataGridViewTextBoxColumn1.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn1.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn1.Name = "precioDataGridViewTextBoxColumn1";
-            this.precioDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // itemCargadoBindingSource
-            // 
-            this.itemCargadoBindingSource.DataSource = typeof(Restaurant.ItemCargado);
             // 
             // ButtonRemoveItem
             // 
@@ -1291,6 +1145,7 @@
             // ButtonClearItems
             // 
             this.ButtonClearItems.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonClearItems.ForeColor = System.Drawing.Color.Red;
             this.ButtonClearItems.Location = new System.Drawing.Point(153, 19);
             this.ButtonClearItems.Name = "ButtonClearItems";
             this.ButtonClearItems.Size = new System.Drawing.Size(25, 26);
@@ -1330,10 +1185,6 @@
             this.DataGridItemsVenta.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataGridItemsVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridItemsVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridItemsVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.descripciónDataGridViewTextBoxColumn,
-            this.tipoDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn});
             this.DataGridItemsVenta.DataSource = this.itemBindingSource;
             this.DataGridItemsVenta.Location = new System.Drawing.Point(3, 53);
             this.DataGridItemsVenta.Name = "DataGridItemsVenta";
@@ -1341,34 +1192,6 @@
             this.DataGridItemsVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridItemsVenta.Size = new System.Drawing.Size(757, 106);
             this.DataGridItemsVenta.TabIndex = 8;
-            // 
-            // descripciónDataGridViewTextBoxColumn
-            // 
-            this.descripciónDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripciónDataGridViewTextBoxColumn.DataPropertyName = "Descripción";
-            this.descripciónDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
-            this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataSource = typeof(Restaurant.Item);
             // 
             // TabConsultas
             // 
@@ -1573,8 +1396,8 @@
             // 
             // TabPromos
             // 
+            this.TabPromos.Controls.Add(this.groupBox10);
             this.TabPromos.Controls.Add(this.groupBox8);
-            this.TabPromos.Controls.Add(this.CheckListPromos);
             this.TabPromos.Controls.Add(this.GroupDataPromo);
             this.TabPromos.Location = new System.Drawing.Point(4, 22);
             this.TabPromos.Name = "TabPromos";
@@ -1585,8 +1408,143 @@
             this.TabPromos.UseVisualStyleBackColor = true;
             this.TabPromos.Enter += new System.EventHandler(this.TabPromos_Enter);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label14);
+            this.groupBox10.Controls.Add(this.dataGridPlatosPromo);
+            this.groupBox10.Controls.Add(this.buttonRemovePlatoPromo);
+            this.groupBox10.Controls.Add(this.buttonAddPlatoPromo);
+            this.groupBox10.Controls.Add(this.buttonClearPlatosPromo);
+            this.groupBox10.Controls.Add(this.buttonBuscarPlatoPromo);
+            this.groupBox10.Controls.Add(this.textSearchPlatosPromo);
+            this.groupBox10.Controls.Add(this.dataGridPlatosToAdd);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.Location = new System.Drawing.Point(390, 3);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(379, 508);
+            this.groupBox10.TabIndex = 18;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Agregar platos a la promoción";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 254);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 18);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Platos ya cargados";
+            // 
+            // dataGridPlatosPromo
+            // 
+            this.dataGridPlatosPromo.AllowUserToAddRows = false;
+            this.dataGridPlatosPromo.AllowUserToDeleteRows = false;
+            this.dataGridPlatosPromo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridPlatosPromo.AutoGenerateColumns = false;
+            this.dataGridPlatosPromo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridPlatosPromo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridPlatosPromo.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridPlatosPromo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridPlatosPromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPlatosPromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.descripcionDataGridViewTextBoxColumn3,
+            this.rubroDataGridViewTextBoxColumn2,
+            this.precioVentaDataGridViewTextBoxColumn2,
+            this.Estado});
+            this.dataGridPlatosPromo.DataSource = this.platoBindingSource;
+            this.dataGridPlatosPromo.Location = new System.Drawing.Point(6, 275);
+            this.dataGridPlatosPromo.Name = "dataGridPlatosPromo";
+            this.dataGridPlatosPromo.ReadOnly = true;
+            this.dataGridPlatosPromo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridPlatosPromo.Size = new System.Drawing.Size(367, 206);
+            this.dataGridPlatosPromo.TabIndex = 18;
+            // 
+            // buttonRemovePlatoPromo
+            // 
+            this.buttonRemovePlatoPromo.Enabled = false;
+            this.buttonRemovePlatoPromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemovePlatoPromo.Location = new System.Drawing.Point(251, 239);
+            this.buttonRemovePlatoPromo.Name = "buttonRemovePlatoPromo";
+            this.buttonRemovePlatoPromo.Size = new System.Drawing.Size(85, 29);
+            this.buttonRemovePlatoPromo.TabIndex = 17;
+            this.buttonRemovePlatoPromo.Text = " ↑ Quitar";
+            this.buttonRemovePlatoPromo.UseVisualStyleBackColor = true;
+            this.buttonRemovePlatoPromo.Click += new System.EventHandler(this.buttonRemovePlatoPromo_Click);
+            // 
+            // buttonAddPlatoPromo
+            // 
+            this.buttonAddPlatoPromo.Enabled = false;
+            this.buttonAddPlatoPromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddPlatoPromo.Location = new System.Drawing.Point(160, 240);
+            this.buttonAddPlatoPromo.Name = "buttonAddPlatoPromo";
+            this.buttonAddPlatoPromo.Size = new System.Drawing.Size(85, 28);
+            this.buttonAddPlatoPromo.TabIndex = 15;
+            this.buttonAddPlatoPromo.Text = "↓ Agregar";
+            this.buttonAddPlatoPromo.UseVisualStyleBackColor = true;
+            this.buttonAddPlatoPromo.Click += new System.EventHandler(this.buttonAddPlatoPromo_Click);
+            // 
+            // buttonClearPlatosPromo
+            // 
+            this.buttonClearPlatosPromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearPlatosPromo.ForeColor = System.Drawing.Color.Red;
+            this.buttonClearPlatosPromo.Location = new System.Drawing.Point(153, 19);
+            this.buttonClearPlatosPromo.Name = "buttonClearPlatosPromo";
+            this.buttonClearPlatosPromo.Size = new System.Drawing.Size(25, 26);
+            this.buttonClearPlatosPromo.TabIndex = 13;
+            this.buttonClearPlatosPromo.Text = "X";
+            this.buttonClearPlatosPromo.UseVisualStyleBackColor = true;
+            this.buttonClearPlatosPromo.Click += new System.EventHandler(this.buttonClearPlatosPromo_Click);
+            // 
+            // buttonBuscarPlatoPromo
+            // 
+            this.buttonBuscarPlatoPromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarPlatoPromo.Location = new System.Drawing.Point(184, 19);
+            this.buttonBuscarPlatoPromo.Name = "buttonBuscarPlatoPromo";
+            this.buttonBuscarPlatoPromo.Size = new System.Drawing.Size(70, 26);
+            this.buttonBuscarPlatoPromo.TabIndex = 12;
+            this.buttonBuscarPlatoPromo.Text = "Buscar";
+            this.buttonBuscarPlatoPromo.UseVisualStyleBackColor = true;
+            this.buttonBuscarPlatoPromo.Click += new System.EventHandler(this.buttonBuscarPlatoPromo_Click);
+            // 
+            // textSearchPlatosPromo
+            // 
+            this.textSearchPlatosPromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSearchPlatosPromo.Location = new System.Drawing.Point(6, 19);
+            this.textSearchPlatosPromo.Name = "textSearchPlatosPromo";
+            this.textSearchPlatosPromo.Size = new System.Drawing.Size(141, 26);
+            this.textSearchPlatosPromo.TabIndex = 11;
+            // 
+            // dataGridPlatosToAdd
+            // 
+            this.dataGridPlatosToAdd.AllowUserToAddRows = false;
+            this.dataGridPlatosToAdd.AllowUserToDeleteRows = false;
+            this.dataGridPlatosToAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridPlatosToAdd.AutoGenerateColumns = false;
+            this.dataGridPlatosToAdd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridPlatosToAdd.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dataGridPlatosToAdd.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridPlatosToAdd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridPlatosToAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPlatosToAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.descripcionDataGridViewTextBoxColumn2,
+            this.rubroDataGridViewTextBoxColumn1,
+            this.precioVentaDataGridViewTextBoxColumn1});
+            this.dataGridPlatosToAdd.DataSource = this.platoBindingSource;
+            this.dataGridPlatosToAdd.Location = new System.Drawing.Point(3, 53);
+            this.dataGridPlatosToAdd.Name = "dataGridPlatosToAdd";
+            this.dataGridPlatosToAdd.ReadOnly = true;
+            this.dataGridPlatosToAdd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridPlatosToAdd.Size = new System.Drawing.Size(370, 180);
+            this.dataGridPlatosToAdd.TabIndex = 8;
+            // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.groupBox9);
             this.groupBox8.Controls.Add(this.DataGridPromos);
             this.groupBox8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1619,6 +1577,7 @@
             // 
             // ButtonClearSearchPromos
             // 
+            this.ButtonClearSearchPromos.ForeColor = System.Drawing.Color.Red;
             this.ButtonClearSearchPromos.Location = new System.Drawing.Point(168, 19);
             this.ButtonClearSearchPromos.Name = "ButtonClearSearchPromos";
             this.ButtonClearSearchPromos.Size = new System.Drawing.Size(24, 26);
@@ -1659,22 +1618,13 @@
             this.DataGridPromos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridPromos.Size = new System.Drawing.Size(370, 250);
             this.DataGridPromos.TabIndex = 8;
-            this.DataGridPromos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPromos_CellClick);
-            // 
-            // CheckListPromos
-            // 
-            this.CheckListPromos.CheckOnClick = true;
-            this.CheckListPromos.FormattingEnabled = true;
-            this.CheckListPromos.Location = new System.Drawing.Point(502, 188);
-            this.CheckListPromos.Name = "CheckListPromos";
-            this.CheckListPromos.Size = new System.Drawing.Size(222, 289);
-            this.CheckListPromos.TabIndex = 13;
+            this.DataGridPromos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPromos_RowEnter);
             // 
             // GroupDataPromo
             // 
             this.GroupDataPromo.Controls.Add(this.label29);
-            this.GroupDataPromo.Controls.Add(this.label16);
-            this.GroupDataPromo.Controls.Add(this.button1);
+            this.GroupDataPromo.Controls.Add(this.labelPP);
+            this.GroupDataPromo.Controls.Add(this.buttonActivatePromo);
             this.GroupDataPromo.Controls.Add(this.TextPricePromo);
             this.GroupDataPromo.Controls.Add(this.TextIdPromo);
             this.GroupDataPromo.Controls.Add(this.LinkClearPromo);
@@ -1702,26 +1652,27 @@
             this.label29.TabIndex = 18;
             this.label29.Text = "Precio platos $";
             // 
-            // label16
+            // labelPP
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(114, 125);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(15, 18);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "0";
+            this.labelPP.AutoSize = true;
+            this.labelPP.Location = new System.Drawing.Point(114, 125);
+            this.labelPP.Name = "labelPP";
+            this.labelPP.Size = new System.Drawing.Size(15, 18);
+            this.labelPP.TabIndex = 17;
+            this.labelPP.Text = "0";
             // 
-            // button1
+            // buttonActivatePromo
             // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(259, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Disponible";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonActivatePromo.Enabled = false;
+            this.buttonActivatePromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonActivatePromo.ForeColor = System.Drawing.Color.Green;
+            this.buttonActivatePromo.Location = new System.Drawing.Point(259, 86);
+            this.buttonActivatePromo.Name = "buttonActivatePromo";
+            this.buttonActivatePromo.Size = new System.Drawing.Size(111, 30);
+            this.buttonActivatePromo.TabIndex = 16;
+            this.buttonActivatePromo.Text = "Disponible";
+            this.buttonActivatePromo.UseVisualStyleBackColor = true;
+            this.buttonActivatePromo.Click += new System.EventHandler(this.buttonActivatePromo_Click);
             // 
             // TextPricePromo
             // 
@@ -1759,6 +1710,7 @@
             // 
             // ButtonDeletePromo
             // 
+            this.ButtonDeletePromo.Enabled = false;
             this.ButtonDeletePromo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonDeletePromo.ForeColor = System.Drawing.Color.Red;
             this.ButtonDeletePromo.Location = new System.Drawing.Point(259, 121);
@@ -1891,7 +1843,7 @@
             // 
             // TextIdMesas
             // 
-            this.TextIdMesas.Location = new System.Drawing.Point(16, 94);
+            this.TextIdMesas.Location = new System.Drawing.Point(24, 88);
             this.TextIdMesas.Name = "TextIdMesas";
             this.TextIdMesas.ReadOnly = true;
             this.TextIdMesas.Size = new System.Drawing.Size(35, 26);
@@ -2019,6 +1971,126 @@
             this.DataGridMesas.TabIndex = 5;
             this.DataGridMesas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMesas_RowEnter);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rubroDataGridViewTextBoxColumn
+            // 
+            this.rubroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rubroDataGridViewTextBoxColumn.DataPropertyName = "Rubro";
+            this.rubroDataGridViewTextBoxColumn.HeaderText = "Rubro";
+            this.rubroDataGridViewTextBoxColumn.Name = "rubroDataGridViewTextBoxColumn";
+            this.rubroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioCostoDataGridViewTextBoxColumn
+            // 
+            this.precioCostoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.precioCostoDataGridViewTextBoxColumn.DataPropertyName = "Precio_Costo";
+            this.precioCostoDataGridViewTextBoxColumn.HeaderText = "Precio de costo";
+            this.precioCostoDataGridViewTextBoxColumn.Name = "precioCostoDataGridViewTextBoxColumn";
+            this.precioCostoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn
+            // 
+            this.precioVentaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta";
+            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio de venta";
+            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
+            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // platoBindingSource
+            // 
+            this.platoBindingSource.DataSource = typeof(DAL.Entities.Plato);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dniDataGridViewTextBoxColumn
+            // 
+            this.dniDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dniDataGridViewTextBoxColumn.DataPropertyName = "Dni";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
+            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sectorDataGridViewTextBoxColumn
+            // 
+            this.sectorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sectorDataGridViewTextBoxColumn.DataPropertyName = "Sector";
+            this.sectorDataGridViewTextBoxColumn.HeaderText = "Sector";
+            this.sectorDataGridViewTextBoxColumn.Name = "sectorDataGridViewTextBoxColumn";
+            this.sectorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mozoBindingSource
+            // 
+            this.mozoBindingSource.DataSource = typeof(DAL.Entities.Mozo);
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mesaIdDataGridViewTextBoxColumn
+            // 
+            this.mesaIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mesaIdDataGridViewTextBoxColumn.DataPropertyName = "Mesa_Id";
+            this.mesaIdDataGridViewTextBoxColumn.HeaderText = "Mesa";
+            this.mesaIdDataGridViewTextBoxColumn.Name = "mesaIdDataGridViewTextBoxColumn";
+            this.mesaIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // importeTotalDataGridViewTextBoxColumn
+            // 
+            this.importeTotalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.importeTotalDataGridViewTextBoxColumn.DataPropertyName = "Importe_Total";
+            this.importeTotalDataGridViewTextBoxColumn.HeaderText = "Importe total";
+            this.importeTotalDataGridViewTextBoxColumn.Name = "importeTotalDataGridViewTextBoxColumn";
+            this.importeTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ventaBindingSource
+            // 
+            this.ventaBindingSource.DataSource = typeof(DAL.Entities.Venta);
+            // 
+            // promocionBindingSource
+            // 
+            this.promocionBindingSource.DataSource = typeof(DAL.Entities.Promocion);
+            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -2050,9 +2122,38 @@
             // 
             this.mesaBindingSource.DataSource = typeof(DAL.Entities.Mesa);
             // 
-            // promocionBindingSource
+            // descripcionDataGridViewTextBoxColumn3
             // 
-            this.promocionBindingSource.DataSource = typeof(DAL.Entities.Promocion);
+            this.descripcionDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn3.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn3.Name = "descripcionDataGridViewTextBoxColumn3";
+            this.descripcionDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // rubroDataGridViewTextBoxColumn2
+            // 
+            this.rubroDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rubroDataGridViewTextBoxColumn2.DataPropertyName = "Rubro";
+            this.rubroDataGridViewTextBoxColumn2.HeaderText = "Rubro";
+            this.rubroDataGridViewTextBoxColumn2.Name = "rubroDataGridViewTextBoxColumn2";
+            this.rubroDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn2
+            // 
+            this.precioVentaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.precioVentaDataGridViewTextBoxColumn2.DataPropertyName = "Precio_Venta";
+            this.precioVentaDataGridViewTextBoxColumn2.HeaderText = "$";
+            this.precioVentaDataGridViewTextBoxColumn2.Name = "precioVentaDataGridViewTextBoxColumn2";
+            this.precioVentaDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.precioVentaDataGridViewTextBoxColumn2.Width = 40;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // descripcionDataGridViewTextBoxColumn1
             // 
@@ -2064,19 +2165,47 @@
             // 
             // precioDataGridViewTextBoxColumn2
             // 
-            this.precioDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.precioDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.precioDataGridViewTextBoxColumn2.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn2.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn2.HeaderText = "$";
             this.precioDataGridViewTextBoxColumn2.Name = "precioDataGridViewTextBoxColumn2";
             this.precioDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.precioDataGridViewTextBoxColumn2.Width = 40;
             // 
             // estadoDataGridViewTextBoxColumn2
             // 
-            this.estadoDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estadoDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.estadoDataGridViewTextBoxColumn2.DataPropertyName = "Estado";
             this.estadoDataGridViewTextBoxColumn2.HeaderText = "Estado";
             this.estadoDataGridViewTextBoxColumn2.Name = "estadoDataGridViewTextBoxColumn2";
             this.estadoDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.estadoDataGridViewTextBoxColumn2.Width = 74;
+            // 
+            // descripcionDataGridViewTextBoxColumn2
+            // 
+            this.descripcionDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn2.HeaderText = "Descripción";
+            this.descripcionDataGridViewTextBoxColumn2.Name = "descripcionDataGridViewTextBoxColumn2";
+            this.descripcionDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // rubroDataGridViewTextBoxColumn1
+            // 
+            this.rubroDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.rubroDataGridViewTextBoxColumn1.DataPropertyName = "Rubro";
+            this.rubroDataGridViewTextBoxColumn1.HeaderText = "Rubro";
+            this.rubroDataGridViewTextBoxColumn1.Name = "rubroDataGridViewTextBoxColumn1";
+            this.rubroDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.rubroDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // precioVentaDataGridViewTextBoxColumn1
+            // 
+            this.precioVentaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.precioVentaDataGridViewTextBoxColumn1.DataPropertyName = "Precio_Venta";
+            this.precioVentaDataGridViewTextBoxColumn1.HeaderText = "$";
+            this.precioVentaDataGridViewTextBoxColumn1.Name = "precioVentaDataGridViewTextBoxColumn1";
+            this.precioVentaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.precioVentaDataGridViewTextBoxColumn1.Width = 40;
             // 
             // MainWindow
             // 
@@ -2099,7 +2228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextPricePlatoC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPlatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).EndInit();
             this.TabMozos.ResumeLayout(false);
             this.groupBuscarMozo.ResumeLayout(false);
             this.groupBuscarMozo.PerformLayout();
@@ -2107,11 +2235,9 @@
             this.GroupDatosMozos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TextDniMozo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMozos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).EndInit();
             this.TabVentas_Pedidos.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.GroupVentas.ResumeLayout(false);
@@ -2130,6 +2256,10 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridConsultas)).EndInit();
             this.TabPromos.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPlatosPromo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPlatosToAdd)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
@@ -2146,8 +2276,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.TextIdMesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextSectorMesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridMesas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mesaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mozoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mesaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2197,7 +2330,6 @@
         private System.Windows.Forms.Label LabelPrecioPromo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridView DataGridPromos;
-        private System.Windows.Forms.CheckedListBox CheckListPromos;
         private System.Windows.Forms.TextBox TextIdMozo;
         private System.Windows.Forms.TextBox TextIdPlatos;
         private System.Windows.Forms.TextBox TextIdPromo;
@@ -2309,11 +2441,27 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelPP;
+        private System.Windows.Forms.Button buttonActivatePromo;
+        private System.Windows.Forms.BindingSource promocionBindingSource;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dataGridPlatosPromo;
+        private System.Windows.Forms.Button buttonRemovePlatoPromo;
+        private System.Windows.Forms.Button buttonAddPlatoPromo;
+        private System.Windows.Forms.Button buttonClearPlatosPromo;
+        private System.Windows.Forms.Button buttonBuscarPlatoPromo;
+        private System.Windows.Forms.TextBox textSearchPlatosPromo;
+        private System.Windows.Forms.DataGridView dataGridPlatosToAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rubroDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioVentaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource promocionBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rubroDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioVentaDataGridViewTextBoxColumn1;
     }
 }
